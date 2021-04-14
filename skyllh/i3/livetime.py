@@ -64,7 +64,7 @@ class I3Livetime(Livetime):
         if(len(ds.grl_pathfilename_list) == 0):
             raise ValueError('No GRL files have been defined for the given '
                 'dataset!')
-        return I3Livetime.from_GRL_files(ds.grl_pathfilename_list)
+        return I3Livetime.from_GRL_files(ds.grl_abs_pathfilename_list)
 
     @staticmethod
     def from_I3DatasetData(data):

@@ -32,6 +32,8 @@ class Livetime(object):
             the property setter method of ``uptime_mjd_intervals_arr`` by
             calling the ``assert_mjd_intervals_integrity`` method.
         """
+        super(Livetime, self).__init__()
+
         # The internal Nx2 numpy ndarray holding the MJD intervals when the
         # detector was taking data.
         self.uptime_mjd_intervals_arr = uptime_mjd_intervals_arr

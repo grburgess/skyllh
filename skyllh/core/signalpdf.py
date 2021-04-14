@@ -133,7 +133,7 @@ class GaussianPSFPointLikeSourceSignalSpatialPDF(SpatialPDF, IsSignalPDF):
 
 class SignalTimePDF(TimePDF, IsSignalPDF):
     """This class provides a time PDF class for a signal source. It consists of
-    a Livetime instance and a TimeProfileModel instance. Together they construct
+    a Livetime instance and a TimeFluxProfile instance. Together they construct
     the actual signal time PDF, which has detector down-time taking into
     account.
     """
@@ -281,7 +281,7 @@ class SignalTimePDF(TimePDF, IsSignalPDF):
             The (N,)-shaped ndarray holding the probability for each event.
         """
         # Update the time-profile if its parameter values have changed and
-        # recalculate self._I and self._S if an updated was actually performed.
+        # recalculate self._I and self._S if an update was actually performed.
         if(params is not None):
             updated = self._time_flux_profile.set_params(params)
             if(updated):
