@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,17 +218,17 @@
 <p>This module contains classes for IceCube specific detector signal yields,
 for a variation of source model and flux model combinations.</p>
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.I3DetSigYield">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">I3DetSigYield</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implmethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYield" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.I3DetSigYield">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">I3DetSigYield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implmethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYield" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.detsigyield.html#skyllh.core.detsigyield.DetSigYield" title="skyllh.core.detsigyield.DetSigYield"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.detsigyield.DetSigYield</span></code></a></p>
 <p>Abstract base class for all IceCube specific detector signal yield
 classes. It assumes that sin(dec) binning is required for calculating the
 detector effective area and hence the detector signal yield.</p>
 <p>Constructor of the IceCube specific detector signal yield base
 class.</p>
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.I3DetSigYield.sin_dec_binning">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">sin_dec_binning</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYield.sin_dec_binning" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.I3DetSigYield.sin_dec_binning">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sin_dec_binning</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYield.sin_dec_binning" title="Permalink to this definition">¶</a></dt>
 <dd><p>The BinningDefinition instance defining the sin(dec) binning
 definition.</p>
 </dd></dl>
@@ -233,8 +236,8 @@ definition.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.I3DetSigYieldImplMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">I3DetSigYieldImplMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.I3DetSigYieldImplMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">I3DetSigYieldImplMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.detsigyield.html#skyllh.core.detsigyield.DetSigYieldImplMethod" title="skyllh.core.detsigyield.DetSigYieldImplMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.detsigyield.DetSigYieldImplMethod</span></code></a></p>
 <p>Abstract base class for an IceCube specific detector signal yield
 implementation method class.</p>
@@ -245,9 +248,9 @@ implementation base class.</p>
 <dd class="field-odd"><p><strong>sin_dec_binning</strong> (<em>BinningDefinition instance</em>) – The instance of BinningDefinition defining the binning of sin(dec).</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.I3DetSigYieldImplMethod.sin_dec_binning">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">sin_dec_binning</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod.sin_dec_binning" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.I3DetSigYieldImplMethod.sin_dec_binning">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sin_dec_binning</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod.sin_dec_binning" title="Permalink to this definition">¶</a></dt>
 <dd><p>The BinningDefinition instance for the sin(dec) binning that should
 be used for computing the sin(dec) dependency of the detector signal
 yield. If None, the binning is supposed to be taken from the Dataset’s
@@ -255,8 +258,8 @@ binning definitions.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.detsigyield.I3DetSigYieldImplMethod.get_sin_dec_binning">
-<code class="sig-name descname"><span class="pre">get_sin_dec_binning</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod.get_sin_dec_binning" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.I3DetSigYieldImplMethod.get_sin_dec_binning">
+<span class="sig-name descname"><span class="pre">get_sin_dec_binning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod.get_sin_dec_binning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the sin(dec) binning definition either as setting from this
 detector signal yield implementation method itself, or from the
 given dataset.</p>
@@ -265,8 +268,8 @@ given dataset.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">PointLikeSourceI3DetSigYieldImplMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">PointLikeSourceI3DetSigYieldImplMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.detsigyield.I3DetSigYieldImplMethod" title="skyllh.i3.detsigyield.I3DetSigYieldImplMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.detsigyield.I3DetSigYieldImplMethod</span></code></a></p>
 <p>Abstract base class for all IceCube specific detector signal yield
 implementation methods for a point-like source. All IceCube detector signal
@@ -278,21 +281,21 @@ if needed.</p>
 object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>sin_dec_binning</strong> (<em>BinningDefinition | None</em>) – The BinningDefinition instance defining the sin(dec) binning that
+<dd class="field-odd"><p><strong>sin_dec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a><em> | </em><em>None</em>) – The BinningDefinition instance defining the sin(dec) binning that
 should be used to compute the sin(dec) dependency of the detector
 effective area. If set to None, the binning will be taken from the
 Dataset binning definitions.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod.source_to_array">
-<code class="sig-name descname"><span class="pre">source_to_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod.source_to_array">
+<span class="sig-name descname"><span class="pre">source_to_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts the sequence of PointLikeSource sources into a numpy record
 array holding the spatial information of the sources needed for the
 detector signal yield calculation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>sources</strong> (<em>SourceModel | sequence of SourceModel</em>) – The source model containing the spatial information of the source.</p>
+<dd class="field-odd"><p><strong>sources</strong> (<a class="reference internal" href="skyllh.physics.source.html#skyllh.physics.source.SourceModel" title="skyllh.physics.source.SourceModel"><em>SourceModel</em></a><em> | </em><em>sequence of SourceModel</em>) – The source model containing the spatial information of the source.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>arr</strong> (<em>numpy record ndarray</em>) – The generated numpy record ndarray holding the spatial information
@@ -304,8 +307,8 @@ for each source.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">FixedFluxPointLikeSourceI3DetSigYield</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implmethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_spl_sinDec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">FixedFluxPointLikeSourceI3DetSigYield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implmethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_spl_sinDec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.detsigyield.I3DetSigYield" title="skyllh.i3.detsigyield.I3DetSigYield"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.detsigyield.I3DetSigYield</span></code></a></p>
 <p>The detector signal yield class for the
 FixedFluxPointLikeSourceI3DetSigYieldImplMethod detector signal yield
@@ -321,17 +324,17 @@ method.</p></li>
 signal yield is made for.</p></li>
 <li><p><strong>fluxmodel</strong> (<em>FluxModel instance</em>) – The instance of FluxModel with fixed parameters this detector signal
 yield is made for.</p></li>
-<li><p><strong>livetime</strong> (<em>float | Livetime instance</em>) – The livetime in days or an instance of Livetime.</p></li>
+<li><p><strong>livetime</strong> (<em>float</em><em> | </em><em>Livetime instance</em>) – The livetime in days or an instance of Livetime.</p></li>
 <li><p><strong>sin_dec_binning</strong> (<em>BinningDefinition instance</em>) – The binning definition for sin(dec).</p></li>
-<li><p><strong>log_spl_sinDec</strong> (<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.InterpolatedUnivariateSpline.html#scipy.interpolate.InterpolatedUnivariateSpline" title="(in SciPy v1.6.1)"><em>scipy.interpolate.InterpolatedUnivariateSpline</em></a>) – The spline instance representing the log value of the detector
+<li><p><strong>log_spl_sinDec</strong> (<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.InterpolatedUnivariateSpline.html#scipy.interpolate.InterpolatedUnivariateSpline" title="(in SciPy v1.7.0)"><em>scipy.interpolate.InterpolatedUnivariateSpline</em></a>) – The spline instance representing the log value of the detector
 signal yield as a function of sin(dec).</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield.log_spl_sinDec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">log_spl_sinDec</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield.log_spl_sinDec" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.InterpolatedUnivariateSpline.html#scipy.interpolate.InterpolatedUnivariateSpline" title="(in SciPy v1.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.InterpolatedUnivariateSpline</span></code></a> instance
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield.log_spl_sinDec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">log_spl_sinDec</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYield.log_spl_sinDec" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.InterpolatedUnivariateSpline.html#scipy.interpolate.InterpolatedUnivariateSpline" title="(in SciPy v1.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.InterpolatedUnivariateSpline</span></code></a> instance
 representing the spline for the log value of the detector signal
 yield as a function of sin(dec).</p>
 </dd></dl>
@@ -339,8 +342,8 @@ yield as a function of sin(dec).</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">FixedFluxPointLikeSourceI3DetSigYieldImplMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">FixedFluxPointLikeSourceI3DetSigYieldImplMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod" title="skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod</span></code></a></p>
 <p>This detector signal yield implementation method constructs a
 detector signal yield for a fixed flux model, assuming a point-like
@@ -348,7 +351,7 @@ source. This means that the detector signal yield does not depend on
 any source flux parameters, hence it is only dependent on the detector
 effective area.
 It constructs a one-dimensional spline function in sin(dec), using a
-<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.InterpolatedUnivariateSpline.html#scipy.interpolate.InterpolatedUnivariateSpline" title="(in SciPy v1.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.InterpolatedUnivariateSpline</span></code></a>.</p>
+<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.InterpolatedUnivariateSpline.html#scipy.interpolate.InterpolatedUnivariateSpline" title="(in SciPy v1.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.InterpolatedUnivariateSpline</span></code></a>.</p>
 <p>This detector signal yield implementation method works with all flux
 models.</p>
 <p>It is tailored to the IceCube detector at the South Pole, where the
@@ -363,7 +366,7 @@ effective area.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sin_dec_binning</strong> (<em>BinningDefinition | None</em>) – The BinningDefinition instance which defines the sin(dec) binning.
+<li><p><strong>sin_dec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a><em> | </em><em>None</em>) – The BinningDefinition instance which defines the sin(dec) binning.
 If set to None, the binning will be taken from the Dataset binning
 definitions.</p></li>
 <li><p><strong>spline_order_sinDec</strong> (<em>int</em>) – The order of the spline function for the logarithmic values of the
@@ -372,16 +375,16 @@ The default is 2.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">spline_order_sinDec</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">spline_order_sinDec</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The order (int) of the logarithmic spline function, that splines the
 detector signal yield, along the sin(dec) axis.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield">
-<code class="sig-name descname"><span class="pre">construct_detsigyield</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield">
+<span class="sig-name descname"><span class="pre">construct_detsigyield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.FixedFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a detector signal yield log spline function for the
 given fixed flux model.</p>
 <dl class="field-list simple">
@@ -411,8 +414,8 @@ GeV cm^2 sr.</p>
 </ul>
 </p></li>
 <li><p><strong>fluxmodel</strong> (<a class="reference internal" href="skyllh.physics.flux.html#skyllh.physics.flux.FluxModel" title="skyllh.physics.flux.FluxModel"><em>FluxModel</em></a>) – The flux model instance. Must be an instance of FluxModel.</p></li>
-<li><p><strong>livetime</strong> (<em>float | Livetime</em>) – The live-time in days to use for the detector signal yield.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
+<li><p><strong>livetime</strong> (<em>float</em><em> | </em><a class="reference internal" href="skyllh.core.livetime.html#skyllh.core.livetime.Livetime" title="skyllh.core.livetime.Livetime"><em>Livetime</em></a>) – The live-time in days to use for the detector signal yield.</p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -424,17 +427,17 @@ GeV cm^2 sr.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">PowerLawFluxPointLikeSourceI3DetSigYield</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implmethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_spl_sinDec_gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">PowerLawFluxPointLikeSourceI3DetSigYield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implmethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_spl_sinDec_gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.detsigyield.I3DetSigYield" title="skyllh.i3.detsigyield.I3DetSigYield"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.detsigyield.I3DetSigYield</span></code></a></p>
 <p>The detector signal yield class for the
 PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod detector signal yield
 implementation method.</p>
 <p>Constructs the detector signal yield instance.</p>
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield.log_spl_sinDec_gamma">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">log_spl_sinDec_gamma</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield.log_spl_sinDec_gamma" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RectBivariateSpline.html#scipy.interpolate.RectBivariateSpline" title="(in SciPy v1.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RectBivariateSpline</span></code></a> instance
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield.log_spl_sinDec_gamma">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">log_spl_sinDec_gamma</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYield.log_spl_sinDec_gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.RectBivariateSpline.html#scipy.interpolate.RectBivariateSpline" title="(in SciPy v1.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RectBivariateSpline</span></code></a> instance
 representing the spline for the log value of the detector signal
 yield as a function of sin(dec) and gamma.</p>
 </dd></dl>
@@ -442,14 +445,14 @@ yield as a function of sin(dec) and gamma.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></code><code class="sig-name descname"><span class="pre">PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma_grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.detsigyield.</span></span><span class="sig-name descname"><span class="pre">PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma_grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod" title="skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.detsigyield.PointLikeSourceI3DetSigYieldImplMethod</span></code></a>, <a class="reference internal" href="skyllh.core.multiproc.html#skyllh.core.multiproc.IsParallelizable" title="skyllh.core.multiproc.IsParallelizable"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.multiproc.IsParallelizable</span></code></a></p>
 <p>This detector signal yield implementation method constructs a
 detector signal yield for a variable power law flux model, which has
 the spectral index gamma as fit parameter, assuming a point-like source.
 It constructs a two-dimensional spline function in sin(dec) and gamma, using
-a <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RectBivariateSpline.html#scipy.interpolate.RectBivariateSpline" title="(in SciPy v1.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RectBivariateSpline</span></code></a>. Hence, the detector signal yield
+a <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.RectBivariateSpline.html#scipy.interpolate.RectBivariateSpline" title="(in SciPy v1.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RectBivariateSpline</span></code></a>. Hence, the detector signal yield
 can vary with the declination and the spectral index, gamma, of the source.</p>
 <p>This detector signal yield implementation method works with a
 PowerLawFlux flux model.</p>
@@ -465,7 +468,7 @@ detector signal yield.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gamma_grid</strong> (<em>ParameterGrid instance</em>) – The ParameterGrid instance which defines the grid of gamma values.</p></li>
-<li><p><strong>sin_dec_binning</strong> (<em>BinningDefinition | None</em>) – The BinningDefinition instance which defines the sin(dec) binning.
+<li><p><strong>sin_dec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a><em> | </em><em>None</em>) – The BinningDefinition instance which defines the sin(dec) binning.
 If set to None, the sin(dec) binning will be taken from the
 dataset’s binning definitions.</p></li>
 <li><p><strong>spline_order_sinDec</strong> (<em>int</em>) – The order of the spline function for the logarithmic values of the
@@ -474,35 +477,35 @@ The default is 2.</p></li>
 <li><p><strong>spline_order_gamma</strong> (<em>int</em>) – The order of the spline function for the logarithmic values of the
 detector signal yield along the gamma axis.
 The default is 2.</p></li>
-<li><p><strong>ncpu</strong> (<em>int | None</em>) – The number of CPUs to utilize. Global setting will take place if
+<li><p><strong>ncpu</strong> (<em>int</em><em> | </em><em>None</em>) – The number of CPUs to utilize. Global setting will take place if
 not specified, i.e. set to None.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.gamma_grid">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">gamma_grid</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.gamma_grid" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.gamma_grid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">gamma_grid</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.gamma_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ParameterGrid instance for the gamma grid that should be used for
 computing the gamma dependency of the detector signal yield.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">spline_order_sinDec</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">spline_order_sinDec</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_sinDec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The order (int) of the logarithmic spline function, that splines the
 detector signal yield, along the sin(dec) axis.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_gamma">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">spline_order_gamma</span></code><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_gamma" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_gamma">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">spline_order_gamma</span></span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.spline_order_gamma" title="Permalink to this definition">¶</a></dt>
 <dd><p>The order (int) of the logarithmic spline function, that splines the
 detector signal yield, along the gamma axis.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield">
-<code class="sig-name descname"><span class="pre">construct_detsigyield</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield">
+<span class="sig-name descname"><span class="pre">construct_detsigyield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.detsigyield.PowerLawFluxPointLikeSourceI3DetSigYieldImplMethod.construct_detsigyield" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a detector signal yield 2-dimensional log spline
 function for the given power law flux model with varying gamma values.</p>
 <dl class="field-list simple">
@@ -532,9 +535,9 @@ GeV cm^2 sr.</p>
 </ul>
 </p></li>
 <li><p><strong>fluxmodel</strong> (<a class="reference internal" href="skyllh.physics.flux.html#skyllh.physics.flux.FluxModel" title="skyllh.physics.flux.FluxModel"><em>FluxModel</em></a>) – The flux model instance. Must be an instance of FluxModel.</p></li>
-<li><p><strong>livetime</strong> (<em>float | Livetime instance</em>) – The live-time in days or an instance of Livetime to use for the
+<li><p><strong>livetime</strong> (<em>float</em><em> | </em><em>Livetime instance</em>) – The live-time in days or an instance of Livetime to use for the
 detector signal yield.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

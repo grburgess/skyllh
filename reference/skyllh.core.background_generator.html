@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.background_generator">
 <span id="skyllh-core-background-generator-module"></span><h1>skyllh.core.background_generator module<a class="headerlink" href="#module-skyllh.core.background_generator" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.background_generator.BackgroundGenerator">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.background_generator.</span></code><code class="sig-name descname"><span class="pre">BackgroundGenerator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bkg_gen_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generator.BackgroundGenerator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.background_generator.</span></span><span class="sig-name descname"><span class="pre">BackgroundGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bkg_gen_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is the general background generator class, which provides a method
 to generate background events. It does not depend on the detector or
@@ -233,31 +236,31 @@ dataset. The order must match the order of <code class="docutils literal notrans
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.background_generator.BackgroundGenerator.bkg_gen_method">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">bkg_gen_method</span></code><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.bkg_gen_method" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generator.BackgroundGenerator.bkg_gen_method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bkg_gen_method</span></span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.bkg_gen_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of BackgroundGenerationMethod which should be used to
 generate background events.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generator.BackgroundGenerator.dataset_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dataset_list</span></code><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.dataset_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generator.BackgroundGenerator.dataset_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dataset_list</span></span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.dataset_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of Dataset instances for which background events should get
 generated for.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generator.BackgroundGenerator.data_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_list</span></code><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.data_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generator.BackgroundGenerator.data_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data_list</span></span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.data_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of DatasetData instances holding the actual data of each
 dataset. The order must match the order of the <code class="docutils literal notranslate"><span class="pre">dataset_list</span></code>
 property.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.background_generator.BackgroundGenerator.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generator.BackgroundGenerator.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the SourceHypoGroupManager instance of the background
 generation method.</p>
 <dl class="field-list simple">
@@ -268,8 +271,8 @@ generation method.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.background_generator.BackgroundGenerator.generate_background_events">
-<code class="sig-name descname"><span class="pre">generate_background_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.generate_background_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generator.BackgroundGenerator.generate_background_events">
+<span class="sig-name descname"><span class="pre">generate_background_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generator.BackgroundGenerator.generate_background_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a mean number of background events for the given dataset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -278,7 +281,7 @@ generation method.</p>
 random numbers from.</p></li>
 <li><p><strong>dataset_idx</strong> (<em>int</em>) – The index of the dataset for which background events should get
 generated for.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 <li><p><strong>**kwargs</strong> – Additional keyword arguments, which will be passed to the
 <code class="docutils literal notranslate"><span class="pre">generate_events</span></code> method of the background generation method

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,26 +216,26 @@
 <div class="section" id="module-skyllh.core.debugging">
 <span id="skyllh-core-debugging-module"></span><h1>skyllh.core.debugging module<a class="headerlink" href="#module-skyllh.core.debugging" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="skyllh.core.debugging.enable_tracing">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">enable_tracing</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.enable_tracing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.enable_tracing">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">enable_tracing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.enable_tracing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables the tracing log debug messages of SkyLLH.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.debugging.disable_tracing">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">disable_tracing</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.disable_tracing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.disable_tracing">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">disable_tracing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.disable_tracing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disables the tracing log debug messages of SkyLLH.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.debugging.is_tracing_enabled">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">is_tracing_enabled</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.is_tracing_enabled" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.is_tracing_enabled">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">is_tracing_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.is_tracing_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True, if tracing is enabled, False otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.debugging.get_logger">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">get_logger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.get_logger" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.get_logger">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.get_logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the logger with the given name from the Python logging system.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -246,8 +249,8 @@ Logger hierarchy is defined using dots as separators.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.debugging.setup_logger">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">setup_logger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.setup_logger" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.setup_logger">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">setup_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.setup_logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes logger with a given name and a log level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,41 +264,41 @@ Logger hierarchy is defined using dots as separators.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.debugging.setup_console_handler">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">setup_console_handler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.setup_console_handler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.setup_console_handler">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">setup_console_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.setup_console_handler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes <cite>StreamHandler</cite> for a logger with a given name and sets its
 handling level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Logger name. Loggers hierarchy is defined using dots as separators.</p></li>
-<li><p><strong>log_level</strong> (<em>int | None</em>) – The log level. The <code class="docutils literal notranslate"><span class="pre">logging</span></code> module predefines levels, e.g.
+<li><p><strong>log_level</strong> (<em>int</em><em> | </em><em>None</em>) – The log level. The <code class="docutils literal notranslate"><span class="pre">logging</span></code> module predefines levels, e.g.
 <code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>.
 If set to None, the log level of the logger will be used.</p></li>
-<li><p><strong>log_format</strong> (<em>str | None</em>) – The format of log records in the final output.
+<li><p><strong>log_format</strong> (<em>str</em><em> | </em><em>None</em>) – The format of log records in the final output.
 If set to <cite>None</cite>, the log format is taken from the configuration.</p></li>
-<li><p><strong>stream</strong> (<em>data stream | None</em>) – The stream that the handler should use. Default stream is <cite>sys.stderr</cite>.</p></li>
+<li><p><strong>stream</strong> (<em>data stream</em><em> | </em><em>None</em>) – The stream that the handler should use. Default stream is <cite>sys.stderr</cite>.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.debugging.setup_file_handler">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">setup_file_handler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.setup_file_handler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.setup_file_handler">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">setup_file_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.setup_file_handler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes <cite>FileHandler</cite> for a logger with a given name and sets its
 handling level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Logger name. Loggers hierarchy is defined using dots as separators.</p></li>
-<li><p><strong>log_level</strong> (<em>int | None</em>) – The log level. There are predefined levels, e.g. <code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>.
+<li><p><strong>log_level</strong> (<em>int</em><em> | </em><em>None</em>) – The log level. There are predefined levels, e.g. <code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>.
 If set to None, the log level of the logger will be used.</p></li>
 <li><p><strong>filename</strong> (<em>str</em>) – The filename of the specified file which is opened and used as the
 stream for logging.</p></li>
-<li><p><strong>path</strong> (<em>str | None</em>) – The path under which the log file should be stored.
+<li><p><strong>path</strong> (<em>str</em><em> | </em><em>None</em>) – The path under which the log file should be stored.
 If set to <cite>None</cite>, the project’s working directory will be used.</p></li>
-<li><p><strong>log_format</strong> (<em>str | None</em>) – The format of log records in the final output.
+<li><p><strong>log_format</strong> (<em>str</em><em> | </em><em>None</em>) – The format of log records in the final output.
 If set to <cite>None</cite>, the log format is taken from the configuration.</p></li>
 <li><p><strong>mode</strong> (<em>str</em>) – File opening mode. Default is ‘a’ for appending.</p></li>
 </ul>
@@ -304,8 +307,8 @@ If set to <cite>None</cite>, the log format is taken from the configuration.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.debugging.QueueHandler">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></code><code class="sig-name descname"><span class="pre">QueueHandler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.QueueHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.debugging.</span></span><span class="sig-name descname"><span class="pre">QueueHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Handler</span></code></p>
 <p>This handler sends events to a queue. Typically, it would be used together
 with a multiprocessing Queue to centralise logging to file in one process
@@ -315,8 +318,8 @@ between processes.</p>
 user code for use with earlier Python versions.</p>
 <p>Initialise an instance, using the passed queue.</p>
 <dl class="py method">
-<dt id="skyllh.core.debugging.QueueHandler.enqueue">
-<code class="sig-name descname"><span class="pre">enqueue</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler.enqueue" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.QueueHandler.enqueue">
+<span class="sig-name descname"><span class="pre">enqueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler.enqueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enqueue a record.</p>
 <p>The base implementation uses put_nowait. You may want to override
 this method if you want to use blocking, timeouts or custom queue
@@ -324,8 +327,8 @@ implementations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.debugging.QueueHandler.prepare">
-<code class="sig-name descname"><span class="pre">prepare</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler.prepare" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.QueueHandler.prepare">
+<span class="sig-name descname"><span class="pre">prepare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler.prepare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepares a record for queuing. The object returned by this method is
 enqueued.</p>
 <p>The base implementation formats the record to merge the message
@@ -337,8 +340,8 @@ of the record while leaving the original intact.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.debugging.QueueHandler.emit">
-<code class="sig-name descname"><span class="pre">emit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler.emit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.debugging.QueueHandler.emit">
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.debugging.QueueHandler.emit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Emit a record.</p>
 <p>Writes the LogRecord to the queue, preparing it for pickling first.</p>
 </dd></dl>

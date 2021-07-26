@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.dataset">
 <span id="skyllh-i3-dataset-module"></span><h1>skyllh.i3.dataset module<a class="headerlink" href="#module-skyllh.i3.dataset" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.dataset.I3Dataset">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.dataset.</span></code><code class="sig-name descname"><span class="pre">I3Dataset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grl_pathfilenames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.dataset.</span></span><span class="sig-name descname"><span class="pre">I3Dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grl_pathfilenames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.dataset.html#skyllh.core.dataset.Dataset" title="skyllh.core.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.dataset.Dataset</span></code></a></p>
 <p>The I3Dataset class is an IceCube specific Dataset class that adds
 IceCube specific properties to the Dataset class. These additional
@@ -228,12 +231,12 @@ properties are:</p>
 of GRL data files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>grl_pathfilenames</strong> (<em>str | sequence of str</em>) – </p>
+<dd class="field-odd"><p><strong>grl_pathfilenames</strong> (<em>str</em><em> | </em><em>sequence of str</em>) – </p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.get_combined_grl_pathfilenames">
-<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">get_combined_grl_pathfilenames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.get_combined_grl_pathfilenames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.get_combined_grl_pathfilenames">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_combined_grl_pathfilenames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.get_combined_grl_pathfilenames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates the combined list of grl pathfilenames of all the given
 datasets.</p>
 <dl class="field-list simple">
@@ -246,40 +249,40 @@ datasets.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.grl_pathfilename_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">grl_pathfilename_list</span></code><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.grl_pathfilename_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.grl_pathfilename_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">grl_pathfilename_list</span></span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.grl_pathfilename_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of file names of the good-run-list data files for this
 dataset.
 If a file name is given with a relative path, it will be relative to the
 root_dir property of this Dataset instance.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.grl_abs_pathfilename_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">grl_abs_pathfilename_list</span></code><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.grl_abs_pathfilename_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.grl_abs_pathfilename_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">grl_abs_pathfilename_list</span></span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.grl_abs_pathfilename_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of absolute path file names of the good-run-list
 data files.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.grl_field_name_renaming_dict">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">grl_field_name_renaming_dict</span></code><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.grl_field_name_renaming_dict" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.grl_field_name_renaming_dict">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">grl_field_name_renaming_dict</span></span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.grl_field_name_renaming_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>The dictionary specifying the field names of the good-run-list data
 which need to get renamed just after loading the data. The dictionary
 keys are the old names and their values are the new names.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.exists">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">exists</span></code><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.exists" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.exists">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">exists</span></span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.exists" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) Flag if all the data files of this data set exists. It is
 <code class="docutils literal notranslate"><span class="pre">True</span></code> if all data files exist and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.load_grl">
-<code class="sig-name descname"><span class="pre">load_grl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">efficiency_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.load_grl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.load_grl">
+<span class="sig-name descname"><span class="pre">load_grl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">efficiency_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.load_grl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the good-run-list and returns a structured numpy ndarray with
 the following data fields:</p>
 <blockquote>
@@ -299,7 +302,7 @@ the following data fields:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>efficiency_mode</strong> (<em>str | None</em>) – <p>The efficiency mode the data should get loaded with. Possible values
+<li><p><strong>efficiency_mode</strong> (<em>str</em><em> | </em><em>None</em>) – <p>The efficiency mode the data should get loaded with. Possible values
 are:</p>
 <blockquote>
 <div><ul>
@@ -322,7 +325,7 @@ memory at once.</p>
 <p>The default value is <code class="docutils literal notranslate"><span class="pre">'time'</span></code>. If set to <code class="docutils literal notranslate"><span class="pre">None</span></code>, the default
 value will be used.</p>
 </p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The TimeLord instance to use to time the data loading procedure.</p></li>
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The TimeLord instance to use to time the data loading procedure.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -333,27 +336,27 @@ information of the dataset.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.load_data">
-<code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtc_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtc_except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.load_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livetime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtc_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtc_except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the data, which is described by the dataset. If a good-run-list
 (GRL) is provided for this dataset, only experimental data will be
 selected which matches the GRL.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>keep_fields</strong> (<em>list of str | None</em>) – The list of user-defined data fields that should get loaded and kept
+<li><p><strong>keep_fields</strong> (<em>list of str</em><em> | </em><em>None</em>) – The list of user-defined data fields that should get loaded and kept
 in addition to the analysis required data fields.</p></li>
-<li><p><strong>livetime</strong> (<em>float | None</em>) – If not None, uses this livetime (in days) as livetime for the
+<li><p><strong>livetime</strong> (<em>float</em><em> | </em><em>None</em>) – If not None, uses this livetime (in days) as livetime for the
 DatasetData instance, otherwise uses the live time from the Dataset
 instance or, if available, the livetime from the good-run-list
 (GRL).</p></li>
-<li><p><strong>dtc_dict</strong> (<em>dict | None</em>) – This dictionary defines how data fields of specific
+<li><p><strong>dtc_dict</strong> (<em>dict</em><em> | </em><em>None</em>) – This dictionary defines how data fields of specific
 data types should get converted into other data types.
 This can be used to use less memory. If set to None, no data
 convertion is performed.</p></li>
-<li><p><strong>dtc_except_fields</strong> (<em>str | sequence of str | None</em>) – The sequence of field names whose data type should not get
+<li><p><strong>dtc_except_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em><em> | </em><em>None</em>) – The sequence of field names whose data type should not get
 converted.</p></li>
-<li><p><strong>efficiency_mode</strong> (<em>str | None</em>) – <p>The efficiency mode the data should get loaded with. Possible values
+<li><p><strong>efficiency_mode</strong> (<em>str</em><em> | </em><em>None</em>) – <p>The efficiency mode the data should get loaded with. Possible values
 are:</p>
 <blockquote>
 <div><ul>
@@ -376,7 +379,7 @@ memory at once.</p>
 <p>The default value is <code class="docutils literal notranslate"><span class="pre">'time'</span></code>. If set to <code class="docutils literal notranslate"><span class="pre">None</span></code>, the default
 value will be used.</p>
 </p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The TimeLord instance that should be used to time the data load
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The TimeLord instance that should be used to time the data load
 operation.</p></li>
 </ul>
 </dd>
@@ -388,8 +391,8 @@ data of this data set.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.dataset.I3Dataset.prepare_data">
-<code class="sig-name descname"><span class="pre">prepare_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.prepare_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3Dataset.prepare_data">
+<span class="sig-name descname"><span class="pre">prepare_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3Dataset.prepare_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepares the data for IceCube by pre-calculating the following
 experimental data fields:</p>
 <ul class="simple">
@@ -411,7 +414,7 @@ experimental data fields:</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>DatasetData instance</em>) – The DatasetData instance holding the data as numpy record ndarray.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The TimeLord instance that should be used to time the data
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The TimeLord instance that should be used to time the data
 preparation.</p></li>
 </ul>
 </dd>
@@ -421,8 +424,8 @@ preparation.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.dataset.I3DatasetData">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.dataset.</span></code><code class="sig-name descname"><span class="pre">I3DatasetData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_grl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3DatasetData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3DatasetData">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.dataset.</span></span><span class="sig-name descname"><span class="pre">I3DatasetData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_grl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.dataset.I3DatasetData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.dataset.html#skyllh.core.dataset.DatasetData" title="skyllh.core.dataset.DatasetData"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.dataset.DatasetData</span></code></a></p>
 <p>The class provides the container for the loaded experimental and
 monto-carlo data of a data set. It’s the IceCube specific class that also
@@ -431,16 +434,16 @@ holds the good-run-list (GRL) data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_exp</strong> (<em>instance of DataFieldRecordArray | None</em>) – The instance of DataFieldRecordArray holding the experimental data.
+<li><p><strong>data_exp</strong> (<em>instance of DataFieldRecordArray</em><em> | </em><em>None</em>) – The instance of DataFieldRecordArray holding the experimental data.
 This can be None for a MC-only study.</p></li>
 <li><p><strong>data_mc</strong> (<em>instance of DataFieldRecordArray</em>) – The instance of DataFieldRecordArray holding the monto-carlo data.</p></li>
 <li><p><strong>livetime</strong> (<em>float</em>) – The integrated livetime in days of the data.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.dataset.I3DatasetData.grl">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">grl</span></code><a class="headerlink" href="#skyllh.i3.dataset.I3DatasetData.grl" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.dataset.I3DatasetData.grl">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">grl</span></span><a class="headerlink" href="#skyllh.i3.dataset.I3DatasetData.grl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DataFieldRecordArray instance holding the good-run-list (GRL)
 data of the IceCube data set. It is None, if there is no GRL data
 available for this IceCube data set.</p>

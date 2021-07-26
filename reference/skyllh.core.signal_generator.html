@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.signal_generator">
 <span id="skyllh-core-signal-generator-module"></span><h1>skyllh.core.signal_generator module<a class="headerlink" href="#module-skyllh.core.signal_generator" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.signal_generator.SignalGenerator">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.signal_generator.</span></code><code class="sig-name descname"><span class="pre">SignalGenerator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.signal_generator.</span></span><span class="sig-name descname"><span class="pre">SignalGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is the general signal generator class. It does not depend on the
 detector or source hypothesis, because these dependencies are factored out
@@ -232,38 +235,38 @@ dataset. The order must match the order of <code class="docutils literal notrans
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.signal_generator.SignalGenerator.src_hypo_group_manager">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_hypo_group_manager</span></code><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator.src_hypo_group_manager">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_hypo_group_manager</span></span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SourceHypoGroupManager instance defining the source groups with
 their spectra.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.signal_generator.SignalGenerator.dataset_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dataset_list</span></code><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.dataset_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator.dataset_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dataset_list</span></span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.dataset_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of Dataset instances for which signal events should get
 generated for.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.signal_generator.SignalGenerator.data_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_list</span></code><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.data_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator.data_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data_list</span></span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.data_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of DatasetData instances holding the actual data of each
 dataset. The order must match the order of the <code class="docutils literal notranslate"><span class="pre">dataset_list</span></code>
 property.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.signal_generator.SignalGenerator.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recreates the signal candidates with the changed source hypothesis
 group manager.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.signal_generator.SignalGenerator.mu2flux">
-<code class="sig-name descname"><span class="pre">mu2flux</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.mu2flux" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator.mu2flux">
+<span class="sig-name descname"><span class="pre">mu2flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.mu2flux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Translate the mean number of signal events <cite>mu</cite> into the
 corresponding flux. The unit of the returned flux is 1/(GeV cm^2 s).</p>
 <dl class="field-list simple">
@@ -285,8 +288,8 @@ contains the flux for each individual source.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.signal_generator.SignalGenerator.generate_signal_events">
-<code class="sig-name descname"><span class="pre">generate_signal_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.generate_signal_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generator.SignalGenerator.generate_signal_events">
+<span class="sig-name descname"><span class="pre">generate_signal_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generator.SignalGenerator.generate_signal_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a given number of signal events from the signal candidate
 monte-carlo events.</p>
 <dl class="field-list simple">

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,56 +218,56 @@
 <p>The display module provides global settings for pretty command line
 displaying.</p>
 <dl class="py class">
-<dt id="skyllh.core.display.ANSIColors">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.display.</span></code><code class="sig-name descname"><span class="pre">ANSIColors</span></code><a class="headerlink" href="#skyllh.core.display.ANSIColors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.display.</span></span><span class="sig-name descname"><span class="pre">ANSIColors</span></span><a class="headerlink" href="#skyllh.core.display.ANSIColors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class defines the ANSI color codes, which can be used to change
 the text color in a terminal.</p>
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.HEADER">
-<code class="sig-name descname"><span class="pre">HEADER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[95m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.HEADER" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.HEADER">
+<span class="sig-name descname"><span class="pre">HEADER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[95m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.HEADER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.OKBLUE">
-<code class="sig-name descname"><span class="pre">OKBLUE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[94m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.OKBLUE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.OKBLUE">
+<span class="sig-name descname"><span class="pre">OKBLUE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[94m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.OKBLUE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.OKGREEN">
-<code class="sig-name descname"><span class="pre">OKGREEN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[92m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.OKGREEN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.OKGREEN">
+<span class="sig-name descname"><span class="pre">OKGREEN</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[92m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.OKGREEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.WARNING">
-<code class="sig-name descname"><span class="pre">WARNING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[93m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.WARNING" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.WARNING">
+<span class="sig-name descname"><span class="pre">WARNING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[93m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.WARNING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.FAIL">
-<code class="sig-name descname"><span class="pre">FAIL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[91m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.FAIL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.FAIL">
+<span class="sig-name descname"><span class="pre">FAIL</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[91m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.FAIL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.ENDC">
-<code class="sig-name descname"><span class="pre">ENDC</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.ENDC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.ENDC">
+<span class="sig-name descname"><span class="pre">ENDC</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.ENDC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.BOLD">
-<code class="sig-name descname"><span class="pre">BOLD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[1m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.BOLD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.BOLD">
+<span class="sig-name descname"><span class="pre">BOLD</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[1m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.BOLD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.core.display.ANSIColors.UNDERLINE">
-<code class="sig-name descname"><span class="pre">UNDERLINE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[4m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.UNDERLINE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.ANSIColors.UNDERLINE">
+<span class="sig-name descname"><span class="pre">UNDERLINE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'\x1b[4m'</span></em><a class="headerlink" href="#skyllh.core.display.ANSIColors.UNDERLINE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.display.add_leading_text_line_padding">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.display.</span></code><code class="sig-name descname"><span class="pre">add_leading_text_line_padding</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padwidth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.display.add_leading_text_line_padding" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.display.add_leading_text_line_padding">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.display.</span></span><span class="sig-name descname"><span class="pre">add_leading_text_line_padding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padwidth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.display.add_leading_text_line_padding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds leading white spaces to all the lines of the given text.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

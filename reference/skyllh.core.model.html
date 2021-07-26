@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -214,27 +217,27 @@
 <span id="skyllh-core-model-module"></span><h1>skyllh.core.model module<a class="headerlink" href="#module-skyllh.core.model" title="Permalink to this headline">¶</a></h1>
 <p>This module defines the base class for any model class used in SkyLLH.</p>
 <dl class="py class">
-<dt id="skyllh.core.model.Model">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.model.</span></code><code class="sig-name descname"><span class="pre">Model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.Model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.model.Model">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class provides a base class for all model classes used in SkyLLH.
 Models could be for instance source models or background models.</p>
 <p>Creates a new Model instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str | None</em>) – The name of the model. If set to <cite>None</cite>, the id of the object is
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em><em> | </em><em>None</em>) – The name of the model. If set to <cite>None</cite>, the id of the object is
 taken as name.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.model.Model.name">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#skyllh.core.model.Model.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.model.Model.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#skyllh.core.model.Model.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.model.Model.id">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#skyllh.core.model.Model.id" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.model.Model.id">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#skyllh.core.model.Model.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The ID of the model. It’s an integer generated with
 Python’s <cite>id</cite> function. Hence, it’s related to the memory address
 of the object.</p>
@@ -243,8 +246,8 @@ of the object.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.model.ModelCollection">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.model.</span></code><code class="sig-name descname"><span class="pre">ModelCollection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.ModelCollection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.model.ModelCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.model.</span></span><span class="sig-name descname"><span class="pre">ModelCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.ModelCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.py.html#skyllh.core.py.NamedObjectCollection" title="skyllh.core.py.NamedObjectCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.py.NamedObjectCollection</span></code></a></p>
 <p>This class describes a collection of Model instances. It can be
 used to group several models into a single object.</p>
@@ -253,24 +256,24 @@ collection holds can be restricted, by setting the model_type argument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>models</strong> (<em>sequence of model_type instances | None</em>) – The sequence of models this collection should be initalized with.</p></li>
-<li><p><strong>model_type</strong> (<em>type | None</em>) – The type of the model. It must be a subclass of class <code class="docutils literal notranslate"><span class="pre">Model</span></code>.
+<li><p><strong>models</strong> (<em>sequence of model_type instances</em><em> | </em><em>None</em>) – The sequence of models this collection should be initalized with.</p></li>
+<li><p><strong>model_type</strong> (<em>type</em><em> | </em><em>None</em>) – The type of the model. It must be a subclass of class <code class="docutils literal notranslate"><span class="pre">Model</span></code>.
 If set to None (default), Model will be used.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.model.ModelCollection.cast">
-<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">cast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.ModelCollection.cast" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.model.ModelCollection.cast">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.ModelCollection.cast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts the given object to a ModelCollection object.
 If the cast fails, a TypeError with the given error message is raised.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj</strong> (<em>Model instance | sequence of Model instances |</em>) – ModelCollection | None
+<li><p><strong>obj</strong> (<em>Model instance</em><em> | </em><em>sequence of Model instances</em><em> |</em>) – ModelCollection | None
 The object that should be casted to ModelCollection.
 If set to None, an empty ModelCollection is created.</p></li>
-<li><p><strong>errmsg</strong> (<em>str | None</em>) – The error message if the cast fails.
+<li><p><strong>errmsg</strong> (<em>str</em><em> | </em><em>None</em>) – The error message if the cast fails.
 If set to None, a generic error message will be used.</p></li>
 </ul>
 </dd>
@@ -284,23 +287,23 @@ ModelCollection instance, it will be returned.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.model.ModelCollection.model_type">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model_type</span></code><a class="headerlink" href="#skyllh.core.model.ModelCollection.model_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.model.ModelCollection.model_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">model_type</span></span><a class="headerlink" href="#skyllh.core.model.ModelCollection.model_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The type of the model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.model.ModelCollection.models">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">models</span></code><a class="headerlink" href="#skyllh.core.model.ModelCollection.models" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.model.ModelCollection.models">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">models</span></span><a class="headerlink" href="#skyllh.core.model.ModelCollection.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of models of type <cite>model_type</cite>.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.model.DetectorModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.model.</span></code><code class="sig-name descname"><span class="pre">DetectorModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.DetectorModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.model.DetectorModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.model.</span></span><span class="sig-name descname"><span class="pre">DetectorModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.model.DetectorModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.model.Model" title="skyllh.core.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.model.Model</span></code></a></p>
 <p>This class provides a base class for a detector model. It can be used
 in combination with the ModelParameterMapper class.</p>

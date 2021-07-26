@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -217,8 +220,8 @@
 <p>This module contains utility functions for creating and managing
 MultiDimGridPDF instances.</p>
 <dl class="py function">
-<dt id="skyllh.core.utils.multidimgridpdf.kde_pdf_sig_spatial_norm_factor_func">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></code><code class="sig-name descname"><span class="pre">kde_pdf_sig_spatial_norm_factor_func</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.kde_pdf_sig_spatial_norm_factor_func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.multidimgridpdf.kde_pdf_sig_spatial_norm_factor_func">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></span><span class="sig-name descname"><span class="pre">kde_pdf_sig_spatial_norm_factor_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.kde_pdf_sig_spatial_norm_factor_func" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the standard normalization factor function for the spatial signal
 MultiDimGridPDF, which is created from KDE PDF values.
 It can be used for the <code class="docutils literal notranslate"><span class="pre">norm_factor_func</span></code> argument of the
@@ -226,8 +229,8 @@ It can be used for the <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.utils.multidimgridpdf.kde_pdf_bkg_norm_factor_func">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></code><code class="sig-name descname"><span class="pre">kde_pdf_bkg_norm_factor_func</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.kde_pdf_bkg_norm_factor_func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.multidimgridpdf.kde_pdf_bkg_norm_factor_func">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></span><span class="sig-name descname"><span class="pre">kde_pdf_bkg_norm_factor_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.kde_pdf_bkg_norm_factor_func" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the standard normalization factor function for the background
 MultiDimGridPDF, which is created from KDE PDF values.
 It can be used for the <code class="docutils literal notranslate"><span class="pre">norm_factor_func</span></code> argument of the
@@ -235,8 +238,8 @@ It can be used for the <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_photosplinetable">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></code><code class="sig-name descname"><span class="pre">create_MultiDimGridPDF_from_photosplinetable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splinetable_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_photosplinetable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_photosplinetable">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></span><span class="sig-name descname"><span class="pre">create_MultiDimGridPDF_from_photosplinetable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splinetable_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_photosplinetable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a MultiDimGridPDF instance with pdf values taken from photospline pdf,
 a spline interpolation of KDE PDF values stored in a splinetable on disk.</p>
 <dl class="field-list simple">
@@ -246,16 +249,16 @@ a spline interpolation of KDE PDF values stored in a splinetable on disk.</p>
 <li><p><strong>data</strong> (<em>DatasetData instance</em>) – The DatasetData instance that holds the auxiliary data of the data set.</p></li>
 <li><p><strong>info_key</strong> (<em>str</em>) – The auxiliary data name for the file containing PDF information.</p></li>
 <li><p><strong>splinetable_key</strong> (<em>str</em>) – The auxiliary data name for the name of the splinetablefile.</p></li>
-<li><p><strong>norm_factor_func</strong> (<em>callable | None</em>) – <p>The normalization factor function. It must have the following call
+<li><p><strong>norm_factor_func</strong> (<em>callable</em><em> | </em><em>None</em>) – <p>The normalization factor function. It must have the following call
 signature:</p>
 <blockquote>
 <div><p>__call__(pdf, tdm, fitparams)</p>
 </div></blockquote>
 </p></li>
-<li><p><strong>kind</strong> (<em>str | None</em>) – The kind of PDF to create. This is either <code class="docutils literal notranslate"><span class="pre">'sig'</span></code> for a
+<li><p><strong>kind</strong> (<em>str</em><em> | </em><em>None</em>) – The kind of PDF to create. This is either <code class="docutils literal notranslate"><span class="pre">'sig'</span></code> for a
 SignalMultiDimGridPDF or <code class="docutils literal notranslate"><span class="pre">'bkg'</span></code> for a BackgroundMultiDimGridPDF
 instance. If set to None, a MultiDimGridPDF instance is created.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance to use for measuring timing information.</p></li>
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance to use for measuring timing information.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -268,8 +271,8 @@ MultiDimGridPDF instance.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_kde_pdf">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></code><code class="sig-name descname"><span class="pre">create_MultiDimGridPDF_from_kde_pdf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numerator_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">denumerator_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_kde_pdf" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_kde_pdf">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.multidimgridpdf.</span></span><span class="sig-name descname"><span class="pre">create_MultiDimGridPDF_from_kde_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numerator_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">denumerator_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.multidimgridpdf.create_MultiDimGridPDF_from_kde_pdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a MultiDimGridPDF instance with pdf values taken from KDE PDF
 values stored in the dataset’s auxiliary data.</p>
 <dl class="field-list simple">
@@ -278,18 +281,18 @@ values stored in the dataset’s auxiliary data.</p>
 <li><p><strong>ds</strong> (<em>Dataset instance</em>) – The Dataset instance the PDF applies to.</p></li>
 <li><p><strong>data</strong> (<em>DatasetData instance</em>) – The DatasetData instance that holds the auxiliary data of the data set.</p></li>
 <li><p><strong>numerator_key</strong> (<em>str</em>) – The auxiliary data name for the PDF numerator array.</p></li>
-<li><p><strong>denumerator_key</strong> (<em>str | None</em>) – The auxiliary data name for the PDF denumerator array.
+<li><p><strong>denumerator_key</strong> (<em>str</em><em> | </em><em>None</em>) – The auxiliary data name for the PDF denumerator array.
 This can be None, if no denumerator array is required.</p></li>
-<li><p><strong>norm_factor_func</strong> (<em>callable | None</em>) – <p>The normalization factor function. It must have the following call
+<li><p><strong>norm_factor_func</strong> (<em>callable</em><em> | </em><em>None</em>) – <p>The normalization factor function. It must have the following call
 signature:</p>
 <blockquote>
 <div><p>__call__(pdf, tdm, fitparams)</p>
 </div></blockquote>
 </p></li>
-<li><p><strong>kind</strong> (<em>str | None</em>) – The kind of PDF to create. This is either <code class="docutils literal notranslate"><span class="pre">'sig'</span></code> for a
+<li><p><strong>kind</strong> (<em>str</em><em> | </em><em>None</em>) – The kind of PDF to create. This is either <code class="docutils literal notranslate"><span class="pre">'sig'</span></code> for a
 SignalMultiDimGridPDF or <code class="docutils literal notranslate"><span class="pre">'bkg'</span></code> for a BackgroundMultiDimGridPDF
 instance. If set to None, a MultiDimGridPDF instance is created.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance to use for measuring timing information.</p></li>
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance to use for measuring timing information.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.progressbar">
 <span id="skyllh-core-progressbar-module"></span><h1>skyllh.core.progressbar module<a class="headerlink" href="#module-skyllh.core.progressbar" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.progressbar.ProgressBar">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.progressbar.</span></code><code class="sig-name descname"><span class="pre">ProgressBar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.progressbar.</span></span><span class="sig-name descname"><span class="pre">ProgressBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class implements a hierarchical progress bar that can serve as a
 parent for child progress bars to display different levels of processing.</p>
@@ -229,77 +232,77 @@ progress bar.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.maxval">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">maxval</span></code><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.maxval" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.maxval">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">maxval</span></span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.maxval" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximal integer value the progress can reach.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.startval">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">startval</span></code><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.startval" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.startval">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">startval</span></span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.startval" title="Permalink to this definition">¶</a></dt>
 <dd><p>The progress integer value to start with. It must be smaller than
 <cite>maxval</cite>.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.parent">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">parent</span></code><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.parent" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.parent">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parent ProgressBar instance of this progress bar, or <cite>None</cite> if
 no parent exist.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.progress">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">progress</span></code><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.progress" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.progress">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">progress</span></span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.progress" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The progress of this progress bar as a number between 0
 and 1.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.gets_shown">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">gets_shown</span></code><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.gets_shown" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.gets_shown">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">gets_shown</span></span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.gets_shown" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) Flag if the progress bar gets shown. This is <code class="docutils literal notranslate"><span class="pre">True</span></code>
 if the program is run in an interactive session, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.add_sub_progress_bar">
-<code class="sig-name descname"><span class="pre">add_sub_progress_bar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pbar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.add_sub_progress_bar" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.add_sub_progress_bar">
+<span class="sig-name descname"><span class="pre">add_sub_progress_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pbar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.add_sub_progress_bar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the given progress bar to the list of running sub progress bars
 of this progress bar.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.remove_sub_progress_bar">
-<code class="sig-name descname"><span class="pre">remove_sub_progress_bar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pbar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.remove_sub_progress_bar" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.remove_sub_progress_bar">
+<span class="sig-name descname"><span class="pre">remove_sub_progress_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pbar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.remove_sub_progress_bar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes the given progress bar instance from the list of running sub
 progress bars of this progress bar.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.get_progress_list">
-<code class="sig-name descname"><span class="pre">get_progress_list</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.get_progress_list" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.get_progress_list">
+<span class="sig-name descname"><span class="pre">get_progress_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.get_progress_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of progress values of all the sub progress bars
 and this progress. The value of this progress bar is the last value.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.rerender">
-<code class="sig-name descname"><span class="pre">rerender</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.rerender" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.rerender">
+<span class="sig-name descname"><span class="pre">rerender</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.rerender" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rerenders this progress bar on the display, but only if the rendered
 progress bar string changed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.trigger_rerendering">
-<code class="sig-name descname"><span class="pre">trigger_rerendering</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.trigger_rerendering" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.trigger_rerendering">
+<span class="sig-name descname"><span class="pre">trigger_rerendering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.trigger_rerendering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Triggers a rerendering of the most top progress bar.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.start">
-<code class="sig-name descname"><span class="pre">start</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.start" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts the progress bar by taking the start time and setting the
 progress value to the start value.
 If this progress bar has a parent, it adds itself to the parent’s list
@@ -313,8 +316,8 @@ progress bar for the first time.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.finish">
-<code class="sig-name descname"><span class="pre">finish</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.finish" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.finish">
+<span class="sig-name descname"><span class="pre">finish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.finish" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finishes this progress bar by setting the current progress value to
 its max value.
 If this progress bar has a parent, it triggers a rerendering of the
@@ -324,8 +327,8 @@ the last time.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.update">
-<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the progress value. If this progress bar has no parent
 progress bar, a rerendering of this progress bar is made.</p>
 <dl class="field-list simple">
@@ -336,8 +339,8 @@ progress bar, a rerendering of this progress bar is made.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.progressbar.ProgressBar.increment">
-<code class="sig-name descname"><span class="pre">increment</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.increment" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.progressbar.ProgressBar.increment">
+<span class="sig-name descname"><span class="pre">increment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.progressbar.ProgressBar.increment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the progress bar by incrementing the progress by the given
 integral amount.</p>
 <dl class="field-list simple">

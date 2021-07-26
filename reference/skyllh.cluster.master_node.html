@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -212,56 +215,56 @@
 <div class="section" id="module-skyllh.cluster.master_node">
 <span id="skyllh-cluster-master-node-module"></span><h1>skyllh.cluster.master_node module<a class="headerlink" href="#module-skyllh.cluster.master_node" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.cluster.master_node.CNRegistryEntry">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.cluster.master_node.</span></code><code class="sig-name descname"><span class="pre">CNRegistryEntry</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cn_start_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cn_live_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.CNRegistryEntry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.CNRegistryEntry">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.cluster.master_node.</span></span><span class="sig-name descname"><span class="pre">CNRegistryEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cn_start_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cn_live_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.CNRegistryEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class provides an registry entry for a compute node. It holds the
 socket to the compute node.</p>
-<dl class="py method">
-<dt id="skyllh.cluster.master_node.CNRegistryEntry.key">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">key</span></code><a class="headerlink" href="#skyllh.cluster.master_node.CNRegistryEntry.key" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.CNRegistryEntry.key">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#skyllh.cluster.master_node.CNRegistryEntry.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The CN’s identification key.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.cluster.master_node.CNRegistryEntry.send_command">
-<code class="sig-name descname"><span class="pre">send_command</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.CNRegistryEntry.send_command" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.CNRegistryEntry.send_command">
+<span class="sig-name descname"><span class="pre">send_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.CNRegistryEntry.send_command" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.cluster.master_node.MasterNode">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.cluster.master_node.</span></code><code class="sig-name descname"><span class="pre">MasterNode</span></code><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.MasterNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.cluster.master_node.</span></span><span class="sig-name descname"><span class="pre">MasterNode</span></span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The MasterNode class provides an entity to run the SkyLLH program as a
 master node, where compute nodes can register to, so the master node can
 distribute work to the compute nodes. The work distribution is handled
 through the MasterNode instance.</p>
-<dl class="py method">
-<dt id="skyllh.cluster.master_node.MasterNode.cn_registry">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cn_registry</span></code><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.cn_registry" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.MasterNode.cn_registry">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cn_registry</span></span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.cn_registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>The dictionary with the registered compute nodes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.cluster.master_node.MasterNode.clear_cn_registry">
-<code class="sig-name descname"><span class="pre">clear_cn_registry</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.clear_cn_registry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.MasterNode.clear_cn_registry">
+<span class="sig-name descname"><span class="pre">clear_cn_registry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.clear_cn_registry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.cluster.master_node.MasterNode.register_compute_nodes">
-<code class="sig-name descname"><span class="pre">register_compute_nodes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_cn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9999</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2048</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.register_compute_nodes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.MasterNode.register_compute_nodes">
+<span class="sig-name descname"><span class="pre">register_compute_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_cn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9999</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2048</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.register_compute_nodes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.cluster.master_node.MasterNode.send_request">
-<code class="sig-name descname"><span class="pre">send_request</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.send_request" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.MasterNode.send_request">
+<span class="sig-name descname"><span class="pre">send_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.send_request" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.cluster.master_node.MasterNode.shutdown_compute_nodes">
-<code class="sig-name descname"><span class="pre">shutdown_compute_nodes</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.shutdown_compute_nodes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.master_node.MasterNode.shutdown_compute_nodes">
+<span class="sig-name descname"><span class="pre">shutdown_compute_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.master_node.MasterNode.shutdown_compute_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends a stop command to all compute nodes.</p>
 </dd></dl>
 

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.livetime">
 <span id="skyllh-i3-livetime-module"></span><h1>skyllh.i3.livetime module<a class="headerlink" href="#module-skyllh.i3.livetime" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.livetime.I3Livetime">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.livetime.</span></code><code class="sig-name descname"><span class="pre">I3Livetime</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uptime_mjd_intervals_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.livetime.I3Livetime" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.livetime.I3Livetime">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.livetime.</span></span><span class="sig-name descname"><span class="pre">I3Livetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uptime_mjd_intervals_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.livetime.I3Livetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.livetime.html#skyllh.core.livetime.Livetime" title="skyllh.core.livetime.Livetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.livetime.Livetime</span></code></a></p>
 <p>The I3Livetime class provides the functionality to load a Livetime object
 from a good-run-list data file.</p>
@@ -237,8 +240,8 @@ calling the <code class="docutils literal notranslate"><span class="pre">assert_
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.i3.livetime.I3Livetime.from_GRL_files">
-<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">from_GRL_files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.livetime.I3Livetime.from_GRL_files" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.livetime.I3Livetime.from_GRL_files">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">from_GRL_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.livetime.I3Livetime.from_GRL_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads an I3Livetime instance from the given good-run-list (GRL) data
 file. The data file needs to contain the following data fields:</p>
 <blockquote>
@@ -257,7 +260,7 @@ file. The data file needs to contain the following data fields:</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pathfilenames</strong> (<em>str | list of str</em>) – The list of fully qualified file names of the GRL data files.</p>
+<dd class="field-odd"><p><strong>pathfilenames</strong> (<em>str</em><em> | </em><em>list of str</em>) – The list of fully qualified file names of the GRL data files.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>livetime</strong> (<em>I3Livetime instance</em>) – The created I3Livetime instance for the provided GRL data.</p>
@@ -266,8 +269,8 @@ file. The data file needs to contain the following data fields:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.livetime.I3Livetime.from_I3Dataset">
-<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">from_I3Dataset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.livetime.I3Livetime.from_I3Dataset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.livetime.I3Livetime.from_I3Dataset">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">from_I3Dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.livetime.I3Livetime.from_I3Dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads an I3Livetime instance from a given I3Dataset instance, which
 must have a good-run-list (GRL) files defined.</p>
 <dl class="field-list simple">

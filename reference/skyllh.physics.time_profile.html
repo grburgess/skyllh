@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -212,8 +215,8 @@
 <div class="section" id="module-skyllh.physics.time_profile">
 <span id="skyllh-physics-time-profile-module"></span><h1>skyllh.physics.time_profile module<a class="headerlink" href="#module-skyllh.physics.time_profile" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.physics.time_profile.TimeProfileModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.time_profile.</span></code><code class="sig-name descname"><span class="pre">TimeProfileModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.time_profile.</span></span><span class="sig-name descname"><span class="pre">TimeProfileModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for an emission time profile of a source.</p>
 <p>Creates a new time profile instance.</p>
@@ -225,27 +228,27 @@
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.t_start">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">t_start</span></code><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.t_start" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.t_start">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">t_start</span></span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.t_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MJD start time of the box profile.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.t_end">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">t_end</span></code><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.t_end" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.t_end">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">t_end</span></span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.t_end" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MJD end time of the box profile.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.duration">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">duration</span></code><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.duration" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.duration">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">duration</span></span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration (in days) of the time profile.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.move">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">move</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.move" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.move">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.move" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract method to move the time profile by the given amount of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -256,8 +259,8 @@ This can be a positive or negative time shift.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.update">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.update">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to update the time profile based on new
 fit parameter values. This method should return a boolean flag if an
 update was actually performed.</p>
@@ -270,15 +273,15 @@ parameter values.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.get_integral">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_integral</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.get_integral" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.get_integral">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.get_integral" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to calculate the integral of the time profile
 from time t1 to time t2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>t1</strong> (<em>float | array of float</em>) – The MJD start time of the integration.</p></li>
-<li><p><strong>t2</strong> (<em>float | array of float</em>) – The MJD end time of the integration.</p></li>
+<li><p><strong>t1</strong> (<em>float</em><em> | </em><em>array of float</em>) – The MJD start time of the integration.</p></li>
+<li><p><strong>t2</strong> (<em>float</em><em> | </em><em>array of float</em>) – The MJD end time of the integration.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -288,8 +291,8 @@ from time t1 to time t2.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.get_total_integral">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_total_integral</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.get_total_integral" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.get_total_integral">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_total_integral</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.get_total_integral" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to calculate the total integral of the time
 profile from t_start to t_end.</p>
 <dl class="field-list simple">
@@ -300,8 +303,8 @@ profile from t_start to t_end.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.TimeProfileModel.get_value">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_value</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.get_value" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.TimeProfileModel.get_value">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.TimeProfileModel.get_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the value of the time profile at time t.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -316,8 +319,8 @@ profile from t_start to t_end.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.time_profile.</span></code><code class="sig-name descname"><span class="pre">BoxTimeProfile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.time_profile.</span></span><span class="sig-name descname"><span class="pre">BoxTimeProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.time_profile.TimeProfileModel" title="skyllh.physics.time_profile.TimeProfileModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.time_profile.TimeProfileModel</span></code></a></p>
 <p>The BoxTimeProfile describes a box-shaped emission time profile of a
 source. It has the following fit parameters:</p>
@@ -339,8 +342,8 @@ source. It has the following fit parameters:</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.move">
-<code class="sig-name descname"><span class="pre">move</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.move" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.move" title="Permalink to this definition">¶</a></dt>
 <dd><p>Moves the box-shaped time profile by the time difference dt.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -350,21 +353,21 @@ This can be a positive or negative time shift.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.T0">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">T0</span></code><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.T0" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.T0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">T0</span></span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.T0" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time of the mid point of the box.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.Tw">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">Tw</span></code><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.Tw" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.Tw">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Tw</span></span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.Tw" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time width (in days) of the box.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.update">
-<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the box-shaped time profile with the new fit parameter
 values.</p>
 <dl class="field-list simple">
@@ -380,15 +383,15 @@ parameter values.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.get_integral">
-<code class="sig-name descname"><span class="pre">get_integral</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.get_integral" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.get_integral">
+<span class="sig-name descname"><span class="pre">get_integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.get_integral" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the integral of the box-shaped time profile from MJD time
 t1 to time t2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>t1</strong> (<em>float | array of float</em>) – The MJD start time(s) of the integration.</p></li>
-<li><p><strong>t2</strong> (<em>float | array of float</em>) – The MJD end time(s) of the integration.</p></li>
+<li><p><strong>t1</strong> (<em>float</em><em> | </em><em>array of float</em>) – The MJD start time(s) of the integration.</p></li>
+<li><p><strong>t2</strong> (<em>float</em><em> | </em><em>array of float</em>) – The MJD end time(s) of the integration.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -398,8 +401,8 @@ t1 to time t2.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.get_total_integral">
-<code class="sig-name descname"><span class="pre">get_total_integral</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.get_total_integral" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.get_total_integral">
+<span class="sig-name descname"><span class="pre">get_total_integral</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.get_total_integral" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the the total integral of the box-shaped time profile
 from t_start to t_end. By definition it is 1.</p>
 <dl class="field-list simple">
@@ -410,14 +413,14 @@ from t_start to t_end. By definition it is 1.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.time_profile.BoxTimeProfile.get_value">
-<code class="sig-name descname"><span class="pre">get_value</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.get_value" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.time_profile.BoxTimeProfile.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.time_profile.BoxTimeProfile.get_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the value of the box-shaped time profile at time t.
 For a box-shaped time profile the values are all equal to 1/duration
 for times within the time duration and zero otherwise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>t</strong> (<em>float | array of float</em>) – The MJD time(s) for which the time profile value(s) should get
+<dd class="field-odd"><p><strong>t</strong> (<em>float</em><em> | </em><em>array of float</em>) – The MJD time(s) for which the time profile value(s) should get
 retrieved.</p>
 </dd>
 <dt class="field-even">Returns</dt>

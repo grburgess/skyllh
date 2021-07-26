@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -216,39 +219,39 @@ source in the sky. What kind of properties this source has is modeled by a
 derived class. The most common one is the PointLikeSource source model for a
 point-like source at a given location in the sky with a given flux model.</p>
 <dl class="py class">
-<dt id="skyllh.physics.source.SourceLocation">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">SourceLocation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceLocation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceLocation">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">SourceLocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceLocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Stores the location of a source, i.e. right-ascention and declination.</p>
-<dl class="py method">
-<dt id="skyllh.physics.source.SourceLocation.ra">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ra</span></code><a class="headerlink" href="#skyllh.physics.source.SourceLocation.ra" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceLocation.ra">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ra</span></span><a class="headerlink" href="#skyllh.physics.source.SourceLocation.ra" title="Permalink to this definition">¶</a></dt>
 <dd><p>The right-ascention angle in radian of the source position.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.source.SourceLocation.dec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dec</span></code><a class="headerlink" href="#skyllh.physics.source.SourceLocation.dec" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceLocation.dec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dec</span></span><a class="headerlink" href="#skyllh.physics.source.SourceLocation.dec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The declination angle in radian of the source position.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.source.SourceModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">SourceModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">SourceModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The base class for all source models in Skyllh. Each source has a central
 location given by a right-ascention and declination location.</p>
-<dl class="py method">
-<dt id="skyllh.physics.source.SourceModel.loc">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">loc</span></code><a class="headerlink" href="#skyllh.physics.source.SourceModel.loc" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceModel.loc">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">loc</span></span><a class="headerlink" href="#skyllh.physics.source.SourceModel.loc" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location of the source.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.source.SourceModel.id">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#skyllh.physics.source.SourceModel.id" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceModel.id">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#skyllh.physics.source.SourceModel.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The ID of the source. It’s an integer generated with the
 id() function. Hence, it’s related to the memory address of the object.</p>
 </dd></dl>
@@ -256,8 +259,8 @@ id() function. Hence, it’s related to the memory address of the object.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.source.SourceCollection">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">SourceCollection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceCollection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">SourceCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.py.html#skyllh.core.py.ObjectCollection" title="skyllh.core.py.ObjectCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.py.ObjectCollection</span></code></a></p>
 <p>This class describes a collection of sources. It can be used to group
 sources into a single object, for instance for a stacking analysis.</p>
@@ -265,21 +268,21 @@ sources into a single object, for instance for a stacking analysis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>source_type</strong> (<em>type | None</em>) – The type of the source. If set to None (default), SourceModel will
+<li><p><strong>source_type</strong> (<em>type</em><em> | </em><em>None</em>) – The type of the source. If set to None (default), SourceModel will
 be used.</p></li>
-<li><p><strong>sources</strong> (<em>sequence of source_type instances | None</em>) – The sequence of sources this collection should be initalized with.</p></li>
+<li><p><strong>sources</strong> (<em>sequence of source_type instances</em><em> | </em><em>None</em>) – The sequence of sources this collection should be initalized with.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.physics.source.SourceCollection.cast">
-<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">cast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceCollection.cast" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceCollection.cast">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.SourceCollection.cast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts the given object to a SourceCollection object. If the cast
 fails, a TypeError with the given error message is raised.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj</strong> (<em>SourceModel | sequence of SourceModel | SourceCollection</em>) – The object that should be casted to SourceCollection.</p></li>
+<li><p><strong>obj</strong> (<a class="reference internal" href="#skyllh.physics.source.SourceModel" title="skyllh.physics.source.SourceModel"><em>SourceModel</em></a><em> | </em><em>sequence of SourceModel</em><em> | </em><a class="reference internal" href="#skyllh.physics.source.SourceCollection" title="skyllh.physics.source.SourceCollection"><em>SourceCollection</em></a>) – The object that should be casted to SourceCollection.</p></li>
 <li><p><strong>errmsg</strong> (<em>str</em>) – The error message if the cast fails.</p></li>
 </ul>
 </dd>
@@ -289,23 +292,23 @@ fails, a TypeError with the given error message is raised.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.source.SourceCollection.source_type">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">source_type</span></code><a class="headerlink" href="#skyllh.physics.source.SourceCollection.source_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceCollection.source_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">source_type</span></span><a class="headerlink" href="#skyllh.physics.source.SourceCollection.source_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The type of the source model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.source.SourceCollection.sources">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">sources</span></code><a class="headerlink" href="#skyllh.physics.source.SourceCollection.sources" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.SourceCollection.sources">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sources</span></span><a class="headerlink" href="#skyllh.physics.source.SourceCollection.sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of sources of type <code class="docutils literal notranslate"><span class="pre">source_type</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.source.Catalog">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">Catalog</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.Catalog" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.Catalog">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">Catalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.Catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.source.SourceCollection" title="skyllh.physics.source.SourceCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.source.SourceCollection</span></code></a></p>
 <p>This class describes a catalog of sources. It is derived from
 SourceCollection. A catalog has a name.</p>
@@ -314,43 +317,43 @@ SourceCollection. A catalog has a name.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the catalog.</p></li>
-<li><p><strong>source_type</strong> (<em>type | None</em>) – The type of the source. If set to None (default), the default type
+<li><p><strong>source_type</strong> (<em>type</em><em> | </em><em>None</em>) – The type of the source. If set to None (default), the default type
 defined by SourceCollection will be used.</p></li>
-<li><p><strong>sources</strong> (<em>sequence of source_type | None</em>) – The sequence of sources this catalog should be initalized with.</p></li>
+<li><p><strong>sources</strong> (<em>sequence of source_type</em><em> | </em><em>None</em>) – The sequence of sources this catalog should be initalized with.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.physics.source.Catalog.name">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#skyllh.physics.source.Catalog.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.Catalog.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#skyllh.physics.source.Catalog.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the catalog.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.source.Catalog.as_source_collection">
-<code class="sig-name descname"><span class="pre">as_source_collection</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.Catalog.as_source_collection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.Catalog.as_source_collection">
+<span class="sig-name descname"><span class="pre">as_source_collection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.Catalog.as_source_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SourceCollection object for this catalog and returns it.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.source.PointLikeSource">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">PointLikeSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.PointLikeSource" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSource">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">PointLikeSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.PointLikeSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.source.SourceModel" title="skyllh.physics.source.SourceModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.source.SourceModel</span></code></a></p>
 <p>The PointLikeSource class is a source model for a point-like source
 object in the sky at a given location (right-ascention and declination).</p>
-<dl class="py method">
-<dt id="skyllh.physics.source.PointLikeSource.ra">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ra</span></code><a class="headerlink" href="#skyllh.physics.source.PointLikeSource.ra" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSource.ra">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ra</span></span><a class="headerlink" href="#skyllh.physics.source.PointLikeSource.ra" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The right-ascention angle in radian of the source
 position.
 This is a short-cut for <cite>self.loc.ra</cite>.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.source.PointLikeSource.dec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dec</span></code><a class="headerlink" href="#skyllh.physics.source.PointLikeSource.dec" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSource.dec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dec</span></span><a class="headerlink" href="#skyllh.physics.source.PointLikeSource.dec" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The declination angle in radian of the source position.
 This is a short-cut for <cite>self.loc.dec</cite>.</p>
 </dd></dl>
@@ -358,34 +361,34 @@ This is a short-cut for <cite>self.loc.dec</cite>.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.source.PointLikeSourceCollection">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">PointLikeSourceCollection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCollection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSourceCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">PointLikeSourceCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.source.SourceCollection" title="skyllh.physics.source.SourceCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.source.SourceCollection</span></code></a></p>
 <p>Describes a collection of point-like sources.</p>
 <p>Creates a new collection of PointLikeSource objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>sources</strong> (<em>sequence of PointLikeSource instances | None</em>) – The sequence of PointLikeSource objects this collection should be
+<dd class="field-odd"><p><strong>sources</strong> (<em>sequence of PointLikeSource instances</em><em> | </em><em>None</em>) – The sequence of PointLikeSource objects this collection should be
 initalized with.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.physics.source.PointLikeSourceCollection.ra">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ra</span></code><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCollection.ra" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSourceCollection.ra">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ra</span></span><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCollection.ra" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The ndarray with the right-ascention of all the sources.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.source.PointLikeSourceCollection.dec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dec</span></code><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCollection.dec" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSourceCollection.dec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dec</span></span><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCollection.dec" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The ndarray with the declination of all the sources.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.source.PointLikeSourceCatalog">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></code><code class="sig-name descname"><span class="pre">PointLikeSourceCatalog</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCatalog" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.source.PointLikeSourceCatalog">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.source.</span></span><span class="sig-name descname"><span class="pre">PointLikeSourceCatalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.source.PointLikeSourceCatalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.source.Catalog" title="skyllh.physics.source.Catalog"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.source.Catalog</span></code></a></p>
 <p>Describes a catalog of point-like sources. The difference to a
 PointLikeSourceCollection is the additional properties of a catalog, e.g.
@@ -395,7 +398,7 @@ the name.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the point-like source catalog.</p></li>
-<li><p><strong>sources</strong> (<em>sequence of PointLikeSource instances | None</em>) – The sequence of PointLikeSource instances this catalog should be
+<li><p><strong>sources</strong> (<em>sequence of PointLikeSource instances</em><em> | </em><em>None</em>) – The sequence of PointLikeSource instances this catalog should be
 initalized with.</p></li>
 </ul>
 </dd>

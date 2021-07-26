@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -216,8 +219,8 @@
 <span id="skyllh-core-utils-trials-module"></span><h1>skyllh.core.utils.trials module<a class="headerlink" href="#module-skyllh.core.utils.trials" title="Permalink to this headline">¶</a></h1>
 <p>This module contains utility functions related analysis trials.</p>
 <dl class="py function">
-<dt id="skyllh.core.utils.trials.create_pseudo_data_file">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.trials.</span></code><code class="sig-name descname"><span class="pre">create_pseudo_data_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_bkg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.trials.create_pseudo_data_file" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.trials.create_pseudo_data_file">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.trials.</span></span><span class="sig-name descname"><span class="pre">create_pseudo_data_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_bkg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.trials.create_pseudo_data_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a pickle file that contains the pseudo data for a single trial.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,33 +229,33 @@
 <li><p><strong>rss</strong> (<a class="reference internal" href="skyllh.core.random.html#skyllh.core.random.RandomStateService" title="skyllh.core.random.RandomStateService"><em>RandomStateService</em></a>) – The RandomStateService instance to use for generating random numbers.</p></li>
 <li><p><strong>filename</strong> (<em>str</em>) – The data file name into which the generated pseudo data should get
 written to.</p></li>
-<li><p><strong>mean_n_bkg_list</strong> (<em>list of float | None</em>) – The mean number of background events that should be generated for
+<li><p><strong>mean_n_bkg_list</strong> (<em>list of float</em><em> | </em><em>None</em>) – The mean number of background events that should be generated for
 each dataset. If set to None (the default), the background
 generation method needs to obtain this number itself.</p></li>
 <li><p><strong>mean_n_sig</strong> (<em>float</em>) – The mean number of signal events that should be generated for the
 trial. The actual number of generated events will be drawn from a
 Poisson distribution with this given signal mean as mean.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord | None</em>) – The instance of TimeLord that should be used to time individual tasks.</p></li>
+<li><p><strong>tl</strong> (<a class="reference internal" href="skyllh.core.timing.html#skyllh.core.timing.TimeLord" title="skyllh.core.timing.TimeLord"><em>TimeLord</em></a><em> | </em><em>None</em>) – The instance of TimeLord that should be used to time individual tasks.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.utils.trials.load_pseudo_data">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.trials.</span></code><code class="sig-name descname"><span class="pre">load_pseudo_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.trials.load_pseudo_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.trials.load_pseudo_data">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.trials.</span></span><span class="sig-name descname"><span class="pre">load_pseudo_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.trials.load_pseudo_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the pseudo data for a single trial from the given file name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>str</em>) – The name of the file that contains the pseudo data.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord | None</em>) – The instance of TimeLord that should be used to time individual tasks.</p></li>
+<li><p><strong>tl</strong> (<a class="reference internal" href="skyllh.core.timing.html#skyllh.core.timing.TimeLord" title="skyllh.core.timing.TimeLord"><em>TimeLord</em></a><em> | </em><em>None</em>) – The instance of TimeLord that should be used to time individual tasks.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

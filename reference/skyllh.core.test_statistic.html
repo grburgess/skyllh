@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,14 +218,14 @@
 <p>The test_statistic module provides the classes for different test statistic
 functions.</p>
 <dl class="py class">
-<dt id="skyllh.core.test_statistic.TestStatistic">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.test_statistic.</span></code><code class="sig-name descname"><span class="pre">TestStatistic</span></code><a class="headerlink" href="#skyllh.core.test_statistic.TestStatistic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.test_statistic.TestStatistic">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.test_statistic.</span></span><span class="sig-name descname"><span class="pre">TestStatistic</span></span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatistic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is the abstract base class for a test statistic class.</p>
 <p>Constructs the test-statistic function instance.</p>
 <dl class="py method">
-<dt id="skyllh.core.test_statistic.TestStatistic.evaluate">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatistic.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.test_statistic.TestStatistic.evaluate">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatistic.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to evaluate the test-statistic function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -244,8 +247,8 @@ log-likelihood ratio function for the given log_lambda value.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.test_statistic.TestStatisticWilks">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.test_statistic.</span></code><code class="sig-name descname"><span class="pre">TestStatisticWilks</span></code><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.test_statistic.TestStatisticWilks">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.test_statistic.</span></span><span class="sig-name descname"><span class="pre">TestStatisticWilks</span></span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.test_statistic.TestStatistic" title="skyllh.core.test_statistic.TestStatistic"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.test_statistic.TestStatistic</span></code></a></p>
 <p>This class implements the standard Wilks theorem test-statistic function:</p>
 <blockquote>
@@ -254,8 +257,8 @@ log-likelihood ratio function for the given log_lambda value.</p></li>
 <p>where the sign(ns_best) is negative for ns_best &lt; 0, and positive otherwise.</p>
 <p>Constructs the test-statistic function instance.</p>
 <dl class="py method">
-<dt id="skyllh.core.test_statistic.TestStatisticWilks.evaluate">
-<code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilks.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.test_statistic.TestStatisticWilks.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilks.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates this test-statistic function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -278,8 +281,8 @@ By definition, the first element is the value of ‘ns’.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.test_statistic.</span></code><code class="sig-name descname"><span class="pre">TestStatisticWilksZeroNsTaylor</span></code><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.test_statistic.</span></span><span class="sig-name descname"><span class="pre">TestStatisticWilksZeroNsTaylor</span></span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.test_statistic.TestStatistic" title="skyllh.core.test_statistic.TestStatistic"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.test_statistic.TestStatistic</span></code></a></p>
 <p>Similar to the TestStatisticWilks class, this class implements the
 standard Wilks theorem test-statistic function. But for zero ns values, the
@@ -304,8 +307,8 @@ defined as:</p>
 <p>being its second derivative w.r.t. ns.</p>
 <p>Constructs the test-statistic function instance.</p>
 <dl class="py method">
-<dt id="skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor.evaluate">
-<code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grads</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grads</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.test_statistic.TestStatisticWilksZeroNsTaylor.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates this test-statistic function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

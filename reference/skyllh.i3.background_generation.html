@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.background_generation">
 <span id="skyllh-i3-background-generation-module"></span><h1>skyllh.i3.background_generation module<a class="headerlink" href="#module-skyllh.i3.background_generation" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.background_generation.</span></code><code class="sig-name descname"><span class="pre">FixedScrambledExpDataI3BkgGenMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_scrambler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.background_generation.</span></span><span class="sig-name descname"><span class="pre">FixedScrambledExpDataI3BkgGenMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_scrambler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.background_generation.html#skyllh.core.background_generation.BackgroundGenerationMethod" title="skyllh.core.background_generation.BackgroundGenerationMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.background_generation.BackgroundGenerationMethod</span></code></a></p>
 <p>This class implements the background event generation method for the
 IceCube detector using scrambled experimental data as background hypothesis
@@ -229,15 +232,15 @@ of events equal to the number of events in the dataset.</p>
 data.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.data_scrambler">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_scrambler</span></code><a class="headerlink" href="#skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.data_scrambler" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.data_scrambler">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data_scrambler</span></span><a class="headerlink" href="#skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.data_scrambler" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DataScrambler instance that implements the data scrambling.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.generate_events">
-<code class="sig-name descname"><span class="pre">generate_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.generate_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.generate_events">
+<span class="sig-name descname"><span class="pre">generate_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.background_generation.FixedScrambledExpDataI3BkgGenMethod.generate_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates background events from the given data, by scrambling the
 data. The number of events is equal to the size of the given dataset.</p>
 <dl class="field-list simple">

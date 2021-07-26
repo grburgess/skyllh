@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.pdf">
 <span id="skyllh-i3-pdf-module"></span><h1>skyllh.i3.pdf module<a class="headerlink" href="#module-skyllh.i3.pdf" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.pdf.I3EnergyPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.pdf.</span></code><code class="sig-name descname"><span class="pre">I3EnergyPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_logE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sinDec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_mcweight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_physicsweight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.pdf.</span></span><span class="sig-name descname"><span class="pre">I3EnergyPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_logE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sinDec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_mcweight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_physicsweight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.EnergyPDF" title="skyllh.core.pdf.EnergyPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.EnergyPDF</span></code></a>, <a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.UsesBinning" title="skyllh.core.binning.UsesBinning"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.binning.UsesBinning</span></code></a></p>
 <p>This is the base class for all IceCube specific energy PDF models.
 IceCube energy PDFs depend soley on the energy and the
@@ -235,50 +238,50 @@ The final data weight will be the product of data_mcweight and
 data_physicsweight.</p></li>
 <li><p><strong>logE_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the log(E) axis.</p></li>
 <li><p><strong>sinDec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the sin(declination) axis.</p></li>
-<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance | None</em>) – The smoothing filter to use for smoothing the energy histogram.
+<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance</em><em> | </em><em>None</em>) – The smoothing filter to use for smoothing the energy histogram.
 If None, no smoothing will be applied.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.hist_smoothing_method">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hist_smoothing_method</span></code><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_smoothing_method" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.hist_smoothing_method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">hist_smoothing_method</span></span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_smoothing_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The HistSmoothingMethod instance defining the smoothing filter of the
 energy PDF histogram.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.hist">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hist</span></code><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.hist">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">hist</span></span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The 2D logE-sinDec histogram array.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hist_mask_mc_covered</span></code><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">hist_mask_mc_covered</span></span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The boolean ndarray holding the mask of the 2D histogram
 bins for which there is monte-carlo coverage.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_zero_physics">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hist_mask_mc_covered_zero_physics</span></code><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_zero_physics" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_zero_physics">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">hist_mask_mc_covered_zero_physics</span></span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_zero_physics" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The boolean ndarray holding the mask of the 2D histogram
 bins for which there is monte-carlo coverage but zero physics
 contribution.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_with_physics">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hist_mask_mc_covered_with_physics</span></code><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_with_physics" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_with_physics">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">hist_mask_mc_covered_with_physics</span></span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.hist_mask_mc_covered_with_physics" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The boolean ndarray holding the mask of the 2D histogram
 bins for which there is monte-carlo coverage and has physics
 contribution.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.assert_is_valid_for_exp_data">
-<code class="sig-name descname"><span class="pre">assert_is_valid_for_exp_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.assert_is_valid_for_exp_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.assert_is_valid_for_exp_data">
+<span class="sig-name descname"><span class="pre">assert_is_valid_for_exp_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.assert_is_valid_for_exp_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if this energy PDF is valid for all the given experimental
 data.
 It checks if all the data is within the logE and sin(dec) binning range.</p>
@@ -307,8 +310,8 @@ must exist:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.pdf.I3EnergyPDF.get_prob">
-<code class="sig-name descname"><span class="pre">get_prob</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.get_prob" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.pdf.I3EnergyPDF.get_prob">
+<span class="sig-name descname"><span class="pre">get_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdf.I3EnergyPDF.get_prob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the energy probability (in logE) of each event.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -330,7 +333,7 @@ exist:</p>
 </ul>
 </p></li>
 <li><p><strong>fitparams</strong> (<em>None</em>) – Unused interface parameter.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to measure
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to measure
 timing information.</p></li>
 </ul>
 </dd>

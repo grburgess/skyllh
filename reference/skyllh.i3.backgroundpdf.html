@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.backgroundpdf">
 <span id="skyllh-i3-backgroundpdf-module"></span><h1>skyllh.i3.backgroundpdf module<a class="headerlink" href="#module-skyllh.i3.backgroundpdf" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">BackgroundI3SpatialPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_sinDec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">BackgroundI3SpatialPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_sinDec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.SpatialPDF" title="skyllh.core.pdf.SpatialPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.SpatialPDF</span></code></a>, <a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.UsesBinning" title="skyllh.core.binning.UsesBinning"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.binning.UsesBinning</span></code></a>, <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.IsBackgroundPDF" title="skyllh.core.pdf.IsBackgroundPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.IsBackgroundPDF</span></code></a></p>
 <p>This is the base class for all IceCube specific spatial background PDF
 models. IceCube spatial background PDFs depend solely on the zenith angle,
@@ -233,16 +236,16 @@ spatial background PDF along the sin(dec) axis.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.spline_order_sinDec">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">spline_order_sinDec</span></code><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.spline_order_sinDec" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.spline_order_sinDec">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">spline_order_sinDec</span></span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.spline_order_sinDec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The order (int) of the logarithmic spline function, that splines the
 background PDF, along the sin(dec) axis.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.add_events">
-<code class="sig-name descname"><span class="pre">add_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.add_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.add_events">
+<span class="sig-name descname"><span class="pre">add_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.add_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add events to spatial background PDF object and recalculate
 logarithmic spline function.</p>
 <dl class="field-list simple">
@@ -262,15 +265,15 @@ exist:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.reset">
-<code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.reset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the logarithmic spline to the original function, which was
 calculated when the object was initialized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.get_prob">
-<code class="sig-name descname"><span class="pre">get_prob</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.get_prob" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.get_prob">
+<span class="sig-name descname"><span class="pre">get_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF.get_prob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the spatial background probability on the sphere of each
 event.</p>
 <dl class="field-list simple">
@@ -287,7 +290,7 @@ to calculate the PDF values. The following data fields must exist:</p>
 </ul>
 </p></li>
 <li><p><strong>fitparams</strong> (<em>None</em>) – Unused interface parameter.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to measure
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to measure
 timing information.</p></li>
 </ul>
 </dd>
@@ -300,8 +303,8 @@ timing information.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.backgroundpdf.DataBackgroundI3SpatialPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">DataBackgroundI3SpatialPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.DataBackgroundI3SpatialPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.DataBackgroundI3SpatialPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">DataBackgroundI3SpatialPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.DataBackgroundI3SpatialPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF" title="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF</span></code></a></p>
 <p>This is the IceCube spatial background PDF, which gets constructed from
 experimental data.</p>
@@ -330,8 +333,8 @@ The default is 2.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.backgroundpdf.MCBackgroundI3SpatialPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">MCBackgroundI3SpatialPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics_weight_field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.MCBackgroundI3SpatialPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.MCBackgroundI3SpatialPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">MCBackgroundI3SpatialPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics_weight_field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_order_sinDec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.MCBackgroundI3SpatialPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF" title="skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.backgroundpdf.BackgroundI3SpatialPDF</span></code></a></p>
 <p>This is the IceCube spatial background PDF, which gets constructed from
 monte-carlo data.</p>
@@ -350,7 +353,7 @@ must exist:</p>
 </li>
 </ul>
 </p></li>
-<li><p><strong>physics_weight_field_names</strong> (<em>str | list of str</em>) – The name or the list of names of the monte-carlo data fields, which
+<li><p><strong>physics_weight_field_names</strong> (<em>str</em><em> | </em><em>list of str</em>) – The name or the list of names of the monte-carlo data fields, which
 should be used as event weights. If a list is given, the weight
 values of all the fields will be summed to construct the final event
 weight.</p></li>
@@ -364,8 +367,8 @@ The default is 2.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.backgroundpdf.DataBackgroundI3EnergyPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">DataBackgroundI3EnergyPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.DataBackgroundI3EnergyPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.DataBackgroundI3EnergyPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">DataBackgroundI3EnergyPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.DataBackgroundI3EnergyPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.i3.pdf.html#skyllh.i3.pdf.I3EnergyPDF" title="skyllh.i3.pdf.I3EnergyPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.pdf.I3EnergyPDF</span></code></a>, <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.IsBackgroundPDF" title="skyllh.core.pdf.IsBackgroundPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.IsBackgroundPDF</span></code></a></p>
 <p>This is the IceCube energy background PDF, which gets constructed from
 experimental data. This class is derived from I3EnergyPDF.</p>
@@ -392,7 +395,7 @@ event.</p>
 </p></li>
 <li><p><strong>logE_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the binning in log10(E).</p></li>
 <li><p><strong>sinDec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the sin(declination).</p></li>
-<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance | None</em>) – The smoothing filter to use for smoothing the energy histogram.
+<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance</em><em> | </em><em>None</em>) – The smoothing filter to use for smoothing the energy histogram.
 If None, no smoothing will be applied.</p></li>
 </ul>
 </dd>
@@ -400,8 +403,8 @@ If None, no smoothing will be applied.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.i3.backgroundpdf.MCBackgroundI3EnergyPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">MCBackgroundI3EnergyPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics_weight_field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.MCBackgroundI3EnergyPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.backgroundpdf.MCBackgroundI3EnergyPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">MCBackgroundI3EnergyPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics_weight_field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.backgroundpdf.MCBackgroundI3EnergyPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.i3.pdf.html#skyllh.i3.pdf.I3EnergyPDF" title="skyllh.i3.pdf.I3EnergyPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.i3.pdf.I3EnergyPDF</span></code></a>, <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.IsBackgroundPDF" title="skyllh.core.pdf.IsBackgroundPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.IsBackgroundPDF</span></code></a></p>
 <p>This is the IceCube energy background PDF, which gets constructed from
 monte-carlo data. This class is derived from I3EnergyPDF.</p>
@@ -431,13 +434,13 @@ event.</p>
 </li>
 </ul>
 </p></li>
-<li><p><strong>physics_weight_field_names</strong> (<em>str | list of str</em>) – The name or the list of names of the monte-carlo data fields, which
+<li><p><strong>physics_weight_field_names</strong> (<em>str</em><em> | </em><em>list of str</em>) – The name or the list of names of the monte-carlo data fields, which
 should be used as physics event weights. If a list is given, the
 weight values of all the fields will be summed to construct the
 final event physics weight.</p></li>
 <li><p><strong>logE_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the binning in log10(E).</p></li>
 <li><p><strong>sinDec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the sin(declination).</p></li>
-<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance | None</em>) – The smoothing filter to use for smoothing the energy histogram.
+<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance</em><em> | </em><em>None</em>) – The smoothing filter to use for smoothing the energy histogram.
 If None, no smoothing will be applied.</p></li>
 </ul>
 </dd>

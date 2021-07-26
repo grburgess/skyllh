@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -214,33 +217,33 @@
 <span id="skyllh-core-math-module"></span><h1>skyllh.core.math module<a class="headerlink" href="#module-skyllh.core.math" title="Permalink to this headline">¶</a></h1>
 <p>The <cite>math</cite> module contains classes for pure mathematical objects.</p>
 <dl class="py class">
-<dt id="skyllh.core.math.MathFunction">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.math.</span></code><code class="sig-name descname"><span class="pre">MathFunction</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.math.MathFunction" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.math.MathFunction">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.math.</span></span><span class="sig-name descname"><span class="pre">MathFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.math.MathFunction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This abstract base class provides an implementation for a mathematical
 function. Such a function has defined parameters, which are implemented as
 class properties. The tuple of parameter names is defined through the
 <cite>param_names</cite> property.</p>
-<dl class="py method">
-<dt id="skyllh.core.math.MathFunction.param_names">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">param_names</span></code><a class="headerlink" href="#skyllh.core.math.MathFunction.param_names" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.math.MathFunction.param_names">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">param_names</span></span><a class="headerlink" href="#skyllh.core.math.MathFunction.param_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tuple holding the names of the math function’s parameters.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.math.MathFunction.math_function_str">
-<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">math_function_str</span></code><a class="headerlink" href="#skyllh.core.math.MathFunction.math_function_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.math.MathFunction.math_function_str">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">math_function_str</span></span><a class="headerlink" href="#skyllh.core.math.MathFunction.math_function_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string showing the mathematical function of this MathFunction.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.math.MathFunction.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newparams</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.math.MathFunction.copy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.math.MathFunction.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newparams</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.math.MathFunction.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies this MathFunction object by calling the copy.deepcopy
 function, and sets new parameters if requested.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>newparams</strong> (<em>dict | None</em>) – The dictionary with the new parameter values to set, where the
+<dd class="field-odd"><p><strong>newparams</strong> (<em>dict</em><em> | </em><em>None</em>) – The dictionary with the new parameter values to set, where the
 dictionary key is the parameter name and the dictionary value is the
 new value of the parameter.</p>
 </dd>
@@ -248,8 +251,8 @@ new value of the parameter.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.math.MathFunction.set_params">
-<code class="sig-name descname"><span class="pre">set_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.math.MathFunction.set_params" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.math.MathFunction.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.math.MathFunction.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the parameters of the math function to the given parameter
 values.</p>
 <dl class="field-list simple">

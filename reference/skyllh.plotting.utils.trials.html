@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -214,8 +217,8 @@
 <div class="section" id="module-skyllh.plotting.utils.trials">
 <span id="skyllh-plotting-utils-trials-module"></span><h1>skyllh.plotting.utils.trials module<a class="headerlink" href="#module-skyllh.plotting.utils.trials" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="skyllh.plotting.utils.trials.plot_ns_fit_vs_mean_ns_inj">
-<code class="sig-prename descclassname"><span class="pre">skyllh.plotting.utils.trials.</span></code><code class="sig-name descname"><span class="pre">plot_ns_fit_vs_mean_ns_inj</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean_n_sig'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_fit_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ns'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rethist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.plotting.utils.trials.plot_ns_fit_vs_mean_ns_inj" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.plotting.utils.trials.plot_ns_fit_vs_mean_ns_inj">
+<span class="sig-prename descclassname"><span class="pre">skyllh.plotting.utils.trials.</span></span><span class="sig-name descname"><span class="pre">plot_ns_fit_vs_mean_ns_inj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean_n_sig'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_fit_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ns'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rethist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.plotting.utils.trials.plot_ns_fit_vs_mean_ns_inj" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a 2D histogram plot showing the fit number of signal events vs.
 the mean number of injected signal events.</p>
 <dl class="field-list simple">
@@ -232,20 +235,20 @@ Default is <code class="docutils literal notranslate"><span class="pre">'ns'</sp
 edges will be return as well.
 Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – The title of the plot.</p></li>
-<li><p><strong>figsize</strong> (<em>tuple | None</em>) – The two-element tuple (width,height) specifying the size of the figure.
+<li><p><strong>figsize</strong> (<em>tuple</em><em> | </em><em>None</em>) – The two-element tuple (width,height) specifying the size of the figure.
 If set to None, the default size (12,10) will be used.</p></li>
-<li><p><strong>line_color</strong> (<em>str | None</em>) – The color of the lines.
+<li><p><strong>line_color</strong> (<em>str</em><em> | </em><em>None</em>) – The color of the lines.
 The default is ‘#E37222’.</p></li>
 <li><p><strong>axis_fontsize</strong> (<em>float</em>) – The font size of the axis labels.</p></li>
 <li><p><strong>title_fontsize</strong> (<em>float</em>) – The font size of the plot title.</p></li>
 <li><p><strong>tick_fontsize</strong> (<em>float</em>) – The font size of the tick labels.</p></li>
-<li><p><strong>xlabel</strong> (<em>str | None</em>) – The label of the x-axis in math syntax.
+<li><p><strong>xlabel</strong> (<em>str</em><em> | </em><em>None</em>) – The label of the x-axis in math syntax.
 Default is <code class="docutils literal notranslate"><span class="pre">r'&lt;n&gt;_{\mathrm{sig,inj}}}'</span></code>.</p></li>
-<li><p><strong>ylabel</strong> (<em>str | None</em>) – The label of if y-axis in math syntax.
+<li><p><strong>ylabel</strong> (<em>str</em><em> | </em><em>None</em>) – The label of if y-axis in math syntax.
 Default is <code class="docutils literal notranslate"><span class="pre">r'n_\mathrm{sig,fit}'</span></code>.</p></li>
-<li><p><strong>ylim</strong> (<em>tuple | None</em>) – The (low,high)-two-element tuple specifying the y-axis limits of the
+<li><p><strong>ylim</strong> (<em>tuple</em><em> | </em><em>None</em>) – The (low,high)-two-element tuple specifying the y-axis limits of the
 main plot.</p></li>
-<li><p><strong>ratio_ylim</strong> (<em>tuple | None</em>) – The (low,high)-two-element tuple specifying the y-axis limits of the
+<li><p><strong>ratio_ylim</strong> (<em>tuple</em><em> | </em><em>None</em>) – The (low,high)-two-element tuple specifying the y-axis limits of the
 ratio plot in percentage.
 If set to None, the default (-100,100) will be used.</p></li>
 </ul>
@@ -269,8 +272,8 @@ This will only be returned, when the <code class="docutils literal notranslate">
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.plotting.utils.trials.plot_gamma_fit_vs_mean_ns_inj">
-<code class="sig-prename descclassname"><span class="pre">skyllh.plotting.utils.trials.</span></code><code class="sig-name descname"><span class="pre">plot_gamma_fit_vs_mean_ns_inj</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_inj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean_n_sig'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_fit_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gamma'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rethist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.plotting.utils.trials.plot_gamma_fit_vs_mean_ns_inj" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.plotting.utils.trials.plot_gamma_fit_vs_mean_ns_inj">
+<span class="sig-prename descclassname"><span class="pre">skyllh.plotting.utils.trials.</span></span><span class="sig-name descname"><span class="pre">plot_gamma_fit_vs_mean_ns_inj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_inj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean_n_sig'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_fit_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gamma'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rethist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.plotting.utils.trials.plot_gamma_fit_vs_mean_ns_inj" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a 2D histogram plot showing the fit spectral index gamma vs.
 the mean number of injected signal events.</p>
 <dl class="field-list simple">
@@ -289,18 +292,18 @@ Default is <code class="docutils literal notranslate"><span class="pre">'gamma'<
 edges will be return as well.
 Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – The title of the plot.</p></li>
-<li><p><strong>figsize</strong> (<em>tuple | None</em>) – The two-element tuple (width,height) specifying the size of the figure.
+<li><p><strong>figsize</strong> (<em>tuple</em><em> | </em><em>None</em>) – The two-element tuple (width,height) specifying the size of the figure.
 If set to None, the default size (12,10) will be used.</p></li>
-<li><p><strong>line_color</strong> (<em>str | None</em>) – The color of the lines.
+<li><p><strong>line_color</strong> (<em>str</em><em> | </em><em>None</em>) – The color of the lines.
 The default is ‘#E37222’.</p></li>
 <li><p><strong>axis_fontsize</strong> (<em>float</em>) – The font size of the axis labels.</p></li>
 <li><p><strong>title_fontsize</strong> (<em>float</em>) – The font size of the plot title.</p></li>
 <li><p><strong>tick_fontsize</strong> (<em>float</em>) – The font size of the tick labels.</p></li>
-<li><p><strong>xlabel</strong> (<em>str | None</em>) – The label of the x-axis in math syntax.
+<li><p><strong>xlabel</strong> (<em>str</em><em> | </em><em>None</em>) – The label of the x-axis in math syntax.
 Default is <code class="docutils literal notranslate"><span class="pre">r'&lt;n&gt;_{\mathrm{sig,inj}}}'</span></code>.</p></li>
-<li><p><strong>ylabel</strong> (<em>str | None</em>) – The label of if y-axis in math syntax.
+<li><p><strong>ylabel</strong> (<em>str</em><em> | </em><em>None</em>) – The label of if y-axis in math syntax.
 Default is <code class="docutils literal notranslate"><span class="pre">r'\gamma_\mathrm{fit}'</span></code>.</p></li>
-<li><p><strong>ratio_ylim</strong> (<em>tuple | None</em>) – The (low,high)-two-element tuple specifying the y-axis limits of the
+<li><p><strong>ratio_ylim</strong> (<em>tuple</em><em> | </em><em>None</em>) – The (low,high)-two-element tuple specifying the y-axis limits of the
 ratio plot in percentage.
 If set to None, the default (-100,100) will be used.</p></li>
 </ul>

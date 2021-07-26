@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.binning">
 <span id="skyllh-core-binning-module"></span><h1>skyllh.core.binning module<a class="headerlink" href="#module-skyllh.core.binning" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.binning.BinningDefinition">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.binning.</span></code><code class="sig-name descname"><span class="pre">BinningDefinition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binedges</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.binning.</span></span><span class="sig-name descname"><span class="pre">BinningDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binedges</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The BinningDefinition class provides a structure to hold histogram
 binning definitions for an analyis.</p>
@@ -227,52 +230,52 @@ binning definitions for an analyis.</p>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.name">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the binning setting. This must be an unique name
 for all the different binning settings used within a season.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.binedges">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">binedges</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.binedges" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.binedges">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">binedges</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.binedges" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numpy.ndarray holding the bin edges.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.nbins">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">nbins</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.nbins" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.nbins">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">nbins</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.nbins" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of bins, based on the number of bin edges (minus 1).</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.bincenters">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">bincenters</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.bincenters" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.bincenters">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bincenters</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.bincenters" title="Permalink to this definition">¶</a></dt>
 <dd><p>The center values of the bins.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.lower_edge">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lower_edge</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.lower_edge" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.lower_edge">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">lower_edge</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.lower_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>The lowest bin edge of the binning.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.upper_edge">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">upper_edge</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.upper_edge" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.upper_edge">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">upper_edge</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.upper_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>The upper most edge of the binning.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.range">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">range</span></code><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.range" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.range">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.range" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tuple (lower_edge, upper_edge) of the binning.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.any_data_out_of_binning_range">
-<code class="sig-name descname"><span class="pre">any_data_out_of_binning_range</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.any_data_out_of_binning_range" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.any_data_out_of_binning_range">
+<span class="sig-name descname"><span class="pre">any_data_out_of_binning_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.any_data_out_of_binning_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if any of the given data is outside of the binning range.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -286,8 +289,8 @@ False otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.binning.BinningDefinition.get_subset">
-<code class="sig-name descname"><span class="pre">get_subset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lower_edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_edge</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.get_subset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.BinningDefinition.get_subset">
+<span class="sig-name descname"><span class="pre">get_subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lower_edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_edge</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.BinningDefinition.get_subset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new BinningDefinition instance which contains only a subset
 of the bins of this BinningDefinition instance. The range of the subset
 is given by a lower and upper edge value.</p>
@@ -307,8 +310,8 @@ is given by a lower and upper edge value.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.binning.UsesBinning">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.binning.</span></code><code class="sig-name descname"><span class="pre">UsesBinning</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.UsesBinning">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.binning.</span></span><span class="sig-name descname"><span class="pre">UsesBinning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is a classifier class that can be used to define, that a class uses
 binning information for one or more dimensions.</p>
@@ -316,22 +319,22 @@ binning information for one or more dimensions.</p>
 BinningDefinition objects.</p>
 <p>This class provides the method <code class="docutils literal notranslate"><span class="pre">has_same_binning_as(obj)</span></code> to determine if
 a given object (that also uses binning) has the same binning.</p>
-<dl class="py method">
-<dt id="skyllh.core.binning.UsesBinning.binnings">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">binnings</span></code><a class="headerlink" href="#skyllh.core.binning.UsesBinning.binnings" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.UsesBinning.binnings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">binnings</span></span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.binnings" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of BinningDefinition objects, one for each
 dimension.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.binning.UsesBinning.binning_ndim">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">binning_ndim</span></code><a class="headerlink" href="#skyllh.core.binning.UsesBinning.binning_ndim" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.binning.UsesBinning.binning_ndim">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">binning_ndim</span></span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.binning_ndim" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The number of dimensions that uses binning.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.binning.UsesBinning.has_same_binning_as">
-<code class="sig-name descname"><span class="pre">has_same_binning_as</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.has_same_binning_as" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.UsesBinning.has_same_binning_as">
+<span class="sig-name descname"><span class="pre">has_same_binning_as</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.has_same_binning_as" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if this object has the same binning as the given object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -344,14 +347,14 @@ dimension.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.binning.UsesBinning.add_binning">
-<code class="sig-name descname"><span class="pre">add_binning</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.add_binning" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.UsesBinning.add_binning">
+<span class="sig-name descname"><span class="pre">add_binning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.add_binning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the given binning definition to the list of binnings.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>binning</strong> (<a class="reference internal" href="#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition to add.</p></li>
-<li><p><strong>name</strong> (<em>str |</em><em> (</em><em>default</em><em>) </em><em>None</em>) – The name of the binning. If not None and it’s different to the
+<li><p><strong>name</strong> (<em>str</em><em> | </em><em>(</em><em>default</em><em>) </em><em>None</em>) – The name of the binning. If not None and it’s different to the
 name of the given binning definition, a copy of the
 BinningDefinition object is made and the new name is set.</p></li>
 </ul>
@@ -360,12 +363,12 @@ BinningDefinition object is made and the new name is set.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.binning.UsesBinning.get_binning">
-<code class="sig-name descname"><span class="pre">get_binning</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.get_binning" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.binning.UsesBinning.get_binning">
+<span class="sig-name descname"><span class="pre">get_binning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.binning.UsesBinning.get_binning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the binning definition of the given name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str | int</em>) – The name of the binning definition. A string specifies the name and
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em><em> | </em><em>int</em>) – The name of the binning definition. A string specifies the name and
 an integer the dimension index.</p>
 </dd>
 <dt class="field-even">Returns</dt>

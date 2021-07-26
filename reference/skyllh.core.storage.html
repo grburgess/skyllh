@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,14 +216,14 @@
 <div class="section" id="module-skyllh.core.storage">
 <span id="skyllh-core-storage-module"></span><h1>skyllh.core.storage module<a class="headerlink" href="#module-skyllh.core.storage" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="skyllh.core.storage.register_FileLoader">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">register_FileLoader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formats</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileloader_cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.register_FileLoader" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.register_FileLoader">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">register_FileLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formats</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileloader_cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.register_FileLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers the given file formats (file extensions) to the given
 FileLoader class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>formats</strong> (<em>str | list of str</em>) – The list of file name extensions that should be mapped to the FileLoader
+<li><p><strong>formats</strong> (<em>str</em><em> | </em><em>list of str</em>) – The list of file name extensions that should be mapped to the FileLoader
 class.</p></li>
 <li><p><strong>fileloader_cls</strong> (<a class="reference internal" href="#skyllh.core.storage.FileLoader" title="skyllh.core.storage.FileLoader"><em>FileLoader</em></a>) – The subclass of FileLoader that should be used for the given file
 formats.</p></li>
@@ -230,20 +233,20 @@ formats.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.storage.create_FileLoader">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">create_FileLoader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.create_FileLoader" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.create_FileLoader">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">create_FileLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.create_FileLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates the appropriate FileLoader object for the given file names.
 It looks up the FileLoader class from the FileLoader registry for the
 file name extension of the first file name in the given list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pathfilenames</strong> (<em>str | sequence of str</em>) – The sequence of fully qualified file names of the files that should be
+<li><p><strong>pathfilenames</strong> (<em>str</em><em> | </em><em>sequence of str</em>) – The sequence of fully qualified file names of the files that should be
 loaded.</p></li>
 <li><p><strong>Parameters</strong> (<em>Additional</em>) – </p></li>
 <li><p><strong>---------------------</strong> – </p></li>
-<li><p><strong>parameters will be passed to the constructor method of the</strong> (<em>Additional</em>) – </p></li>
-<li><p><strong>FileLoader class.</strong> (<em>chosen</em>) – </p></li>
+<li><p><strong>the</strong> (<em>Additional parameters will be passed to the constructor method of</em>) – </p></li>
+<li><p><strong>class.</strong> (<em>chosen FileLoader</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -253,40 +256,40 @@ loaded.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.storage.assert_file_exists">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">assert_file_exists</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.assert_file_exists" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.assert_file_exists">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">assert_file_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.assert_file_exists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the given file exists and raises a RuntimeError if it does
 not exist.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.storage.FileLoader">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">FileLoader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.FileLoader" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.FileLoader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">FileLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.FileLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Initializes a new FileLoader instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pathfilenames</strong> (<em>str | sequence of str</em>) – The sequence of fully qualified file names of the data files that
+<dd class="field-odd"><p><strong>pathfilenames</strong> (<em>str</em><em> | </em><em>sequence of str</em>) – The sequence of fully qualified file names of the data files that
 need to be loaded.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.storage.FileLoader.pathfilename_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pathfilename_list</span></code><a class="headerlink" href="#skyllh.core.storage.FileLoader.pathfilename_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.storage.FileLoader.pathfilename_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pathfilename_list</span></span><a class="headerlink" href="#skyllh.core.storage.FileLoader.pathfilename_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of fully qualified file names of the data files.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.FileLoader.load_data">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.FileLoader.load_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.FileLoader.load_data">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.FileLoader.load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to load the data from the file.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.storage.NPYFileLoader">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">NPYFileLoader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.NPYFileLoader" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.NPYFileLoader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">NPYFileLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.NPYFileLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.storage.FileLoader" title="skyllh.core.storage.FileLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.storage.FileLoader</span></code></a></p>
 <p>The NPYFileLoader class provides the data loading functionality for
 numpy data files containing numpy arrays. It uses the <code class="docutils literal notranslate"><span class="pre">numpy.load</span></code>
@@ -295,26 +298,26 @@ several data files.</p>
 <p>Initializes a new FileLoader instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pathfilenames</strong> (<em>str | sequence of str</em>) – The sequence of fully qualified file names of the data files that
+<dd class="field-odd"><p><strong>pathfilenames</strong> (<em>str</em><em> | </em><em>sequence of str</em>) – The sequence of fully qualified file names of the data files that
 need to be loaded.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.storage.NPYFileLoader.load_data">
-<code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertion_except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.NPYFileLoader.load_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.NPYFileLoader.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertion_except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.NPYFileLoader.load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the data from the files specified through their fully qualified
 file names.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>keep_fields</strong> (<em>str | sequence of str | None</em>) – Load the data into memory only for these data fields. If set to
+<li><p><strong>keep_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em><em> | </em><em>None</em>) – Load the data into memory only for these data fields. If set to
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, all in-file-present data fields are loaded into memory.</p></li>
-<li><p><strong>dtype_convertions</strong> (<em>dict | None</em>) – If not None, this dictionary defines how data fields of specific
+<li><p><strong>dtype_convertions</strong> (<em>dict</em><em> | </em><em>None</em>) – If not None, this dictionary defines how data fields of specific
 data types get converted into the specified data types.
 This can be used to use less memory.</p></li>
-<li><p><strong>dtype_convertion_except_fields</strong> (<em>str | sequence of str | None</em>) – The sequence of field names whose data type should not get
+<li><p><strong>dtype_convertion_except_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em><em> | </em><em>None</em>) – The sequence of field names whose data type should not get
 converted.</p></li>
-<li><p><strong>efficiency_mode</strong> (<em>str | None</em>) – <p>The efficiency mode the data should get loaded with. Possible values
+<li><p><strong>efficiency_mode</strong> (<em>str</em><em> | </em><em>None</em>) – <p>The efficiency mode the data should get loaded with. Possible values
 are:</p>
 <blockquote>
 <div><ul>
@@ -351,8 +354,8 @@ value will be used.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.storage.PKLFileLoader">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">PKLFileLoader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkl_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.PKLFileLoader" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.PKLFileLoader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">PKLFileLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathfilenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkl_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.PKLFileLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.storage.FileLoader" title="skyllh.core.storage.FileLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.storage.FileLoader</span></code></a></p>
 <p>The PKLFileLoader class provides the data loading functionality for
 pickled Python data files containing Python data structures. It uses the
@@ -361,24 +364,24 @@ pickled Python data files containing Python data structures. It uses the
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pathfilenames</strong> (<em>str | sequence of str</em>) – The sequence of fully qualified file names of the data files that
+<li><p><strong>pathfilenames</strong> (<em>str</em><em> | </em><em>sequence of str</em>) – The sequence of fully qualified file names of the data files that
 need to be loaded.</p></li>
-<li><p><strong>pkl_encoding</strong> (<em>str | None</em>) – The encoding of the pickled data files. If None, the default
+<li><p><strong>pkl_encoding</strong> (<em>str</em><em> | </em><em>None</em>) – The encoding of the pickled data files. If None, the default
 encodings ‘ASCII’ and ‘latin1’ will be tried to load the data.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.storage.PKLFileLoader.pkl_encoding">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pkl_encoding</span></code><a class="headerlink" href="#skyllh.core.storage.PKLFileLoader.pkl_encoding" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.storage.PKLFileLoader.pkl_encoding">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pkl_encoding</span></span><a class="headerlink" href="#skyllh.core.storage.PKLFileLoader.pkl_encoding" title="Permalink to this definition">¶</a></dt>
 <dd><p>The encoding of the pickled data files. Can be None.
 If None, the default encodings ‘ASCII’ and ‘latin1’ will be tried to
 load the data.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.PKLFileLoader.load_data">
-<code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.PKLFileLoader.load_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.PKLFileLoader.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.PKLFileLoader.load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the data from the files specified through their fully qualified
 file names.</p>
 <dl class="field-list simple">
@@ -396,8 +399,8 @@ The file &lt;-&gt; object mapping order is preserved.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.storage.DataFieldRecordArray">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></code><code class="sig-name descname"><span class="pre">DataFieldRecordArray</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertion_except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.storage.</span></span><span class="sig-name descname"><span class="pre">DataFieldRecordArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_convertion_except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The DataFieldRecordArray class provides a data container similar to a numpy
 record ndarray. But the data fields are stored as individual numpy ndarray
@@ -407,7 +410,7 @@ access on the record ndarray.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>numpy record ndarray | dict | DataFieldRecordArray | None</em>) – The numpy record ndarray that needs to get transformed into the
+<li><p><strong>data</strong> (<em>numpy record ndarray</em><em> | </em><em>dict</em><em> | </em><a class="reference internal" href="#skyllh.core.storage.DataFieldRecordArray" title="skyllh.core.storage.DataFieldRecordArray"><em>DataFieldRecordArray</em></a><em> | </em><em>None</em>) – The numpy record ndarray that needs to get transformed into the
 DataFieldRecordArray instance. Alternative a dictionary with field
 names as keys and numpy ndarrays as values can be provided. If an
 instance of DataFieldRecordArray is provided, the new
@@ -415,12 +418,12 @@ DataFieldRecordArray gets constructed from the copy of the data of
 the provided DataFieldRecordArray instance.
 If set to <cite>None</cite>, the DataFieldRecordArray instance is initialized
 with no data and the length of the array is set to 0.</p></li>
-<li><p><strong>keep_fields</strong> (<em>str | sequence of str | None</em>) – If not None (default), this specifies the data fields that should
+<li><p><strong>keep_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em><em> | </em><em>None</em>) – If not None (default), this specifies the data fields that should
 get kept from the given data. Otherwise all data fields get kept.</p></li>
-<li><p><strong>dtype_convertions</strong> (<em>dict | None</em>) – If not None, this dictionary defines how data fields of specific
+<li><p><strong>dtype_convertions</strong> (<em>dict</em><em> | </em><em>None</em>) – If not None, this dictionary defines how data fields of specific
 data types get converted into the specified data types.
 This can be used to use less memory.</p></li>
-<li><p><strong>dtype_convertion_except_fields</strong> (<em>str | sequence of str | None</em>) – The sequence of field names whose data type should not get
+<li><p><strong>dtype_convertion_except_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em><em> | </em><em>None</em>) – The sequence of field names whose data type should not get
 converted.</p></li>
 <li><p><strong>copy</strong> (<em>bool</em>) – Flag if the input data should get copied. Default is True. If a
 DataFieldRecordArray instance is provided, this option is set to
@@ -428,22 +431,22 @@ DataFieldRecordArray instance is provided, this option is set to
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.field_name_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">field_name_list</span></code><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.field_name_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.field_name_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">field_name_list</span></span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.field_name_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of the field names of this DataFieldRecordArray.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.indices">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">indices</span></code><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.indices" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.indices">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">indices</span></span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The numpy ndarray holding the indices of this
 DataFieldRecordArray.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.append">
-<code class="sig-name descname"><span class="pre">append</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.append" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.append" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends the given DataFieldRecordArray to this DataFieldRecordArray
 instance.</p>
 <dl class="field-list simple">
@@ -456,8 +459,8 @@ Additional data fields are ignored.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.append_field">
-<code class="sig-name descname"><span class="pre">append_field</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.append_field" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.append_field">
+<span class="sig-name descname"><span class="pre">append_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.append_field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends a field and its data to this DataFieldRecordArray instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -479,8 +482,8 @@ Additional data fields are ignored.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.as_numpy_record_array">
-<code class="sig-name descname"><span class="pre">as_numpy_record_array</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.as_numpy_record_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.as_numpy_record_array">
+<span class="sig-name descname"><span class="pre">as_numpy_record_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.as_numpy_record_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a numpy record ndarray instance holding the data of this
 DataFieldRecordArray instance.</p>
 <dl class="field-list simple">
@@ -492,13 +495,13 @@ DataFieldRecordArray instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.copy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new DataFieldRecordArray that is a copy of this
 DataFieldRecordArray instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>keep_fields</strong> (<em>str | sequence of str | None</em>) – If not None (default), this specifies the data fields that should
+<dd class="field-odd"><p><strong>keep_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em><em> | </em><em>None</em>) – If not None (default), this specifies the data fields that should
 get kept from this DataFieldRecordArray. Otherwise all data fields
 get kept.</p>
 </dd>
@@ -506,8 +509,8 @@ get kept.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.remove_field">
-<code class="sig-name descname"><span class="pre">remove_field</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.remove_field" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.remove_field">
+<span class="sig-name descname"><span class="pre">remove_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.remove_field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes the given field from this array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -517,43 +520,43 @@ get kept.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.get_field_dtype">
-<code class="sig-name descname"><span class="pre">get_field_dtype</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.get_field_dtype" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.get_field_dtype">
+<span class="sig-name descname"><span class="pre">get_field_dtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.get_field_dtype" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the numpy dtype object of the given data field.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.set_field_dtype">
-<code class="sig-name descname"><span class="pre">set_field_dtype</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.set_field_dtype" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.set_field_dtype">
+<span class="sig-name descname"><span class="pre">set_field_dtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.set_field_dtype" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the data type of the given field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the data field.</p></li>
-<li><p><strong>dt</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.20)"><em>numpy.dtype</em></a>) – The dtype instance defining the new data type.</p></li>
+<li><p><strong>dt</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.21)"><em>numpy.dtype</em></a>) – The dtype instance defining the new data type.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.convert_dtypes">
-<code class="sig-name descname"><span class="pre">convert_dtypes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">convertions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.convert_dtypes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.convert_dtypes">
+<span class="sig-name descname"><span class="pre">convert_dtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">convertions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">except_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.convert_dtypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts the data type of the data fields of this
 DataFieldRecordArray. This method can be used to compress the data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>convertions</strong> (dict of <cite>old_dtype</cite> -&gt; <cite>new_dtype</cite>) – The dictionary with the old dtype as key and the new dtype as value.</p></li>
-<li><p><strong>except_fields</strong> (<em>sequence of str | None</em>) – The sequence of field names, which should not get converted.</p></li>
+<li><p><strong>except_fields</strong> (<em>sequence of str</em><em> | </em><em>None</em>) – The sequence of field names, which should not get converted.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.get_selection">
-<code class="sig-name descname"><span class="pre">get_selection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.get_selection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.get_selection">
+<span class="sig-name descname"><span class="pre">get_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.get_selection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an DataFieldRecordArray that contains a selection of the data
 of this DataFieldRecordArray instance.</p>
 <dl class="field-list simple">
@@ -569,8 +572,8 @@ original data.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.set_selection">
-<code class="sig-name descname"><span class="pre">set_selection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.set_selection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.set_selection">
+<span class="sig-name descname"><span class="pre">set_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.set_selection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a selection of the data of this DataFieldRecordArray instance
 to the data given in arr.</p>
 <dl class="field-list simple">
@@ -587,8 +590,8 @@ instance.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.rename_fields">
-<code class="sig-name descname"><span class="pre">rename_fields</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">convertions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">must_exist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.rename_fields" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.rename_fields">
+<span class="sig-name descname"><span class="pre">rename_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">convertions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">must_exist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.rename_fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Renames the given fields of this array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -606,13 +609,13 @@ does not exist, a KeyError is raised.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.tidy_up">
-<code class="sig-name descname"><span class="pre">tidy_up</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.tidy_up" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.tidy_up">
+<span class="sig-name descname"><span class="pre">tidy_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_fields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.tidy_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes all fields that are not specified through the keep_fields
 argument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>keep_fields</strong> (<em>str | sequence of str</em>) – The field name(s), that should not be removed.</p>
+<dd class="field-odd"><p><strong>keep_fields</strong> (<em>str</em><em> | </em><em>sequence of str</em>) – The field name(s), that should not be removed.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>TypeError</strong> – If keep_fields is not an instance of str or a sequence of str
@@ -622,8 +625,8 @@ argument.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.storage.DataFieldRecordArray.sort_by_field">
-<code class="sig-name descname"><span class="pre">sort_by_field</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.sort_by_field" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.storage.DataFieldRecordArray.sort_by_field">
+<span class="sig-name descname"><span class="pre">sort_by_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.storage.DataFieldRecordArray.sort_by_field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sorts the data along the given field name in ascending order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

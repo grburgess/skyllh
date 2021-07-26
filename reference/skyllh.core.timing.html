@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,47 +216,47 @@
 <div class="section" id="module-skyllh.core.timing">
 <span id="skyllh-core-timing-module"></span><h1>skyllh.core.timing module<a class="headerlink" href="#module-skyllh.core.timing" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.timing.TaskRecord">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.timing.</span></code><code class="sig-name descname"><span class="pre">TaskRecord</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tstart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TaskRecord" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskRecord">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.timing.</span></span><span class="sig-name descname"><span class="pre">TaskRecord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tstart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TaskRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Creates a new TaskRecord instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the task.</p></li>
-<li><p><strong>tstart</strong> (<em>float | 1d ndarray of float</em>) – The start time(s) of the task in seconds.</p></li>
-<li><p><strong>tend</strong> (<em>float | 1d ndarray of float</em>) – The end time(s) of the task in seconds.</p></li>
+<li><p><strong>tstart</strong> (<em>float</em><em> | </em><em>1d ndarray of float</em>) – The start time(s) of the task in seconds.</p></li>
+<li><p><strong>tend</strong> (<em>float</em><em> | </em><em>1d ndarray of float</em>) – The end time(s) of the task in seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskRecord.tstart">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">tstart</span></code><a class="headerlink" href="#skyllh.core.timing.TaskRecord.tstart" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskRecord.tstart">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">tstart</span></span><a class="headerlink" href="#skyllh.core.timing.TaskRecord.tstart" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The time stamps the execution of this task started.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskRecord.tend">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">tend</span></code><a class="headerlink" href="#skyllh.core.timing.TaskRecord.tend" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskRecord.tend">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">tend</span></span><a class="headerlink" href="#skyllh.core.timing.TaskRecord.tend" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The time stamps the execution of this task was stopped.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskRecord.duration">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">duration</span></code><a class="headerlink" href="#skyllh.core.timing.TaskRecord.duration" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskRecord.duration">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">duration</span></span><a class="headerlink" href="#skyllh.core.timing.TaskRecord.duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The total duration (without time overlap) the task was
 executed.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskRecord.niter">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">niter</span></code><a class="headerlink" href="#skyllh.core.timing.TaskRecord.niter" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskRecord.niter">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">niter</span></span><a class="headerlink" href="#skyllh.core.timing.TaskRecord.niter" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The number of times this task was executed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.timing.TaskRecord.join">
-<code class="sig-name descname"><span class="pre">join</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TaskRecord.join" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskRecord.join">
+<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TaskRecord.join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Joins this TaskRecord with the given TaskRecord instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -266,24 +269,24 @@ TaskRecord instance.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.timing.TimeLord">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.timing.</span></code><code class="sig-name descname"><span class="pre">TimeLord</span></code><a class="headerlink" href="#skyllh.core.timing.TimeLord" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.timing.</span></span><span class="sig-name descname"><span class="pre">TimeLord</span></span><a class="headerlink" href="#skyllh.core.timing.TimeLord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt id="skyllh.core.timing.TimeLord.task_name_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">task_name_list</span></code><a class="headerlink" href="#skyllh.core.timing.TimeLord.task_name_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord.task_name_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">task_name_list</span></span><a class="headerlink" href="#skyllh.core.timing.TimeLord.task_name_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of task names.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.timing.TimeLord.add_task_record">
-<code class="sig-name descname"><span class="pre">add_task_record</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.add_task_record" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord.add_task_record">
+<span class="sig-name descname"><span class="pre">add_task_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.add_task_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a given task record to the internal list of task records.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.timing.TimeLord.get_task_record">
-<code class="sig-name descname"><span class="pre">get_task_record</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.get_task_record" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord.get_task_record">
+<span class="sig-name descname"><span class="pre">get_task_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.get_task_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves a task record of the given name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -296,8 +299,8 @@ TaskRecord instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.timing.TimeLord.has_task_record">
-<code class="sig-name descname"><span class="pre">has_task_record</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.has_task_record" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord.has_task_record">
+<span class="sig-name descname"><span class="pre">has_task_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.has_task_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if this TimeLord instance has a task record of the given name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -311,8 +314,8 @@ name, and <code class="docutils literal notranslate"><span class="pre">False</sp
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.timing.TimeLord.join">
-<code class="sig-name descname"><span class="pre">join</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.join" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord.join">
+<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Joins a given TimeLord instance with this TimeLord instance. Tasks
 of the same name will be updated and new tasks will be added.</p>
 <dl class="field-list simple">
@@ -324,16 +327,16 @@ of this TimeLord instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.timing.TimeLord.task_timer">
-<code class="sig-name descname"><span class="pre">task_timer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.task_timer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TimeLord.task_timer">
+<span class="sig-name descname"><span class="pre">task_timer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TimeLord.task_timer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates TaskTimer instance for the given task name.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.timing.TaskTimer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.timing.</span></code><code class="sig-name descname"><span class="pre">TaskTimer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_lord</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TaskTimer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskTimer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.timing.</span></span><span class="sig-name descname"><span class="pre">TaskTimer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_lord</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.timing.TaskTimer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -343,22 +346,22 @@ of this TimeLord instance.</p>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskTimer.time_lord">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_lord</span></code><a class="headerlink" href="#skyllh.core.timing.TaskTimer.time_lord" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskTimer.time_lord">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">time_lord</span></span><a class="headerlink" href="#skyllh.core.timing.TaskTimer.time_lord" title="Permalink to this definition">¶</a></dt>
 <dd><p>The TimeLord instance that keeps track of the recorded tasks. This
 can be None, which means that the task should not get recorded.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskTimer.name">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#skyllh.core.timing.TaskTimer.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskTimer.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#skyllh.core.timing.TaskTimer.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name if the task.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.timing.TaskTimer.duration">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">duration</span></code><a class="headerlink" href="#skyllh.core.timing.TaskTimer.duration" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.timing.TaskTimer.duration">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">duration</span></span><a class="headerlink" href="#skyllh.core.timing.TaskTimer.duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration in seconds the task was executed.</p>
 </dd></dl>
 

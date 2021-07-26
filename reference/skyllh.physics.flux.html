@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -219,8 +222,8 @@ The units are defined using the astropy.units module and can be set through
 the properties <code class="docutils literal notranslate"><span class="pre">energy_unit</span></code>, <code class="docutils literal notranslate"><span class="pre">length_unit</span></code>, and <code class="docutils literal notranslate"><span class="pre">time_unit</span></code>.
 The default units are [energy] = GeV, [length] = cm, [time] = s.</p>
 <dl class="py function">
-<dt id="skyllh.physics.flux.get_conversion_factor_to_internal_flux_unit">
-<code class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></code><code class="sig-name descname"><span class="pre">get_conversion_factor_to_internal_flux_unit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.get_conversion_factor_to_internal_flux_unit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.get_conversion_factor_to_internal_flux_unit">
+<span class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></span><span class="sig-name descname"><span class="pre">get_conversion_factor_to_internal_flux_unit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.get_conversion_factor_to_internal_flux_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the unit conversion factor for converting the used flux
 unit of the given flux model into the skyllh internally used flux unit
 1/(GeV cm2 s).</p>
@@ -236,15 +239,15 @@ factor.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.flux.FluxModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></code><code class="sig-name descname"><span class="pre">FluxModel</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></span><span class="sig-name descname"><span class="pre">FluxModel</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for all flux models.
 This base class defines the units used for the flux calculation. At this
 point the function form of the flux model is not yet defined.</p>
 <dl class="py attribute">
-<dt id="skyllh.physics.flux.FluxModel.energy_unit">
-<code class="sig-name descname"><span class="pre">energy_unit</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel.energy_unit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.energy_unit">
+<span class="sig-name descname"><span class="pre">energy_unit</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.energy_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The used unit of energy.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -254,8 +257,8 @@ point the function form of the flux model is not yet defined.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.physics.flux.FluxModel.length_unit">
-<code class="sig-name descname"><span class="pre">length_unit</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel.length_unit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.length_unit">
+<span class="sig-name descname"><span class="pre">length_unit</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.length_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The used unit of length.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -265,8 +268,8 @@ point the function form of the flux model is not yet defined.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.physics.flux.FluxModel.time_unit">
-<code class="sig-name descname"><span class="pre">time_unit</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel.time_unit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.time_unit">
+<span class="sig-name descname"><span class="pre">time_unit</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.time_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The used unit of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -276,8 +279,8 @@ point the function form of the flux model is not yet defined.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.physics.flux.FluxModel.math_function_str">
-<code class="sig-name descname"><span class="pre">math_function_str</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel.math_function_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.math_function_str">
+<span class="sig-name descname"><span class="pre">math_function_str</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.math_function_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string showing the mathematical function of the flux calculation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -286,50 +289,50 @@ point the function form of the flux model is not yet defined.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="id0">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">energy_unit</span></code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">energy_unit</span></span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unit of energy used for the flux calculation.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="id1">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">length_unit</span></code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">length_unit</span></span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unit of length used for the flux calculation.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="id2">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_unit</span></code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="id2">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">time_unit</span></span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unit of length used for the flux calculation.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.flux.FluxModel.unit_str">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">unit_str</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel.unit_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.unit_str">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">unit_str</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.unit_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string representation of the flux unit.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.flux.FluxModel.unit_latex_str">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">unit_latex_str</span></code><a class="headerlink" href="#skyllh.physics.flux.FluxModel.unit_latex_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.unit_latex_str">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">unit_latex_str</span></span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.unit_latex_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The latex string representation of the flux unit.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="id3">
-<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">math_function_str</span></code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="id3">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">math_function_str</span></span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string showing the mathematical function of the flux calculation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.flux.FluxModel.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newprop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.copy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newprop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies this flux model object by calling the copy.deepcopy function,
 and sets new properties if requested.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>newprop</strong> (<em>dict | None</em>) – The dictionary with the new property values to set, where the
+<dd class="field-odd"><p><strong>newprop</strong> (<em>dict</em><em> | </em><em>None</em>) – The dictionary with the new property values to set, where the
 dictionary key is the property name and the dictionary value is the
 new value of the property.</p>
 </dd>
@@ -337,8 +340,8 @@ new value of the property.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.physics.flux.FluxModel.set_properties">
-<code class="sig-name descname"><span class="pre">set_properties</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.set_properties" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.FluxModel.set_properties">
+<span class="sig-name descname"><span class="pre">set_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.FluxModel.set_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the properties of the flux model to the given property values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -351,8 +354,8 @@ values.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.flux.NormedFluxModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></code><code class="sig-name descname"><span class="pre">NormedFluxModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.NormedFluxModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.NormedFluxModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></span><span class="sig-name descname"><span class="pre">NormedFluxModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.NormedFluxModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.flux.FluxModel" title="skyllh.physics.flux.FluxModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.flux.FluxModel</span></code></a></p>
 <p>Abstract base class for all normalized flux models of the form</p>
 <blockquote>
@@ -364,8 +367,8 @@ dependence of the flux.</p>
 <p>The unit of dN/(dEdAdt) is [energy]^-1 [length]^-2 [time]^-1.
 By default the unit is GeV^-1 cm^-2 s^-1.</p>
 <dl class="py attribute">
-<dt id="skyllh.physics.flux.NormedFluxModel.Phi0">
-<code class="sig-name descname"><span class="pre">Phi0</span></code><a class="headerlink" href="#skyllh.physics.flux.NormedFluxModel.Phi0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.NormedFluxModel.Phi0">
+<span class="sig-name descname"><span class="pre">Phi0</span></span><a class="headerlink" href="#skyllh.physics.flux.NormedFluxModel.Phi0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flux value (dN/(dEdAdt)) at E0 in unit
 [energy]^-1 [length]^-2 [time]^-1.</p>
 <dl class="field-list simple">
@@ -376,8 +379,8 @@ By default the unit is GeV^-1 cm^-2 s^-1.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="skyllh.physics.flux.NormedFluxModel.E0">
-<code class="sig-name descname"><span class="pre">E0</span></code><a class="headerlink" href="#skyllh.physics.flux.NormedFluxModel.E0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.NormedFluxModel.E0">
+<span class="sig-name descname"><span class="pre">E0</span></span><a class="headerlink" href="#skyllh.physics.flux.NormedFluxModel.E0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Normalization energy in unit of energy.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -386,24 +389,24 @@ By default the unit is GeV^-1 cm^-2 s^-1.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="id4">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">Phi0</span></code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="id4">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Phi0</span></span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
 <dd><p>The flux value (dN/(dEdAdt)) at energy E0 in unit
 [energy]^-1 [length]^-2 [time]^-1.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="id5">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">E0</span></code><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="id5">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">E0</span></span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
 <dd><p>The normalization energy.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.flux.PowerLawFlux">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></code><code class="sig-name descname"><span class="pre">PowerLawFlux</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.PowerLawFlux" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.PowerLawFlux">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></span><span class="sig-name descname"><span class="pre">PowerLawFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.PowerLawFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.flux.NormedFluxModel" title="skyllh.physics.flux.NormedFluxModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.flux.NormedFluxModel</span></code></a></p>
 <p>Power law flux of the form</p>
 <blockquote>
@@ -423,22 +426,22 @@ By default that is GeV^-1 cm^-2 s^-1.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.physics.flux.PowerLawFlux.gamma">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">gamma</span></code><a class="headerlink" href="#skyllh.physics.flux.PowerLawFlux.gamma" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.PowerLawFlux.gamma">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">gamma</span></span><a class="headerlink" href="#skyllh.physics.flux.PowerLawFlux.gamma" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.flux.PowerLawFlux.math_function_str">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">math_function_str</span></code><a class="headerlink" href="#skyllh.physics.flux.PowerLawFlux.math_function_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.PowerLawFlux.math_function_str">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">math_function_str</span></span><a class="headerlink" href="#skyllh.physics.flux.PowerLawFlux.math_function_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string showing the mathematical function of the flux calculation.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.flux.CutoffPowerLawFlux">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></code><code class="sig-name descname"><span class="pre">CutoffPowerLawFlux</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ecut</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.CutoffPowerLawFlux" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.CutoffPowerLawFlux">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></span><span class="sig-name descname"><span class="pre">CutoffPowerLawFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ecut</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.CutoffPowerLawFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.flux.PowerLawFlux" title="skyllh.physics.flux.PowerLawFlux"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.flux.PowerLawFlux</span></code></a></p>
 <p>Cut-off power law flux of the form</p>
 <blockquote>
@@ -459,22 +462,22 @@ GeV^-1 cm^-2 s^-1.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.physics.flux.CutoffPowerLawFlux.Ecut">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">Ecut</span></code><a class="headerlink" href="#skyllh.physics.flux.CutoffPowerLawFlux.Ecut" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.CutoffPowerLawFlux.Ecut">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Ecut</span></span><a class="headerlink" href="#skyllh.physics.flux.CutoffPowerLawFlux.Ecut" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.flux.CutoffPowerLawFlux.math_function_str">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">math_function_str</span></code><a class="headerlink" href="#skyllh.physics.flux.CutoffPowerLawFlux.math_function_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.CutoffPowerLawFlux.math_function_str">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">math_function_str</span></span><a class="headerlink" href="#skyllh.physics.flux.CutoffPowerLawFlux.math_function_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string showing the mathematical function of the flux calculation.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.flux.LogParabolaPowerLawFlux">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></code><code class="sig-name descname"><span class="pre">LogParabolaPowerLawFlux</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.flux.LogParabolaPowerLawFlux">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.flux.</span></span><span class="sig-name descname"><span class="pre">LogParabolaPowerLawFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.physics.flux.NormedFluxModel" title="skyllh.physics.flux.NormedFluxModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.physics.flux.NormedFluxModel</span></code></a></p>
 <p>Power law flux with an index which varies as a log parabola in energy of
 the form</p>
@@ -483,19 +486,19 @@ the form</p>
 </div></blockquote>
 <p>The unit of dN/(dEdAdt) is [energy]^-1 [length]^-2 [time]^-1.
 By default the unit is GeV^-1 cm^-2 s^-1.</p>
-<dl class="py method">
-<dt id="skyllh.physics.flux.LogParabolaPowerLawFlux.alpha">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alpha</span></code><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux.alpha" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.LogParabolaPowerLawFlux.alpha">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux.alpha" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.flux.LogParabolaPowerLawFlux.beta">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">beta</span></code><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux.beta" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.LogParabolaPowerLawFlux.beta">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux.beta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.flux.LogParabolaPowerLawFlux.math_function_str">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">math_function_str</span></code><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux.math_function_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.flux.LogParabolaPowerLawFlux.math_function_str">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">math_function_str</span></span><a class="headerlink" href="#skyllh.physics.flux.LogParabolaPowerLawFlux.math_function_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string showing the mathematical function of the flux calculation.</p>
 </dd></dl>
 

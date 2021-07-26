@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,13 +216,13 @@
 <div class="section" id="module-skyllh.core.smoothing">
 <span id="skyllh-core-smoothing-module"></span><h1>skyllh.core.smoothing module<a class="headerlink" href="#module-skyllh.core.smoothing" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.smoothing.HistSmoothingMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></code><code class="sig-name descname"><span class="pre">HistSmoothingMethod</span></code><a class="headerlink" href="#skyllh.core.smoothing.HistSmoothingMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.HistSmoothingMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></span><span class="sig-name descname"><span class="pre">HistSmoothingMethod</span></span><a class="headerlink" href="#skyllh.core.smoothing.HistSmoothingMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for implementing a histogram smoothing method.</p>
 <dl class="py method">
-<dt id="skyllh.core.smoothing.HistSmoothingMethod.smooth">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">smooth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.HistSmoothingMethod.smooth" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.HistSmoothingMethod.smooth">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.HistSmoothingMethod.smooth" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to smooth the given histogram h.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -234,13 +237,13 @@
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.smoothing.NoHistSmoothingMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></code><code class="sig-name descname"><span class="pre">NoHistSmoothingMethod</span></code><a class="headerlink" href="#skyllh.core.smoothing.NoHistSmoothingMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.NoHistSmoothingMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></span><span class="sig-name descname"><span class="pre">NoHistSmoothingMethod</span></span><a class="headerlink" href="#skyllh.core.smoothing.NoHistSmoothingMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.smoothing.HistSmoothingMethod" title="skyllh.core.smoothing.HistSmoothingMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.smoothing.HistSmoothingMethod</span></code></a></p>
 <p>This class implements a no-shoothing histogram method.</p>
 <dl class="py method">
-<dt id="skyllh.core.smoothing.NoHistSmoothingMethod.smooth">
-<code class="sig-name descname"><span class="pre">smooth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.NoHistSmoothingMethod.smooth" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.NoHistSmoothingMethod.smooth">
+<span class="sig-name descname"><span class="pre">smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.NoHistSmoothingMethod.smooth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Does not perform any smoothing and just returns the input histogram.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -255,8 +258,8 @@
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.smoothing.NeighboringBinHistSmoothingMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></code><code class="sig-name descname"><span class="pre">NeighboringBinHistSmoothingMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_kernel_arrays</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.NeighboringBinHistSmoothingMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.NeighboringBinHistSmoothingMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></span><span class="sig-name descname"><span class="pre">NeighboringBinHistSmoothingMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_kernel_arrays</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.NeighboringBinHistSmoothingMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.smoothing.HistSmoothingMethod" title="skyllh.core.smoothing.HistSmoothingMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.smoothing.HistSmoothingMethod</span></code></a></p>
 <p>This class implements</p>
 <p>Constructs a new neighboring bin histogram smoothing method.</p>
@@ -267,16 +270,16 @@ axis should not get smoothed, the UNSMOOTH_AXIS constant should be
 used for that axis’ smoothing kernel array.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.ndim">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ndim</span></code><a class="headerlink" href="#skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.ndim" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.ndim">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ndim</span></span><a class="headerlink" href="#skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.ndim" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The dimensionality of the histogram this smoothing
 instances is made for.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.smooth">
-<code class="sig-name descname"><span class="pre">smooth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.smooth" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.smooth">
+<span class="sig-name descname"><span class="pre">smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.NeighboringBinHistSmoothingMethod.smooth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Smoothes the given histogram array h with the internal kernel array k. Both arrays must have the same dimensionality. The shape
 values of k must be smaller than or equal to the shape values of h.</p>
 <dl class="field-list simple">
@@ -292,23 +295,23 @@ values of k must be smaller than or equal to the shape values of h.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.smoothing.SmoothingFilter">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></code><code class="sig-name descname"><span class="pre">SmoothingFilter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_kernel_array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.SmoothingFilter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.SmoothingFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></span><span class="sig-name descname"><span class="pre">SmoothingFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_kernel_array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.SmoothingFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class provides a base class for a histogram smoothing filter. It
 provides an axis kernel array that defines how many neighboring bins of a
 histogram bin should be used to smooth that histogram bin.</p>
-<dl class="py method">
-<dt id="skyllh.core.smoothing.SmoothingFilter.axis_kernel_array">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">axis_kernel_array</span></code><a class="headerlink" href="#skyllh.core.smoothing.SmoothingFilter.axis_kernel_array" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.smoothing.SmoothingFilter.axis_kernel_array">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">axis_kernel_array</span></span><a class="headerlink" href="#skyllh.core.smoothing.SmoothingFilter.axis_kernel_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>The kernel array for a histogram axis.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.smoothing.BlockSmoothingFilter">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></code><code class="sig-name descname"><span class="pre">BlockSmoothingFilter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.BlockSmoothingFilter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.BlockSmoothingFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></span><span class="sig-name descname"><span class="pre">BlockSmoothingFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.BlockSmoothingFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.smoothing.SmoothingFilter" title="skyllh.core.smoothing.SmoothingFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.smoothing.SmoothingFilter</span></code></a></p>
 <p>This class defines the histogram smoothing filter for smoothing a
 histogram via a block kernel function. The half-width of that
@@ -322,8 +325,8 @@ bin, which should be used to smooth that histogram bin.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.smoothing.GaussianSmoothingFilter">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></code><code class="sig-name descname"><span class="pre">GaussianSmoothingFilter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.GaussianSmoothingFilter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.smoothing.GaussianSmoothingFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.smoothing.</span></span><span class="sig-name descname"><span class="pre">GaussianSmoothingFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.smoothing.GaussianSmoothingFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.smoothing.SmoothingFilter" title="skyllh.core.smoothing.SmoothingFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.smoothing.SmoothingFilter</span></code></a></p>
 <p>This class defines the histogram smoothing filter for smoothing a
 histogram via a Gaussian kernel function. The width of that Gaussian is

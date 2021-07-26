@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.optimize">
 <span id="skyllh-core-optimize-module"></span><h1>skyllh.core.optimize module<a class="headerlink" href="#module-skyllh.core.optimize" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.optimize.EventSelectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">EventSelectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.EventSelectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">EventSelectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is the abstract base class for all event selection method classes.
 The idea is to pre-select only events that contribute to the likelihood
@@ -227,16 +230,16 @@ are implemented through derived classes of this base class.</p>
 sources, i.e. the list of SourceModel instances.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.optimize.EventSelectionMethod.src_hypo_group_manager">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_hypo_group_manager</span></code><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.EventSelectionMethod.src_hypo_group_manager">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_hypo_group_manager</span></span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SourceHypoGroupManager instance, which defines the list of
 sources.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.EventSelectionMethod.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.EventSelectionMethod.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the SourceHypoGroupManager instance of the event selection
 method. This will also recreate the internal source numpy record array.</p>
 <dl class="field-list simple">
@@ -248,8 +251,8 @@ this event selection method.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.EventSelectionMethod.source_to_array">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">source_to_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.EventSelectionMethod.source_to_array">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">source_to_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to convert a sequence of SourceModel
 instances into a structured numpy ndarray with the source information
 in a format that is best understood my the actual event selection
@@ -267,8 +270,8 @@ for each source.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.EventSelectionMethod.select_events">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">select_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.EventSelectionMethod.select_events">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.EventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method selects the events, which will contribute to the
 log-likelihood ratio function.</p>
 <dl class="field-list simple">
@@ -278,7 +281,7 @@ log-likelihood ratio function.</p>
 <li><p><strong>retidxs</strong> (<em>bool</em>) – Flag if also the indices of of the selected events should get
 returned as 1d ndarray.
 Default is False.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>
@@ -297,8 +300,8 @@ True.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.optimize.AllEventSelectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">AllEventSelectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.AllEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.AllEventSelectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">AllEventSelectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.AllEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.optimize.EventSelectionMethod" title="skyllh.core.optimize.EventSelectionMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.optimize.EventSelectionMethod</span></code></a></p>
 <p>This event selection method selects all events.</p>
 <p>Creates a new event selection method instance.</p>
@@ -311,8 +314,8 @@ parameter.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.optimize.AllEventSelectionMethod.source_to_array">
-<code class="sig-name descname"><span class="pre">source_to_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.AllEventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.AllEventSelectionMethod.source_to_array">
+<span class="sig-name descname"><span class="pre">source_to_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.AllEventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to convert a sequence of SourceModel
 instances into a structured numpy ndarray with the source information
 in a format that is best understood my the actual event selection
@@ -330,8 +333,8 @@ for each source.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.AllEventSelectionMethod.select_events">
-<code class="sig-name descname"><span class="pre">select_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.AllEventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.AllEventSelectionMethod.select_events">
+<span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.AllEventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects all of the given events. Hence, the returned event array is
 the same as the given array.</p>
 <dl class="field-list simple">
@@ -342,7 +345,7 @@ the selection method should get applied.</p></li>
 <li><p><strong>retidxs</strong> (<em>bool</em>) – Flag if also the indices of of the selected events should get
 returned as 1d ndarray.
 Default is False.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>
@@ -361,8 +364,8 @@ True.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.optimize.SpatialEventSelectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">SpatialEventSelectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.SpatialEventSelectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">SpatialEventSelectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.optimize.EventSelectionMethod" title="skyllh.core.optimize.EventSelectionMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.optimize.EventSelectionMethod</span></code></a></p>
 <p>This class defines the base class for all spatial event selection
 methods.</p>
@@ -374,8 +377,8 @@ sources, i.e. the list of SourceModel instances.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.optimize.SpatialEventSelectionMethod.source_to_array">
-<code class="sig-name descname"><span class="pre">source_to_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialEventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.SpatialEventSelectionMethod.source_to_array">
+<span class="sig-name descname"><span class="pre">source_to_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialEventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts the given sequence of SourceModel instances into a
 structured numpy ndarray holding the necessary source information needed
 for this event selection method.</p>
@@ -394,8 +397,8 @@ for each source. It contains the following data fields: ‘ra’, ‘dec’.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.optimize.DecBandEventSectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">DecBandEventSectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.DecBandEventSectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.DecBandEventSectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">DecBandEventSectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.DecBandEventSectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.optimize.SpatialEventSelectionMethod" title="skyllh.core.optimize.SpatialEventSelectionMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.optimize.SpatialEventSelectionMethod</span></code></a></p>
 <p>This event selection method selects events within a declination band
 around a list of point-like source positions.</p>
@@ -411,16 +414,16 @@ events should get selected.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.optimize.DecBandEventSectionMethod.delta_angle">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">delta_angle</span></code><a class="headerlink" href="#skyllh.core.optimize.DecBandEventSectionMethod.delta_angle" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.DecBandEventSectionMethod.delta_angle">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delta_angle</span></span><a class="headerlink" href="#skyllh.core.optimize.DecBandEventSectionMethod.delta_angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The half-opening angle around the source in declination and
 right-ascention for which events should get selected.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.DecBandEventSectionMethod.select_events">
-<code class="sig-name descname"><span class="pre">select_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.DecBandEventSectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.DecBandEventSectionMethod.select_events">
+<span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.DecBandEventSectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the events within the declination band.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -438,7 +441,7 @@ The following data fields must exist:</p>
 <li><p><strong>retidxs</strong> (<em>bool</em>) – Flag if also the indices of of the selected events should get
 returned as 1d ndarray.
 Default is False.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>
@@ -457,8 +460,8 @@ True.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.optimize.RABandEventSectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">RABandEventSectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.RABandEventSectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.RABandEventSectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">RABandEventSectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.RABandEventSectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.optimize.SpatialEventSelectionMethod" title="skyllh.core.optimize.SpatialEventSelectionMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.optimize.SpatialEventSelectionMethod</span></code></a></p>
 <p>This event selection method selects events within a right-ascension band
 around a list of point-like source positions.</p>
@@ -474,16 +477,16 @@ which events should get selected.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.optimize.RABandEventSectionMethod.delta_angle">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">delta_angle</span></code><a class="headerlink" href="#skyllh.core.optimize.RABandEventSectionMethod.delta_angle" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.RABandEventSectionMethod.delta_angle">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delta_angle</span></span><a class="headerlink" href="#skyllh.core.optimize.RABandEventSectionMethod.delta_angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The half-opening angle around the source in declination and
 right-ascention for which events should get selected.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.RABandEventSectionMethod.select_events">
-<code class="sig-name descname"><span class="pre">select_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.RABandEventSectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.RABandEventSectionMethod.select_events">
+<span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.RABandEventSectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the events within the right-ascention band.</p>
 <p>The solid angle dOmega = dRA * dSinDec = dRA * dDec * cos(dec) is a
 function of declination, i.e. for a constant dOmega, the right-ascension
@@ -509,7 +512,7 @@ The following data fields must exist:</p>
 <li><p><strong>retidxs</strong> (<em>bool</em>) – Flag if also the indices of of the selected events should get
 returned as 1d ndarray.
 Default is False.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>
@@ -528,8 +531,8 @@ True.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.optimize.SpatialBoxEventSelectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">SpatialBoxEventSelectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialBoxEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.SpatialBoxEventSelectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">SpatialBoxEventSelectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialBoxEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.optimize.SpatialEventSelectionMethod" title="skyllh.core.optimize.SpatialEventSelectionMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.optimize.SpatialEventSelectionMethod</span></code></a></p>
 <p>This event selection method selects events within a spatial box in
 right-ascention and declination around a list of point-like source
@@ -545,16 +548,16 @@ get selected.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.optimize.SpatialBoxEventSelectionMethod.delta_angle">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">delta_angle</span></code><a class="headerlink" href="#skyllh.core.optimize.SpatialBoxEventSelectionMethod.delta_angle" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.SpatialBoxEventSelectionMethod.delta_angle">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delta_angle</span></span><a class="headerlink" href="#skyllh.core.optimize.SpatialBoxEventSelectionMethod.delta_angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The half-opening angle around the source in declination and
 right-ascention for which events should get selected.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.SpatialBoxEventSelectionMethod.select_events">
-<code class="sig-name descname"><span class="pre">select_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialBoxEventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.SpatialBoxEventSelectionMethod.select_events">
+<span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.SpatialBoxEventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the events within the spatial box in right-ascention and
 declination.</p>
 <p>The solid angle dOmega = dRA * dSinDec = dRA * dDec * cos(dec) is a
@@ -581,7 +584,7 @@ The following data fields must exist:</p>
 <li><p><strong>retidxs</strong> (<em>bool</em>) – Flag if also the indices of of the selected events should get
 returned as 1d ndarray.
 Default is False.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>
@@ -600,8 +603,8 @@ True.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.optimize.PsiFuncEventSelectionMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></code><code class="sig-name descname"><span class="pre">PsiFuncEventSelectionMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_name_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.PsiFuncEventSelectionMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.optimize.</span></span><span class="sig-name descname"><span class="pre">PsiFuncEventSelectionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_name_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.optimize.EventSelectionMethod" title="skyllh.core.optimize.EventSelectionMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.optimize.EventSelectionMethod</span></code></a></p>
 <p>This event selection method selects events whose psi value, i.e. the
 great circle distance of the event to the source, is smaller than the value
@@ -623,31 +626,31 @@ DataFieldRecordArray instance.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.optimize.PsiFuncEventSelectionMethod.psi_name">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">psi_name</span></code><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.psi_name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.PsiFuncEventSelectionMethod.psi_name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">psi_name</span></span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.psi_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the data field that provides the psi value of the event.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.optimize.PsiFuncEventSelectionMethod.func">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">func</span></code><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.func" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.PsiFuncEventSelectionMethod.func">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">func</span></span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.func" title="Permalink to this definition">¶</a></dt>
 <dd><p>The function that should get evaluated for each event. The call
 signature must be <code class="docutils literal notranslate"><span class="pre">func(*axis_data)</span></code>, where <code class="docutils literal notranslate"><span class="pre">*axis_data</span></code> is the
 event data of each required axis. The number of axes must match the
 provided axis names through the <code class="docutils literal notranslate"><span class="pre">axis_name_list</span></code> property.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.optimize.PsiFuncEventSelectionMethod.axis_name_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">axis_name_list</span></code><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.axis_name_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.optimize.PsiFuncEventSelectionMethod.axis_name_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">axis_name_list</span></span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.axis_name_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of data field names for each axis of the function defined
 through the <code class="docutils literal notranslate"><span class="pre">func</span></code> property.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.PsiFuncEventSelectionMethod.source_to_array">
-<code class="sig-name descname"><span class="pre">source_to_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.PsiFuncEventSelectionMethod.source_to_array">
+<span class="sig-name descname"><span class="pre">source_to_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.source_to_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts the given sequence of SourceModel instances into a
 structured numpy ndarray holding the necessary source information needed
 for this event selection method.</p>
@@ -665,8 +668,8 @@ is required.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.optimize.PsiFuncEventSelectionMethod.select_events">
-<code class="sig-name descname"><span class="pre">select_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.optimize.PsiFuncEventSelectionMethod.select_events">
+<span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retidxs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.optimize.PsiFuncEventSelectionMethod.select_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the events whose psi value is smaller than the value of the
 predefined function.</p>
 <dl class="field-list simple">
@@ -691,7 +694,7 @@ evaluated.</p>
 <li><p><strong>retidxs</strong> (<em>bool</em>) – Flag if also the indices of of the selected events should get
 returned as 1d ndarray.
 Default is False.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>

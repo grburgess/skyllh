@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,27 +216,27 @@
 <span id="skyllh-physics-model-module"></span><h1>skyllh.physics.model module<a class="headerlink" href="#module-skyllh.physics.model" title="Permalink to this headline">¶</a></h1>
 <p>This module defines the base classes for any physics models used by SkyLLH.</p>
 <dl class="py class">
-<dt id="skyllh.physics.model.PhysicsModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.model.</span></code><code class="sig-name descname"><span class="pre">PhysicsModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.model.PhysicsModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.model.</span></span><span class="sig-name descname"><span class="pre">PhysicsModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.model.PhysicsModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class provides a base class for all physics models like source
 models or background models.</p>
 <p>Creates a new PhysicsModel instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str | None</em>) – The name of the physics model. If set to <cite>None</cite>, the id of the
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em><em> | </em><em>None</em>) – The name of the physics model. If set to <cite>None</cite>, the id of the
 object is taken as name.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.physics.model.PhysicsModel.name">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#skyllh.physics.model.PhysicsModel.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModel.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#skyllh.physics.model.PhysicsModel.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the physics model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.model.PhysicsModel.id">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#skyllh.physics.model.PhysicsModel.id" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModel.id">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#skyllh.physics.model.PhysicsModel.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The ID of the physics model. It’s an integer generated
 with Python’s <cite>id</cite> function. Hence, it’s related to the memory address
 of the object.</p>
@@ -242,8 +245,8 @@ of the object.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.physics.model.PhysicsModelCollection">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.physics.model.</span></code><code class="sig-name descname"><span class="pre">PhysicsModelCollection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModelCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.physics.model.</span></span><span class="sig-name descname"><span class="pre">PhysicsModelCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.py.html#skyllh.core.py.ObjectCollection" title="skyllh.core.py.ObjectCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.py.ObjectCollection</span></code></a></p>
 <p>This class describes a collection of PhysicsModel instances. It can be
 used to group several physics models into a single object.</p>
@@ -253,22 +256,22 @@ model_type parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_type</strong> (<em>type | None</em>) – The type of the physics model. If set to None (default),
+<li><p><strong>model_type</strong> (<em>type</em><em> | </em><em>None</em>) – The type of the physics model. If set to None (default),
 PhysicsModel will be used.</p></li>
-<li><p><strong>models</strong> (<em>sequence of model_type instances | None</em>) – The sequence of physics models this collection should be initalized
+<li><p><strong>models</strong> (<em>sequence of model_type instances</em><em> | </em><em>None</em>) – The sequence of physics models this collection should be initalized
 with.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.physics.model.PhysicsModelCollection.cast">
-<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">cast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection.cast" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModelCollection.cast">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection.cast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Casts the given object to a PhysicsModelCollection object.
 If the cast fails, a TypeError with the given error message is raised.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj</strong> (<em>PhysicsModel instance | sequence of PhysicsModel instances |</em>) – PhysicsModelCollection | None
+<li><p><strong>obj</strong> (<em>PhysicsModel instance</em><em> | </em><em>sequence of PhysicsModel instances</em><em> |</em>) – PhysicsModelCollection | None
 The object that should be casted to PhysicsModelCollection.</p></li>
 <li><p><strong>errmsg</strong> (<em>str</em>) – The error message if the cast fails.</p></li>
 </ul>
@@ -283,15 +286,15 @@ PhysicsModelCollection instance, it will be returned.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.model.PhysicsModelCollection.model_type">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model_type</span></code><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection.model_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModelCollection.model_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">model_type</span></span><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection.model_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The type of the physics model.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.physics.model.PhysicsModelCollection.models">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">models</span></code><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection.models" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.physics.model.PhysicsModelCollection.models">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">models</span></span><a class="headerlink" href="#skyllh.physics.model.PhysicsModelCollection.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of models of type <cite>model_type</cite>.</p>
 </dd></dl>
 

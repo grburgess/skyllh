@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,8 +218,8 @@
 <div class="section" id="module-skyllh.i3.utils.sensitivity">
 <span id="skyllh-i3-utils-sensitivity-module"></span><h1>skyllh.i3.utils.sensitivity module<a class="headerlink" href="#module-skyllh.i3.utils.sensitivity" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="skyllh.i3.utils.sensitivity.generate_ps_sin_dec_h0_ts_values">
-<code class="sig-prename descclassname"><span class="pre">skyllh.i3.utils.sensitivity.</span></code><code class="sig-name descname"><span class="pre">generate_ps_sin_dec_h0_ts_values</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.utils.sensitivity.generate_ps_sin_dec_h0_ts_values" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.utils.sensitivity.generate_ps_sin_dec_h0_ts_values">
+<span class="sig-prename descclassname"><span class="pre">skyllh.i3.utils.sensitivity.</span></span><span class="sig-name descname"><span class="pre">generate_ps_sin_dec_h0_ts_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.utils.sensitivity.generate_ps_sin_dec_h0_ts_values" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates sets of null-hypothesis, i.e. background-only trial data
 events, test-statistic values for the given point-source analysis for a
 grid of sin(dec) values.
@@ -240,10 +243,10 @@ This parameter specifies the number of iterations to perform.
 For each iteration the RandomStateService is re-seeded with a seed that
 is incremented by 1.
 Default is 1.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The optional parent progress bar.</p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The optional parent progress bar.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -259,8 +262,8 @@ sin(dec) values and iterations.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_sensitivity_curve">
-<code class="sig-prename descclassname"><span class="pre">skyllh.i3.utils.sensitivity.</span></code><code class="sig-name descname"><span class="pre">estimate_ps_sin_dec_sensitivity_curve</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_vals_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0075</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_sensitivity_curve" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_sensitivity_curve">
+<span class="sig-prename descclassname"><span class="pre">skyllh.i3.utils.sensitivity.</span></span><span class="sig-name descname"><span class="pre">estimate_ps_sin_dec_sensitivity_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_vals_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0075</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_sensitivity_curve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates the point-source sensitivity of the given analysis as a
 function of sin(dec). This function places a PointLikeSource source on the
 given declination values and estimates its sensitivity.</p>
@@ -291,18 +294,18 @@ iterations to perform for each sensitivity.
 For each iteration the RandomStateService is re-seeded with a seed that
 is incremented by 1.
 Default is 1.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>. If <cite>poisson</cite> is set to True, the actual number of
 generated signal events will be drawn from a Poisson distribution
 with the given mean number of signal events.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The optional parent progress bar.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The optional parent progress bar.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>additional keyword arguments are passed to the estimate_sensitivity</strong> (<em>Any</em>) – </p></li>
+<li><p><strong>estimate_sensitivity</strong> (<em>Any additional keyword arguments are passed to the</em>) – </p></li>
 <li><p><strong>function.</strong> – </p></li>
 </ul>
 </dd>
@@ -323,8 +326,8 @@ scaled to obtain the flux for the estimated sensitivity.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_discovery_potential_curve">
-<code class="sig-prename descclassname"><span class="pre">skyllh.i3.utils.sensitivity.</span></code><code class="sig-name descname"><span class="pre">estimate_ps_sin_dec_discovery_potential_curve</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_vals_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0027</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0075</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_discovery_potential_curve" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_discovery_potential_curve">
+<span class="sig-prename descclassname"><span class="pre">skyllh.i3.utils.sensitivity.</span></span><span class="sig-name descname"><span class="pre">estimate_ps_sin_dec_discovery_potential_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sin_dec_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_vals_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0027</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0075</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.utils.sensitivity.estimate_ps_sin_dec_discovery_potential_curve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates the point-source discovery potential of the given analysis as a
 function of sin(dec). This function places a PointLikeSource source on the
 given declination values and estimates its discovery potential.</p>
@@ -359,18 +362,18 @@ iterations to perform for each discovery potential estimation.
 For each iteration the RandomStateService is re-seeded with a seed that
 is incremented by 1.
 Default is 1.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>. If <cite>poisson</cite> is set to True, the actual number of
 generated signal events will be drawn from a Poisson distribution
 with the mean number of signal events, mu.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The optional parent progress bar.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The optional parent progress bar.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>additional keyword arguments are passed to the</strong> (<em>Any</em>) – </p></li>
+<li><p><strong>the</strong> (<em>Any additional keyword arguments are passed to</em>) – </p></li>
 <li><p><strong>function.</strong> (<em>estimate_discovery_potential</em>) – </p></li>
 </ul>
 </dd>

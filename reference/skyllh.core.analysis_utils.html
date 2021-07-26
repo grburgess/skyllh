@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.analysis_utils">
 <span id="skyllh-core-analysis-utils-module"></span><h1>skyllh.core.analysis_utils module<a class="headerlink" href="#module-skyllh.core.analysis_utils" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.pointlikesource_to_data_field_array">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">pointlikesource_to_data_field_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.pointlikesource_to_data_field_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.pointlikesource_to_data_field_array">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">pointlikesource_to_data_field_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.pointlikesource_to_data_field_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to transform a list of PointLikeSource sources into a numpy
 record ndarray. The resulting numpy record ndarray contains the following
 fields:</p>
@@ -240,8 +243,8 @@ fields:</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.calculate_pval_from_trials">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">calculate_pval_from_trials</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ts_threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.calculate_pval_from_trials" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.calculate_pval_from_trials">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">calculate_pval_from_trials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ts_threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.calculate_pval_from_trials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the percentage (p-value) of test-statistic trials that are
 above the given test-statistic critical value.
 In addition it calculates the standard deviation of the p-value assuming
@@ -257,8 +260,8 @@ binomial statistics.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.truncated_gamma_logpdf">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">truncated_gamma_logpdf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ts_above_eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_above_eta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.truncated_gamma_logpdf" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.truncated_gamma_logpdf">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">truncated_gamma_logpdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ts_above_eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_above_eta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.truncated_gamma_logpdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the -log(likelihood) of a sample of random numbers
 generated from a gamma pdf truncated from below at x=eta.</p>
 <dl class="field-list simple">
@@ -281,8 +284,8 @@ gamma pdf.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.calculate_critical_ts_from_gamma">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">calculate_critical_ts_from_gamma</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.calculate_critical_ts_from_gamma" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.calculate_critical_ts_from_gamma">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">calculate_critical_ts_from_gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.calculate_critical_ts_from_gamma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the critical test-statistic value corresponding
 to h0_ts_quantile by fitting the ts distribution with a truncated
 gamma function.</p>
@@ -303,8 +306,8 @@ from below.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.polynomial_fit">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">polynomial_fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_thr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.polynomial_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.polynomial_fit">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">polynomial_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_thr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.polynomial_fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs a polynomial fit on the p-values of test-statistic trials
 associated to each ns..
 Using the fitted parameters it computes the number of signal events
@@ -327,8 +330,8 @@ uncertainties, use 1/sigma.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.estimate_mean_nsignal_for_ts_quantile">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">estimate_mean_nsignal_for_ts_quantile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dmu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.estimate_mean_nsignal_for_ts_quantile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.estimate_mean_nsignal_for_ts_quantile">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">estimate_mean_nsignal_for_ts_quantile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">critical_ts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dmu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.estimate_mean_nsignal_for_ts_quantile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the mean number of signal events needed to be injected to
 reach a test statistic distribution with defined properties for the given
 analysis.</p>
@@ -337,30 +340,35 @@ analysis.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ana</strong> (<em>Analysis instance</em>) – The Analysis instance to use for the calculation.</p></li>
 <li><p><strong>rss</strong> (<em>instance of RandomStateService</em>) – The RandomStateService instance to use for generating random numbers.</p></li>
-<li><p><strong>h0_trials</strong> (<em>(</em><em>n_h0_trials</em><em>,</em><em>)</em><em>-shaped ndarray | None</em>) – The structured ndarray holding the trials for the null-hypothesis.
-If set to <cite>None</cite>, the number of trials is calculated
-from binomial statistics via <cite>h0_ts_quantile*(1-h0_ts_quantile)/eps**2</cite>,
-where <cite>eps</cite> is <cite>min(5e-3, h0_ts_quantile/10)</cite>.</p></li>
-<li><p><strong>h0_ts_quantile</strong> (<em>float</em>) – Null-hypothesis test statistic quantile.</p></li>
 <li><p><strong>p</strong> (<em>float</em>) – Desired probability of signal test statistic for exceeding
 <cite>h0_ts_quantile</cite> part of null-hypothesis test statistic threshold.</p></li>
 <li><p><strong>eps_p</strong> (<em>float</em>) – Precision in <cite>p</cite> as stopping condition for the calculation.</p></li>
 <li><p><strong>mu_range</strong> (<em>2-element sequence</em>) – The range of mu (lower,upper) to search for mean number of signal
 events.</p></li>
+<li><p><strong>critical_ts</strong> (<em>float</em><em> | </em><em>None</em>) – The critical test-statistic value that should be overcome by the signal
+distribution. If set to None, the null-hypothesis test-statistic
+distribution will be used to compute the critical TS value.</p></li>
+<li><p><strong>h0_trials</strong> (<em>(</em><em>n_h0_trials</em><em>,</em><em>)</em><em>-shaped ndarray</em><em> | </em><em>None</em>) – The structured ndarray holding the trials for the null-hypothesis.
+If set to <cite>None</cite>, the number of trials is calculated
+from binomial statistics via <cite>h0_ts_quantile*(1-h0_ts_quantile)/eps**2</cite>,
+where <cite>eps</cite> is <cite>min(5e-3, h0_ts_quantile/10)</cite>.</p></li>
+<li><p><strong>h0_ts_quantile</strong> (<em>float</em><em> | </em><em>None</em>) – Null-hypothesis test statistic quantile.
+If set to None, the critical test-statistic value that should be
+overcome by the signal distribution MUST be given.</p></li>
 <li><p><strong>min_dmu</strong> (<em>float</em>) – The minimum delta mu to use for calculating the derivative dmu/dp.
 The default is <code class="docutils literal notranslate"><span class="pre">0.5</span></code>.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>. If <cite>poisson</cite> is set to True, the actual number of
 generated signal events will be drawn from a Poisson distribution
 with the mean number of signal events, mu.</p></li>
-<li><p><strong>ppbar</strong> (<em>instance of ProgressBar | None</em>) – The possible parent ProgressBar instance.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional TimeLord instance that should be used to collect timing
+<li><p><strong>ppbar</strong> (<em>instance of ProgressBar</em><em> | </em><em>None</em>) – The possible parent ProgressBar instance.</p></li>
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to collect timing
 information about this function.</p></li>
-<li><p><strong>pathfilename</strong> (<em>string | None</em>) – Trial data file path including the filename.
+<li><p><strong>pathfilename</strong> (<em>string</em><em> | </em><em>None</em>) – Trial data file path including the filename.
 If set to None, generatedtrials won’t be saved.</p></li>
 </ul>
 </dd>
@@ -375,8 +383,8 @@ If set to None, generatedtrials won’t be saved.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.estimate_sensitivity">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">estimate_sensitivity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dmu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.estimate_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.estimate_sensitivity">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">estimate_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dmu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.estimate_sensitivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates the mean number of signal events that whould have to be
 injected into the data such that the test-statistic value of p*100% of all
 trials are larger than the critical test-statistic value c, which
@@ -390,7 +398,7 @@ respectively.</p>
 <li><p><strong>ana</strong> (<a class="reference internal" href="skyllh.core.analysis.html#skyllh.core.analysis.Analysis" title="skyllh.core.analysis.Analysis"><em>Analysis</em></a>) – The Analysis instance to use for sensitivity estimation.</p></li>
 <li><p><strong>rss</strong> (<a class="reference internal" href="skyllh.core.random.html#skyllh.core.random.RandomStateService" title="skyllh.core.random.RandomStateService"><em>RandomStateService</em></a>) – The RandomStateService instance to use for generating random
 numbers.</p></li>
-<li><p><strong>h0_trials</strong> (<em>(</em><em>n_h0_ts_vals</em><em>,</em><em>)</em><em>-shaped ndarray | None</em>) – The strutured ndarray holding the trials for the null-hypothesis.
+<li><p><strong>h0_trials</strong> (<em>(</em><em>n_h0_ts_vals</em><em>,</em><em>)</em><em>-shaped ndarray</em><em> | </em><em>None</em>) – The strutured ndarray holding the trials for the null-hypothesis.
 If set to <cite>None</cite>, the number of trials is calculated from binomial
 statistics via <cite>h0_ts_quantile*(1-h0_ts_quantile)/eps**2</cite>,
 where <cite>eps</cite> is <cite>min(5e-3, h0_ts_quantile/10)</cite>.</p></li>
@@ -399,22 +407,22 @@ where <cite>eps</cite> is <cite>min(5e-3, h0_ts_quantile/10)</cite>.</p></li>
 the null-hypothesis test statistic value threshold, which is defined
 through the <cite>h0_ts_quantile</cite> value.</p></li>
 <li><p><strong>eps_p</strong> (<em>float</em><em>, </em><em>optional</em>) – Precision in <cite>p</cite> for execution to break.</p></li>
-<li><p><strong>mu_range</strong> (<em>2-element sequence | None</em>) – Range to search for the mean number of signal events.
+<li><p><strong>mu_range</strong> (<em>2-element sequence</em><em> | </em><em>None</em>) – Range to search for the mean number of signal events.
 If set to None, the range (0, 10) will be used.</p></li>
 <li><p><strong>min_dmu</strong> (<em>float</em>) – The minimum delta mu to use for calculating the derivative dmu/dp.
 The default is <code class="docutils literal notranslate"><span class="pre">0.5</span></code>.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>. If <cite>poisson</cite> is set to True, the actual number of
 generated signal events will be drawn from a Poisson distribution
 with the mean number of signal events, mu.</p></li>
-<li><p><strong>ppbar</strong> (<em>instance of ProgressBar | None</em>) – The possible parent ProgressBar instance.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional TimeLord instance that should be used to collect timing
+<li><p><strong>ppbar</strong> (<em>instance of ProgressBar</em><em> | </em><em>None</em>) – The possible parent ProgressBar instance.</p></li>
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to collect timing
 information about this function.</p></li>
-<li><p><strong>pathfilename</strong> (<em>string | None</em>) – Trial data file path including the filename.
+<li><p><strong>pathfilename</strong> (<em>string</em><em> | </em><em>None</em>) – Trial data file path including the filename.
 If set to None, generated trials won’t be saved.</p></li>
 </ul>
 </dd>
@@ -429,8 +437,8 @@ If set to None, generated trials won’t be saved.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.estimate_discovery_potential">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">estimate_discovery_potential</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.733e-07</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dmu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.estimate_discovery_potential" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.estimate_discovery_potential">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">estimate_discovery_potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_trials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.733e-07</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dmu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.estimate_discovery_potential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates the mean number of signal events that whould have to be
 injected into the data such that the test-statistic value of p*100% of all
 trials are larger than the critical test-statistic value c, which
@@ -444,7 +452,7 @@ set to 5.733e-7, and 0.5, respectively.</p>
 <li><p><strong>ana</strong> (<a class="reference internal" href="skyllh.core.analysis.html#skyllh.core.analysis.Analysis" title="skyllh.core.analysis.Analysis"><em>Analysis</em></a>) – The Analysis instance to use for discovery potential estimation.</p></li>
 <li><p><strong>rss</strong> (<a class="reference internal" href="skyllh.core.random.html#skyllh.core.random.RandomStateService" title="skyllh.core.random.RandomStateService"><em>RandomStateService</em></a>) – The RandomStateService instance to use for generating random
 numbers.</p></li>
-<li><p><strong>h0_trials</strong> (<em>(</em><em>n_h0_ts_vals</em><em>,</em><em>)</em><em>-shaped ndarray | None</em>) – The structured ndarray holding the trials for the null-hypothesis.
+<li><p><strong>h0_trials</strong> (<em>(</em><em>n_h0_ts_vals</em><em>,</em><em>)</em><em>-shaped ndarray</em><em> | </em><em>None</em>) – The structured ndarray holding the trials for the null-hypothesis.
 If set to <cite>None</cite>, the number of trials is calculated from binomial
 statistics via <cite>h0_ts_quantile*(1-h0_ts_quantile)/eps**2</cite>,
 where <cite>eps</cite> is <cite>min(5e-3, h0_ts_quantile/10)</cite>.</p></li>
@@ -452,22 +460,22 @@ where <cite>eps</cite> is <cite>min(5e-3, h0_ts_quantile/10)</cite>.</p></li>
 <li><p><strong>p</strong> (<em>float</em><em>, </em><em>optional</em>) – Desired probability of the signal test statistic value to exceed the
 critical value.</p></li>
 <li><p><strong>eps_p</strong> (<em>float</em><em>, </em><em>optional</em>) – Precision in <cite>p</cite> for execution to break.</p></li>
-<li><p><strong>mu_range</strong> (<em>2-element sequence | None</em>) – Range to search for the mean number of signal events.
+<li><p><strong>mu_range</strong> (<em>2-element sequence</em><em> | </em><em>None</em>) – Range to search for the mean number of signal events.
 If set to None, the range (0, 10) will be used.</p></li>
 <li><p><strong>min_dmu</strong> (<em>float</em>) – The minimum delta mu to use for calculating the derivative dmu/dp.
 The default is <code class="docutils literal notranslate"><span class="pre">0.5</span></code>.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>. If <cite>poisson</cite> is set to True, the actual number of
 generated signal events will be drawn from a Poisson distribution
 with the mean number of signal events, mu.</p></li>
-<li><p><strong>ppbar</strong> (<em>instance of ProgressBar | None</em>) – The possible parent ProgressBar instance.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional TimeLord instance that should be used to collect timing
+<li><p><strong>ppbar</strong> (<em>instance of ProgressBar</em><em> | </em><em>None</em>) – The possible parent ProgressBar instance.</p></li>
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to collect timing
 information about this function.</p></li>
-<li><p><strong>pathfilename</strong> (<em>string | None</em>) – Trial data file path including the filename.
+<li><p><strong>pathfilename</strong> (<em>string</em><em> | </em><em>None</em>) – Trial data file path including the filename.
 If set to None, generated trials won’t be saved.</p></li>
 </ul>
 </dd>
@@ -483,8 +491,8 @@ discovery potential.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.generate_mu_of_p_spline_interpolation">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">generate_mu_of_p_spline_interpolation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cubic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.generate_mu_of_p_spline_interpolation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.generate_mu_of_p_spline_interpolation">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">generate_mu_of_p_spline_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h0_ts_quantile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cubic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.generate_mu_of_p_spline_interpolation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a spline interpolation for mu(p) function for a pre-defined
 range of mu, where mu is the mean number of injected signal events and p the
 probability for the ts value larger than the ts value corresponding to the
@@ -495,7 +503,7 @@ distribution.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ana</strong> (<em>instance of Analysis</em>) – The Analysis instance to use for the calculation.</p></li>
 <li><p><strong>rss</strong> (<em>instance of RandomStateService</em>) – The RandomStateService instance to use for generating random numbers.</p></li>
-<li><p><strong>h0_ts_vals</strong> (<em>(</em><em>n_h0_ts_vals</em><em>,</em><em>)</em><em>-shaped 1D ndarray | None</em>) – The 1D ndarray holding the test-statistic values for the
+<li><p><strong>h0_ts_vals</strong> (<em>(</em><em>n_h0_ts_vals</em><em>,</em><em>)</em><em>-shaped 1D ndarray</em><em> | </em><em>None</em>) – The 1D ndarray holding the test-statistic values for the
 null-hypothesis. If set to <cite>None</cite>, 100/(1-h0_ts_quantile)
 null-hypothesis trials will be generated.</p></li>
 <li><p><strong>h0_ts_quantile</strong> (<em>float</em>) – Null-hypothesis test statistic quantile, which should be exceeded by
@@ -507,16 +515,16 @@ create the interpolation spline for.</p></li>
 <li><p><strong>mu_step</strong> (<em>float</em>) – The step size of the mean number of signal events.</p></li>
 <li><p><strong>kind</strong> (<em>str</em>) – The kind of spline to generate. Possble values are ‘linear’ and ‘cubic’
 (default).</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>. If <cite>poisson</cite> is set to True, the actual number of
 generated signal events will be drawn from a Poisson distribution
 with the mean number of signal events, mu.</p></li>
-<li><p><strong>ppbar</strong> (<em>instance of ProgressBar | None</em>) – The possible parent ProgressBar instance.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional TimeLord instance that should be used to collect timing
+<li><p><strong>ppbar</strong> (<em>instance of ProgressBar</em><em> | </em><em>None</em>) – The possible parent ProgressBar instance.</p></li>
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to collect timing
 information about this function.</p></li>
 </ul>
 </dd>
@@ -527,8 +535,8 @@ information about this function.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.create_trial_data_file">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">create_trial_data_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_null</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_bkg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.create_trial_data_file" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.create_trial_data_file">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">create_trial_data_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_null</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_bkg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.create_trial_data_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and fills a trial data file with <cite>n_trials</cite> generated trials for
 each mean number of injected signal events from <cite>ns_min</cite> up to <cite>ns_max</cite> for
 a given analysis.</p>
@@ -539,7 +547,7 @@ a given analysis.</p>
 <li><p><strong>rss</strong> (<a class="reference internal" href="skyllh.core.random.html#skyllh.core.random.RandomStateService" title="skyllh.core.random.RandomStateService"><em>RandomStateService</em></a>) – The RandomStateService instance to use for generating random
 numbers.</p></li>
 <li><p><strong>n_trials</strong> (<em>int</em>) – The number of trials to perform for each hypothesis test.</p></li>
-<li><p><strong>mean_n_sig</strong> (<em>ndarray of float | float | 2-</em><em> or </em><em>3-element sequence of float</em>) – The array of mean number of injected signal events (MNOISEs) for which
+<li><p><strong>mean_n_sig</strong> (<em>ndarray of float</em><em> | </em><em>float</em><em> | </em><em>2-</em><em> or </em><em>3-element sequence of float</em>) – The array of mean number of injected signal events (MNOISEs) for which
 to generate trials. If this argument is not a ndarray, an array of
 MNOISEs is generated based on this argument.
 If a single float is given, only this given MNOISEs are injected.
@@ -547,7 +555,7 @@ If a 2-element sequence of floats is given, it specifies the range of
 MNOISEs with a step size of one.
 If a 3-element sequence of floats is given, it specifies the range plus
 the step size of the MNOISEs.</p></li>
-<li><p><strong>mean_n_sig_null</strong> (<em>ndarray of float | float | 2-</em><em> or </em><em>3-element sequence of</em>) – float
+<li><p><strong>mean_n_sig_null</strong> (<em>ndarray of float</em><em> | </em><em>float</em><em> | </em><em>2-</em><em> or </em><em>3-element sequence of</em>) – float
 The array of the fixed mean number of signal events (FMNOSEs) for the
 null-hypothesis for which to generate trials. If this argument is not a
 ndarray, an array of FMNOSEs is generated based on this argument.
@@ -556,21 +564,21 @@ If a 2-element sequence of floats is given, it specifies the range of
 FMNOSEs with a step size of one.
 If a 3-element sequence of floats is given, it specifies the range plus
 the step size of the FMNOSEs.</p></li>
-<li><p><strong>mean_n_bkg_list</strong> (<em>list of float | None</em>) – The mean number of background events that should be generated for
+<li><p><strong>mean_n_bkg_list</strong> (<em>list of float</em><em> | </em><em>None</em>) – The mean number of background events that should be generated for
 each dataset. This parameter is passed to the <code class="docutils literal notranslate"><span class="pre">do_trials</span></code> method of
 the <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> class. If set to None (the default), the background
 generation method needs to obtain this number itself.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>pathfilename</strong> (<em>string | None</em>) – Trial data file path including the filename.
+<li><p><strong>pathfilename</strong> (<em>string</em><em> | </em><em>None</em>) – Trial data file path including the filename.
 If set to None generated trials won’t be saved.</p></li>
-<li><p><strong>ncpu</strong> (<em>int | None</em>) – The number of CPUs to use.</p></li>
-<li><p><strong>ppbar</strong> (<em>instance of ProgressBar | None</em>) – The optional instance of the parent progress bar.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The instance of TimeLord that should be used to measure individual
+<li><p><strong>ncpu</strong> (<em>int</em><em> | </em><em>None</em>) – The number of CPUs to use.</p></li>
+<li><p><strong>ppbar</strong> (<em>instance of ProgressBar</em><em> | </em><em>None</em>) – The optional instance of the parent progress bar.</p></li>
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The instance of TimeLord that should be used to measure individual
 tasks.</p></li>
 </ul>
 </dd>
@@ -589,8 +597,8 @@ null-hypothesis used to generate the trials.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.extend_trial_data_file">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">extend_trial_data_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trial_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_null</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_bkg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.extend_trial_data_file" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.extend_trial_data_file">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">extend_trial_data_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ana</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trial_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_null</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_bkg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.extend_trial_data_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends to the trial data file <cite>n_trials</cite> generated trials for each
 mean number of injected signal events up to <cite>ns_max</cite> for a given analysis.</p>
 <dl class="field-list simple">
@@ -601,7 +609,7 @@ mean number of injected signal events up to <cite>ns_max</cite> for a given anal
 numbers.</p></li>
 <li><p><strong>n_trials</strong> (<em>int</em>) – The number of trials the trial data file needs to be extended by.</p></li>
 <li><p><strong>trial_data</strong> (<em>structured numpy ndarray</em>) – The structured numpy ndarray holding the trials.</p></li>
-<li><p><strong>mean_n_sig</strong> (<em>ndarray of float | float | 2-</em><em> or </em><em>3-element sequence of float</em>) – The array of mean number of injected signal events (MNOISEs) for which
+<li><p><strong>mean_n_sig</strong> (<em>ndarray of float</em><em> | </em><em>float</em><em> | </em><em>2-</em><em> or </em><em>3-element sequence of float</em>) – The array of mean number of injected signal events (MNOISEs) for which
 to generate trials. If this argument is not a ndarray, an array of
 MNOISEs is generated based on this argument.
 If a single float is given, only this given MNOISEs are injected.
@@ -609,7 +617,7 @@ If a 2-element sequence of floats is given, it specifies the range of
 MNOISEs with a step size of one.
 If a 3-element sequence of floats is given, it specifies the range plus
 the step size of the MNOISEs.</p></li>
-<li><p><strong>mean_n_sig_null</strong> (<em>ndarray of float | float | 2-</em><em> or </em><em>3-element sequence of</em>) – float
+<li><p><strong>mean_n_sig_null</strong> (<em>ndarray of float</em><em> | </em><em>float</em><em> | </em><em>2-</em><em> or </em><em>3-element sequence of</em>) – float
 The array of the fixed mean number of signal events (FMNOSEs) for the
 null-hypothesis for which to generate trials. If this argument is not a
 ndarray, an array of FMNOSEs is generated based on this argument.
@@ -618,13 +626,13 @@ If a 2-element sequence of floats is given, it specifies the range of
 FMNOSEs with a step size of one.
 If a 3-element sequence of floats is given, it specifies the range plus
 the step size of the FMNOSEs.</p></li>
-<li><p><strong>bkg_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
+<li><p><strong>bkg_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_events</cite> method of the
 background generation method class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>sig_kwargs</strong> (<em>dict | None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
+<li><p><strong>sig_kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – Additional keyword arguments for the <cite>generate_signal_events</cite> method
 of the <cite>SignalGenerator</cite> class. An usual keyword argument is
 <cite>poisson</cite>.</p></li>
-<li><p><strong>pathfilename</strong> (<em>string | None</em>) – Trial data file path including the filename.</p></li>
+<li><p><strong>pathfilename</strong> (<em>string</em><em> | </em><em>None</em>) – Trial data file path including the filename.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -635,8 +643,8 @@ mean number of injected signal events..</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.core.analysis_utils.calculate_upper_limit_distribution">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></code><code class="sig-name descname"><span class="pre">calculate_upper_limit_distribution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_bkg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.calculate_upper_limit_distribution" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.analysis_utils.calculate_upper_limit_distribution">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">calculate_upper_limit_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pathfilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_bkg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.analysis_utils.calculate_upper_limit_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to calculate upper limit distribution. It loads the trial data
 file containing test statistic distribution and calculates 10 percentile
 value for each mean number of injected signal event. Then it finds upper

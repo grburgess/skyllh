@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -214,8 +217,8 @@
 <span id="skyllh-core-livetime-module"></span><h1>skyllh.core.livetime module<a class="headerlink" href="#module-skyllh.core.livetime" title="Permalink to this headline">¶</a></h1>
 <p>The livetime module provides general functionality for detector up-time.</p>
 <dl class="py class">
-<dt id="skyllh.core.livetime.Livetime">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.livetime.</span></code><code class="sig-name descname"><span class="pre">Livetime</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uptime_mjd_intervals_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.livetime.</span></span><span class="sig-name descname"><span class="pre">Livetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uptime_mjd_intervals_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Livetime</span></code> class defines an interface to query the up-time of the
 detector.</p>
@@ -238,58 +241,58 @@ calling the <code class="docutils literal notranslate"><span class="pre">assert_
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.assert_mjd_intervals_integrity">
-<code class="sig-name descname"><span class="pre">assert_mjd_intervals_integrity</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.assert_mjd_intervals_integrity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.assert_mjd_intervals_integrity">
+<span class="sig-name descname"><span class="pre">assert_mjd_intervals_integrity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.assert_mjd_intervals_integrity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the internal MJD interval array conforms with all its
 data requirements.</p>
 <p>Raises TypeError if the data array is not a float64 array.
 Raises ValueError if the data integrity is broken.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.uptime_mjd_intervals_arr">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">uptime_mjd_intervals_arr</span></code><a class="headerlink" href="#skyllh.core.livetime.Livetime.uptime_mjd_intervals_arr" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.uptime_mjd_intervals_arr">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">uptime_mjd_intervals_arr</span></span><a class="headerlink" href="#skyllh.core.livetime.Livetime.uptime_mjd_intervals_arr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Nx2 numpy ndarray holding the up-time intervals of the detector.
 The first and second elements of the second axis is the start and stop
 time of the up-time interval, respectively.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.n_uptime_mjd_intervals">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_uptime_mjd_intervals</span></code><a class="headerlink" href="#skyllh.core.livetime.Livetime.n_uptime_mjd_intervals" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.n_uptime_mjd_intervals">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_uptime_mjd_intervals</span></span><a class="headerlink" href="#skyllh.core.livetime.Livetime.n_uptime_mjd_intervals" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of on-time intervals defined.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.livetime">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">livetime</span></code><a class="headerlink" href="#skyllh.core.livetime.Livetime.livetime" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.livetime">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">livetime</span></span><a class="headerlink" href="#skyllh.core.livetime.Livetime.livetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The integrated live-time in days, based on the internal up-time time
 intervals.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.time_window">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_window</span></code><a class="headerlink" href="#skyllh.core.livetime.Livetime.time_window" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.time_window">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">time_window</span></span><a class="headerlink" href="#skyllh.core.livetime.Livetime.time_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The two-element tuple holding the time window which is
 spanned by all the MJD uptime intervals.
 By definition this included possible detector down-time periods.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.time_start">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_start</span></code><a class="headerlink" href="#skyllh.core.livetime.Livetime.time_start" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.time_start">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">time_start</span></span><a class="headerlink" href="#skyllh.core.livetime.Livetime.time_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The start of the detector live-time.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.time_end">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_end</span></code><a class="headerlink" href="#skyllh.core.livetime.Livetime.time_end" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.time_end">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">time_end</span></span><a class="headerlink" href="#skyllh.core.livetime.Livetime.time_end" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The end of the detector live-time.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.load_from_ontime_mjd_intervals">
-<code class="sig-name descname"><span class="pre">load_from_ontime_mjd_intervals</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intervals</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.load_from_ontime_mjd_intervals" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.load_from_ontime_mjd_intervals">
+<span class="sig-name descname"><span class="pre">load_from_ontime_mjd_intervals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intervals</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.load_from_ontime_mjd_intervals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the internal MJD uptime intervals from the given interval
 array.</p>
 <dl class="field-list simple">
@@ -300,8 +303,8 @@ array.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.get_ontime_intervals_between">
-<code class="sig-name descname"><span class="pre">get_ontime_intervals_between</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.get_ontime_intervals_between" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.get_ontime_intervals_between">
+<span class="sig-name descname"><span class="pre">get_ontime_intervals_between</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.get_ontime_intervals_between" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a (N,2)-shaped ndarray holding the on-time detector intervals
 between the given time range from t_start to t_end.</p>
 <dl class="field-list simple">
@@ -320,12 +323,12 @@ upper bound of the last on-time interval.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.get_ontime_upto">
-<code class="sig-name descname"><span class="pre">get_ontime_upto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.get_ontime_upto" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.get_ontime_upto">
+<span class="sig-name descname"><span class="pre">get_ontime_upto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.get_ontime_upto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the cumulative detector on-time up to the given time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>mjd</strong> (<em>float | array of floats</em>) – The time in MJD up to which the detector on-time should be
+<dd class="field-odd"><p><strong>mjd</strong> (<em>float</em><em> | </em><em>array of floats</em>) – The time in MJD up to which the detector on-time should be
 calculated.</p>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -336,13 +339,13 @@ to the the given MJD times.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.is_on">
-<code class="sig-name descname"><span class="pre">is_on</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.is_on" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.is_on">
+<span class="sig-name descname"><span class="pre">is_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.is_on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the detector is on at the given MJD time. MJD times
 outside any live-time interval will be masked as False.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>mjd</strong> (<em>float | sequence of float</em>) – The time in MJD.</p>
+<dd class="field-odd"><p><strong>mjd</strong> (<em>float</em><em> | </em><em>sequence of float</em>) – The time in MJD.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>is_on</strong> (<em>array of bool</em>) – True if the detector was on at the given time.</p>
@@ -351,8 +354,8 @@ outside any live-time interval will be masked as False.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.livetime.Livetime.draw_ontimes">
-<code class="sig-name descname"><span class="pre">draw_ontimes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.draw_ontimes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.livetime.Livetime.draw_ontimes">
+<span class="sig-name descname"><span class="pre">draw_ontimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.livetime.Livetime.draw_ontimes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draws random MJD times based on the detector on-time intervals.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

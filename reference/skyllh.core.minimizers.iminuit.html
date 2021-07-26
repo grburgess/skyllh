@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -216,8 +219,8 @@
 <span id="skyllh-core-minimizers-iminuit-module"></span><h1>skyllh.core.minimizers.iminuit module<a class="headerlink" href="#module-skyllh.core.minimizers.iminuit" title="Permalink to this headline">¶</a></h1>
 <p>The minimizers/iminuit module provides a SkyLLH interface to the iminuit minimizer.</p>
 <dl class="py class">
-<dt id="skyllh.core.minimizers.iminuit.FuncWithGradsFunctor">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizers.iminuit.</span></code><code class="sig-name descname"><span class="pre">FuncWithGradsFunctor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.FuncWithGradsFunctor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.FuncWithGradsFunctor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizers.iminuit.</span></span><span class="sig-name descname"><span class="pre">FuncWithGradsFunctor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.FuncWithGradsFunctor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Helper class to evaluate the LLH function that returns the function value
 and its gradients in two seperate calls, one for the LLH function value and
@@ -232,25 +235,25 @@ one for its gradient values.</p>
 </div></blockquote>
 <p>returning the a two-element tuple (f, grads).</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>tuple | None</em>) – The optional positional arguments for the function <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>func_args</strong> (<em>tuple</em><em> | </em><em>None</em>) – The optional positional arguments for the function <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_f">
-<code class="sig-name descname"><span class="pre">get_f</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_f" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_f">
+<span class="sig-name descname"><span class="pre">get_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_grads">
-<code class="sig-name descname"><span class="pre">get_grads</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_grads" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_grads">
+<span class="sig-name descname"><span class="pre">get_grads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.FuncWithGradsFunctor.get_grads" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizers.iminuit.</span></code><code class="sig-name descname"><span class="pre">IMinuitMinimizerImpl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizers.iminuit.</span></span><span class="sig-name descname"><span class="pre">IMinuitMinimizerImpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.minimizer.html#skyllh.core.minimizer.MinimizerImpl" title="skyllh.core.minimizer.MinimizerImpl"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.minimizer.MinimizerImpl</span></code></a></p>
 <p>The SkyLLH minimizer implementation that utilizes the iminuit minimizer.</p>
 <p>Creates a new IMinuit minimizer instance to minimize a given
@@ -261,8 +264,8 @@ function.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.minimize">
-<code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimizes the given function <code class="docutils literal notranslate"><span class="pre">func</span></code> with the given initial function
 argument values <code class="docutils literal notranslate"><span class="pre">initials</span></code> and within the given parameter bounds
 <code class="docutils literal notranslate"><span class="pre">bounds</span></code>.</p>
@@ -283,17 +286,17 @@ the function gradient for each fit parameter, if the
 <code class="docutils literal notranslate"><span class="pre">func_provides_grads</span></code> keyword argument option is set to True.
 If set to False, <code class="docutils literal notranslate"><span class="pre">func</span></code> must return only the function value.</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>sequence | None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>func_args</strong> (<em>sequence</em><em> | </em><em>None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>keyword arguments include options for this minimizer</strong> (<em>Additional</em>) – </p></li>
-<li><p><strong>Possible options are</strong> (<em>implementation.</em>) – <dl class="simple">
+<li><p><strong>minimizer</strong> (<em>Additional keyword arguments include options for this</em>) – </p></li>
+<li><p><strong>are</strong> (<em>implementation. Possible options</em>) – <dl class="simple">
 <dt>func_provides_grads<span class="classifier">bool</span></dt><dd><p>Flag if the function <code class="docutils literal notranslate"><span class="pre">func</span></code> also returns its gradients.
 Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>additional keyword arguments are passed on to the underlaying</strong> (<em>Any</em>) – </p></li>
+<li><p><strong>underlaying</strong> (<em>Any additional keyword arguments are passed on to the</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -312,8 +315,8 @@ minimum.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.get_niter">
-<code class="sig-name descname"><span class="pre">get_niter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.get_niter">
+<span class="sig-name descname"><span class="pre">get_niter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of iterations needed to find the minimum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -327,8 +330,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.has_converged">
-<code class="sig-name descname"><span class="pre">has_converged</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.has_converged">
+<span class="sig-name descname"><span class="pre">has_converged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analyzes the status information dictionary if the minimization
 process has converged. By definition the minimization process has
 converged if <code class="docutils literal notranslate"><span class="pre">status['is_valid']</span></code> equals True.</p>
@@ -344,8 +347,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.is_repeatable">
-<code class="sig-name descname"><span class="pre">is_repeatable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.is_repeatable">
+<span class="sig-name descname"><span class="pre">is_repeatable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizers.iminuit.IMinuitMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the minimization process can be repeated to get a better
 result.</p>
 <p>TODO: Implement a proper check. For now just return True.</p>

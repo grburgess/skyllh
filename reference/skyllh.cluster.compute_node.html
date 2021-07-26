@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -111,7 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -212,33 +215,33 @@
 <div class="section" id="module-skyllh.cluster.compute_node">
 <span id="skyllh-cluster-compute-node-module"></span><h1>skyllh.cluster.compute_node module<a class="headerlink" href="#module-skyllh.cluster.compute_node" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.cluster.compute_node.ComputeNode">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.cluster.compute_node.</span></code><code class="sig-name descname"><span class="pre">ComputeNode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">live_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_port</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.compute_node.ComputeNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.cluster.compute_node.</span></span><span class="sig-name descname"><span class="pre">ComputeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">live_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_port</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The ComputeNode class provides an entity for stand-alone program running
 on a dedicated compute node host.</p>
-<dl class="py method">
-<dt id="skyllh.cluster.compute_node.ComputeNode.live_time">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">live_time</span></code><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.live_time" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.cluster.compute_node.ComputeNode.live_time">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">live_time</span></span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.live_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time in seconds this ComputeNode instance should be listening for
 requests.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.cluster.compute_node.ComputeNode.master_addr">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">master_addr</span></code><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.master_addr" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.cluster.compute_node.ComputeNode.master_addr">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">master_addr</span></span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.master_addr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The address of the SkyLLH master program.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.cluster.compute_node.ComputeNode.master_port">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">master_port</span></code><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.master_port" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.cluster.compute_node.ComputeNode.master_port">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">master_port</span></span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.master_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port number of the SkyLLH master program.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.cluster.compute_node.ComputeNode.handle_requests">
-<code class="sig-name descname"><span class="pre">handle_requests</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.handle_requests" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.cluster.compute_node.ComputeNode.handle_requests">
+<span class="sig-name descname"><span class="pre">handle_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.cluster.compute_node.ComputeNode.handle_requests" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

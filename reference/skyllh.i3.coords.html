@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -214,8 +217,8 @@
 <span id="skyllh-i3-coords-module"></span><h1>skyllh.i3.coords module<a class="headerlink" href="#module-skyllh.i3.coords" title="Permalink to this headline">¶</a></h1>
 <p>IceCube specific coordinate utility functions.</p>
 <dl class="py function">
-<dt id="skyllh.i3.coords.azi_to_ra_transform">
-<code class="sig-prename descclassname"><span class="pre">skyllh.i3.coords.</span></code><code class="sig-name descname"><span class="pre">azi_to_ra_transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.coords.azi_to_ra_transform" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.coords.azi_to_ra_transform">
+<span class="sig-prename descclassname"><span class="pre">skyllh.i3.coords.</span></span><span class="sig-name descname"><span class="pre">azi_to_ra_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.coords.azi_to_ra_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates the given IceCube azimuth angles into right-ascention angles for
 the given MJD times. This function is IceCube specific and assumes that the
 detector is located excently at the South Pole and neglects all astronomical
@@ -231,8 +234,8 @@ effects like Earth’s precession.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.i3.coords.ra_to_azi_transform">
-<code class="sig-prename descclassname"><span class="pre">skyllh.i3.coords.</span></code><code class="sig-name descname"><span class="pre">ra_to_azi_transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.coords.ra_to_azi_transform" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.coords.ra_to_azi_transform">
+<span class="sig-prename descclassname"><span class="pre">skyllh.i3.coords.</span></span><span class="sig-name descname"><span class="pre">ra_to_azi_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.coords.ra_to_azi_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates the given right-ascention angles to local IceCube azimuth angles.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -245,8 +248,8 @@ effects like Earth’s precession.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="skyllh.i3.coords.hor_to_equ_transform">
-<code class="sig-prename descclassname"><span class="pre">skyllh.i3.coords.</span></code><code class="sig-name descname"><span class="pre">hor_to_equ_transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.coords.hor_to_equ_transform" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.coords.hor_to_equ_transform">
+<span class="sig-prename descclassname"><span class="pre">skyllh.i3.coords.</span></span><span class="sig-name descname"><span class="pre">hor_to_equ_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mjd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.coords.hor_to_equ_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the coordinate from the horizontal system (azimuth, zenith)
 into the equatorial system (right-ascention, declination) for detector at
 the South Pole and neglecting all astronomical effects like Earth

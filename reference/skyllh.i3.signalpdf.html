@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.signalpdf">
 <span id="skyllh-i3-signalpdf-module"></span><h1>skyllh.i3.signalpdf module<a class="headerlink" href="#module-skyllh.i3.signalpdf" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.signalpdf.SignalI3EnergyPDFSet">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.signalpdf.</span></code><code class="sig-name descname"><span class="pre">SignalI3EnergyPDFSet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_grid_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.signalpdf.SignalI3EnergyPDFSet" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.signalpdf.SignalI3EnergyPDFSet">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.signalpdf.</span></span><span class="sig-name descname"><span class="pre">SignalI3EnergyPDFSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logE_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinDec_binning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_grid_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.signalpdf.SignalI3EnergyPDFSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.PDFSet" title="skyllh.core.pdf.PDFSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.PDFSet</span></code></a>, <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.IsSignalPDF" title="skyllh.core.pdf.IsSignalPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.IsSignalPDF</span></code></a>, <a class="reference internal" href="skyllh.core.multiproc.html#skyllh.core.multiproc.IsParallelizable" title="skyllh.core.multiproc.IsParallelizable"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.multiproc.IsParallelizable</span></code></a></p>
 <p>This is the signal energy PDF for IceCube. It creates a set of
 I3EnergyPDF objects for a discrete set of energy signal parameters. Energy
@@ -257,20 +260,20 @@ GeV cm^2 sr.</p>
 <li><p><strong>logE_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the binning in log10(E).</p></li>
 <li><p><strong>sinDec_binning</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a>) – The binning definition for the sin(declination).</p></li>
 <li><p><strong>fluxmodel</strong> (<a class="reference internal" href="skyllh.physics.flux.html#skyllh.physics.flux.FluxModel" title="skyllh.physics.flux.FluxModel"><em>FluxModel</em></a>) – The flux model to use to create the signal energy PDF.</p></li>
-<li><p><strong>fitparam_grid_set</strong> (<em>ParameterGridSet | ParameterGrid</em>) – The set of parameter grids. A ParameterGrid object for each
+<li><p><strong>fitparam_grid_set</strong> (<a class="reference internal" href="skyllh.core.parameters.html#skyllh.core.parameters.ParameterGridSet" title="skyllh.core.parameters.ParameterGridSet"><em>ParameterGridSet</em></a><em> | </em><a class="reference internal" href="skyllh.core.parameters.html#skyllh.core.parameters.ParameterGrid" title="skyllh.core.parameters.ParameterGrid"><em>ParameterGrid</em></a>) – The set of parameter grids. A ParameterGrid object for each
 energy fit parameter, for which an I3EnergyPDF object needs to be
 created.</p></li>
-<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance | None</em>) – The smoothing filter to use for smoothing the energy histogram.
+<li><p><strong>smoothing_filter</strong> (<em>SmoothingFilter instance</em><em> | </em><em>None</em>) – The smoothing filter to use for smoothing the energy histogram.
 If None, no smoothing will be applied.</p></li>
-<li><p><strong>ncpu</strong> (<em>int | None</em><em> (</em><em>default</em><em>)</em>) – The number of CPUs to use to create the different I3EnergyPDF
+<li><p><strong>ncpu</strong> (<em>int</em><em> | </em><em>None</em><em> (</em><em>default</em><em>)</em>) – The number of CPUs to use to create the different I3EnergyPDF
 objects for the different fit parameter grid values.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.i3.signalpdf.SignalI3EnergyPDFSet.assert_is_valid_for_exp_data">
-<code class="sig-name descname"><span class="pre">assert_is_valid_for_exp_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.signalpdf.SignalI3EnergyPDFSet.assert_is_valid_for_exp_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.signalpdf.SignalI3EnergyPDFSet.assert_is_valid_for_exp_data">
+<span class="sig-name descname"><span class="pre">assert_is_valid_for_exp_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_exp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.signalpdf.SignalI3EnergyPDFSet.assert_is_valid_for_exp_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if this signal energy PDF is valid for all the given
 experimental data.
 It checks if all the data is within the logE and sin(dec) binning range.</p>
@@ -299,8 +302,8 @@ must exist:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.signalpdf.SignalI3EnergyPDFSet.get_prob">
-<code class="sig-name descname"><span class="pre">get_prob</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridfitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.signalpdf.SignalI3EnergyPDFSet.get_prob" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.signalpdf.SignalI3EnergyPDFSet.get_prob">
+<span class="sig-name descname"><span class="pre">get_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridfitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.signalpdf.SignalI3EnergyPDFSet.get_prob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the signal energy probability (in logE) of each event for
 a given set of signal fit parameters on a grid.</p>
 <dl class="field-list simple">

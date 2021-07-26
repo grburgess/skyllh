@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -217,31 +220,31 @@
 <p>This module contains utility functions for creating and managing
 NDPhotosplinePDF instances.</p>
 <dl class="py function">
-<dt id="skyllh.core.utils.ndphotosplinepdf.create_NDPhotosplinePDF_from_photosplinefit">
-<code class="sig-prename descclassname"><span class="pre">skyllh.core.utils.ndphotosplinepdf.</span></code><code class="sig-name descname"><span class="pre">create_NDPhotosplinePDF_from_photosplinefit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splinefit_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.ndphotosplinepdf.create_NDPhotosplinePDF_from_photosplinefit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.utils.ndphotosplinepdf.create_NDPhotosplinePDF_from_photosplinefit">
+<span class="sig-prename descclassname"><span class="pre">skyllh.core.utils.ndphotosplinepdf.</span></span><span class="sig-name descname"><span class="pre">create_NDPhotosplinePDF_from_photosplinefit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splinefit_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.utils.ndphotosplinepdf.create_NDPhotosplinePDF_from_photosplinefit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new NDPhotosplinePDF instance from a photospline fits file that
 is defined in the given data set.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ds</strong> (<em>Dataset instance</em>) – The Dataset instance the PDF applies to.</p></li>
-<li><p><strong>kind</strong> (<em>str | None</em>) – The kind of PDF to create. This is either <code class="docutils literal notranslate"><span class="pre">'sig'</span></code> for a
+<li><p><strong>kind</strong> (<em>str</em><em> | </em><em>None</em>) – The kind of PDF to create. This is either <code class="docutils literal notranslate"><span class="pre">'sig'</span></code> for a
 SignalNDPhotosplinePDF, or <code class="docutils literal notranslate"><span class="pre">'bkg'</span></code> for a BackgroundNDPhotosplinePDF
 instance. If set to None, a NDPhotosplinePDF instance is created.</p></li>
 <li><p><strong>info_key</strong> (<em>str</em>) – The auxiliary data name for the file containing PDF meta data
 information.</p></li>
 <li><p><strong>splinefit_key</strong> (<em>str</em>) – The auxiliary data name defining the path to the file containing the
 photospline fit.</p></li>
-<li><p><strong>param_set</strong> (<em>Parameter | ParameterSet | None</em>) – The Parameter instance or ParameterSet instance defining the
+<li><p><strong>param_set</strong> (<a class="reference internal" href="skyllh.core.parameters.html#skyllh.core.parameters.Parameter" title="skyllh.core.parameters.Parameter"><em>Parameter</em></a><em> | </em><a class="reference internal" href="skyllh.core.parameters.html#skyllh.core.parameters.ParameterSet" title="skyllh.core.parameters.ParameterSet"><em>ParameterSet</em></a><em> | </em><em>None</em>) – The Parameter instance or ParameterSet instance defining the
 parameters of the new PDF. The ParameterSet holds the information
 which parameters are fixed and which are floating (i.e. fitted).</p></li>
-<li><p><strong>norm_factor_func</strong> (<em>callable | None</em>) – <p>The normalization factor function. It must have the following call
+<li><p><strong>norm_factor_func</strong> (<em>callable</em><em> | </em><em>None</em>) – <p>The normalization factor function. It must have the following call
 signature:</p>
 <blockquote>
 <div><p>__call__(pdf, tdm, params)</p>
 </div></blockquote>
 </p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance to use for measuring timing information.</p></li>
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance to use for measuring timing information.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

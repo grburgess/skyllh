@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.signal_generation">
 <span id="skyllh-core-signal-generation-module"></span><h1>skyllh.core.signal_generation module<a class="headerlink" href="#module-skyllh.core.signal_generation" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.signal_generation.SignalGenerationMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.signal_generation.</span></code><code class="sig-name descname"><span class="pre">SignalGenerationMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy_range</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generation.SignalGenerationMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.signal_generation.</span></span><span class="sig-name descname"><span class="pre">SignalGenerationMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy_range</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is a base class for a source and detector specific signal generation
 method, that calculates the source flux for a given monte-carlo event, which
@@ -222,21 +225,21 @@ is needed to calculate the MC event weights for the signal generator.</p>
 <p>Constructs a new signal generation method instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>energy_range</strong> (<em>2-element tuple of float | None</em>) – The energy range from which to take MC events into account for
+<dd class="field-odd"><p><strong>energy_range</strong> (<em>2-element tuple of float</em><em> | </em><em>None</em>) – The energy range from which to take MC events into account for
 signal event generation.
 If set to None, the entire energy range [0, +inf] is used.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.signal_generation.SignalGenerationMethod.energy_range">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">energy_range</span></code><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod.energy_range" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.signal_generation.SignalGenerationMethod.energy_range">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">energy_range</span></span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod.energy_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>The 2-element tuple of floats holding the energy range from which to
 take MC events into account for signal event generation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.signal_generation.SignalGenerationMethod.calc_source_signal_mc_event_flux">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">calc_source_signal_mc_event_flux</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod.calc_source_signal_mc_event_flux" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generation.SignalGenerationMethod.calc_source_signal_mc_event_flux">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">calc_source_signal_mc_event_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod.calc_source_signal_mc_event_flux" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to calculate the signal flux of each given
 MC event for each source hypothesis of the given source hypothesis
 group.</p>
@@ -259,8 +262,8 @@ signal event.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.signal_generation.SignalGenerationMethod.signal_event_post_sampling_processing">
-<code class="sig-name descname"><span class="pre">signal_event_post_sampling_processing</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shg_sig_events_meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shg_sig_events</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod.signal_event_post_sampling_processing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.signal_generation.SignalGenerationMethod.signal_event_post_sampling_processing">
+<span class="sig-name descname"><span class="pre">signal_event_post_sampling_processing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shg_sig_events_meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shg_sig_events</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.signal_generation.SignalGenerationMethod.signal_event_post_sampling_processing" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method should be reimplemented by the derived class if there
 is some processing needed after the MC signal events have been sampled
 from the global MC data.</p>

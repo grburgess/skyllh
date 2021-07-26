@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -216,8 +219,8 @@
 functions. In general these should be detector independent, because they
 implement the pure math of the log-likelihood ratio function.</p>
 <dl class="py class">
-<dt id="skyllh.core.llhratio.LLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">LLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.LLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">LLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for a log-likelihood (LLH) ratio function.</p>
 <p>Creates a new LLH ratio function instance.</p>
@@ -227,29 +230,29 @@ implement the pure math of the log-likelihood ratio function.</p>
 of this log-likelihood ratio function.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.LLHRatio.minimizer">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">minimizer</span></code><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.minimizer" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.LLHRatio.minimizer">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">minimizer</span></span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.minimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Minimizer instance used to minimize the negative of the
 log-likelihood ratio function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.LLHRatio.initialize_for_new_trial">
-<code class="sig-name descname"><span class="pre">initialize_for_new_trial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.LLHRatio.initialize_for_new_trial">
+<span class="sig-name descname"><span class="pre">initialize_for_new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method will be called by the Analysis class after new trial data
 has been initialized to the trial data manager. Derived classes can make
 use of this call hook to perform LLHRatio specific trial initialization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tl</strong> (<em>TimeLord | None</em>) – The optional TimeLord instance to use for timing measurements.</p>
+<dd class="field-odd"><p><strong>tl</strong> (<a class="reference internal" href="skyllh.core.timing.html#skyllh.core.timing.TimeLord" title="skyllh.core.timing.TimeLord"><em>TimeLord</em></a><em> | </em><em>None</em>) – The optional TimeLord instance to use for timing measurements.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.LLHRatio.evaluate">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.LLHRatio.evaluate">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method evaluates the LLH ratio function for the given set of
 fit parameter values.</p>
 <dl class="field-list simple">
@@ -257,7 +260,7 @@ fit parameter values.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fitparam_values</strong> (<em>numpy 1D ndarray</em>) – The ndarray holding the current values of the (global) fit
 parameters.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord | None</em>) – The optional TimeLord instance to use for measuring timeing.</p></li>
+<li><p><strong>tl</strong> (<a class="reference internal" href="skyllh.core.timing.html#skyllh.core.timing.TimeLord" title="skyllh.core.timing.TimeLord"><em>TimeLord</em></a><em> | </em><em>None</em>) – The optional TimeLord instance to use for measuring timeing.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -272,8 +275,8 @@ parameter.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.LLHRatio.maximize">
-<code class="sig-name descname"><span class="pre">maximize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparamset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.maximize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.LLHRatio.maximize">
+<span class="sig-name descname"><span class="pre">maximize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparamset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.LLHRatio.maximize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximize the log-likelihood ratio function, by using the <code class="docutils literal notranslate"><span class="pre">evaluate</span></code>
 method.</p>
 <dl class="field-list simple">
@@ -283,7 +286,7 @@ method.</p>
 This is needed to generate random parameter initial values.</p></li>
 <li><p><strong>fitparamset</strong> (<em>FitParameterSet instance</em>) – The instance of FitParameterSet holding the global fit parameter
 definitions used in the maximization process.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to time the
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to time the
 maximization process.</p></li>
 </ul>
 </dd>
@@ -303,8 +306,8 @@ process, i.e. from the minimizer.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.TCLLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">TCLLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.TCLLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">TCLLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.LLHRatio" title="skyllh.core.llhratio.LLHRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.LLHRatio</span></code></a></p>
 <p>Abstract base class for a log-likelihood (LLH) ratio function with two
 components, i.e. signal and background.</p>
@@ -314,16 +317,16 @@ components, i.e. signal and background.</p>
 <dd class="field-odd"><p><strong>mean_n_sig_0</strong> (<em>float</em>) – The fixed mean number of signal events for the null-hypothesis.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.TCLLHRatio.mean_n_sig_0">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mean_n_sig_0</span></code><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio.mean_n_sig_0" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.TCLLHRatio.mean_n_sig_0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mean_n_sig_0</span></span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio.mean_n_sig_0" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameter value for the mean number of signal events of the
 null-hypothesis.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.TCLLHRatio.calculate_ns_grad2">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">calculate_ns_grad2</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.TCLLHRatio.calculate_ns_grad2">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">calculate_ns_grad2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to calculate the second derivative of the
 log-likelihood ratio function w.r.t. the fit parameter ns, the number
 of signal events in the data set.</p>
@@ -341,8 +344,8 @@ for the given fit parameter values.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.TCLLHRatio.maximize">
-<code class="sig-name descname"><span class="pre">maximize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparamset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio.maximize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.TCLLHRatio.maximize">
+<span class="sig-name descname"><span class="pre">maximize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparamset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.TCLLHRatio.maximize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximizes this log-likelihood ratio function, by minimizing its
 negative.
 This method has a special implementation when a 1D Newton-Rapson
@@ -356,7 +359,7 @@ numbers from. It is used by the minimizer to generate random
 fit parameter initial values.</p></li>
 <li><p><strong>fitparamset</strong> (<em>FitParameterSet instance</em>) – The instance of FitParameterSet holding the global fit parameter
 definitions used in the maximization process.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to time the
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to time the
 maximization of the LLH-ratio function.</p></li>
 </ul>
 </dd>
@@ -376,8 +379,8 @@ process, i.e. from the minimizer.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.SingleDatasetTCLLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">SingleDatasetTCLLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleDatasetTCLLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">SingleDatasetTCLLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.TCLLHRatio" title="skyllh.core.llhratio.TCLLHRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.TCLLHRatio</span></code></a></p>
 <p>Abstract base class for a log-likelihood (LLH) ratio function with two
 components, i.e. signal and background, for a single data set.</p>
@@ -402,30 +405,30 @@ additional data fields for this LLH ratio function.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_hypo_group_manager">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_hypo_group_manager</span></code><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_hypo_group_manager">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_hypo_group_manager</span></span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SourceHypoGroupManager instance that defines the source
 hypotheses.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_fitparam_mapper">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_fitparam_mapper</span></code><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_fitparam_mapper" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_fitparam_mapper">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_fitparam_mapper</span></span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.src_fitparam_mapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SourceFitParameterMapper instance defining the global fit
 parameters and their mapping to the source fit parameters.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.tdm">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">tdm</span></code><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.tdm" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.tdm">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">tdm</span></span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.tdm" title="Permalink to this definition">¶</a></dt>
 <dd><p>The TrialDataManager instance that holds the trial event data and
 additional data fields for this LLH ratio function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleDatasetTCLLHRatio.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the source hypothesis group manager of this two-component LLH
 ratio function.</p>
 <dl class="field-list simple">
@@ -438,8 +441,8 @@ ratio function.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">ZeroSigH0SingleDatasetTCLLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdfratios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">ZeroSigH0SingleDatasetTCLLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdfratios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.SingleDatasetTCLLHRatio" title="skyllh.core.llhratio.SingleDatasetTCLLHRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.SingleDatasetTCLLHRatio</span></code></a></p>
 <p>This class implements a two-component (TC) log-likelihood (LLH) ratio
 function for a single data assuming zero signal for the null-hypothesis.
@@ -466,22 +469,22 @@ on none, one, or several fit parameters.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.mean_n_sig_0">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mean_n_sig_0</span></code><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.mean_n_sig_0" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.mean_n_sig_0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mean_n_sig_0</span></span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.mean_n_sig_0" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameter value for the mean number of signal events of the
 null-hypothesis.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.pdfratio_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pdfratio_list</span></code><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.pdfratio_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.pdfratio_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pdfratio_list</span></span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.pdfratio_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of PDFRatio instances.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_log_lambda_and_grads">
-<code class="sig-name descname"><span class="pre">calculate_log_lambda_and_grads</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dXi_ps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_log_lambda_and_grads" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_log_lambda_and_grads">
+<span class="sig-name descname"><span class="pre">calculate_log_lambda_and_grads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dXi_ps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_log_lambda_and_grads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the log(Lambda) value and its gradient for each global fit
 parameter. This calculation is source and detector independent.</p>
 <dl class="field-list simple">
@@ -513,8 +516,8 @@ The first element is the gradient for ns.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_ns_grad2">
-<code class="sig-name descname"><span class="pre">calculate_ns_grad2</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_ns_grad2">
+<span class="sig-name descname"><span class="pre">calculate_ns_grad2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the second derivative w.r.t. ns of the log-likelihood
 ratio function.
 This method tries to use cached values for the first derivative
@@ -538,8 +541,8 @@ for the given fit parameter values.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">SingleSourceZeroSigH0SingleDatasetTCLLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdfratios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">SingleSourceZeroSigH0SingleDatasetTCLLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdfratios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio" title="skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.ZeroSigH0SingleDatasetTCLLHRatio</span></code></a></p>
 <p>This class implements a 2-component, i.e. signal and background,
 log-likelihood ratio function for a single data set. The
@@ -568,20 +571,20 @@ none, one, or several fit parameters.</p></li>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.initialize_for_new_trial">
-<code class="sig-name descname"><span class="pre">initialize_for_new_trial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.initialize_for_new_trial">
+<span class="sig-name descname"><span class="pre">initialize_for_new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes the log-likelihood ratio function for a new trial.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tl</strong> (<em>TimeLord | None</em>) – The optional TimeLord instance that should be used for timing
+<dd class="field-odd"><p><strong>tl</strong> (<a class="reference internal" href="skyllh.core.timing.html#skyllh.core.timing.TimeLord" title="skyllh.core.timing.TimeLord"><em>TimeLord</em></a><em> | </em><em>None</em>) – The optional TimeLord instance that should be used for timing
 measurements.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.evaluate">
-<code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceZeroSigH0SingleDatasetTCLLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates the log-likelihood ratio function for the given set of
 data events.</p>
 <dl class="field-list simple">
@@ -590,7 +593,7 @@ data events.</p>
 <li><p><strong>fitparam_values</strong> (<em>numpy</em><em> (</em><em>N_fitparams+1</em><em>)</em><em>-shaped 1D ndarray</em>) – The ndarray holding the current values of the fit parameters.
 By definition, the first element is the fit parameter for the number
 of signal events, ns.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance to measure the timing of evaluating
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance to measure the timing of evaluating
 the LLH ratio function.</p></li>
 </ul>
 </dd>
@@ -609,8 +612,8 @@ The first element is the gradient for ns.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.DatasetSignalWeights">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">DatasetSignalWeights</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detsigyields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.DatasetSignalWeights">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">DatasetSignalWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detsigyields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for a dataset signal weight calculator class.</p>
 <p>Base class constructor.</p>
@@ -631,37 +634,37 @@ source hypothesis groups.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.DatasetSignalWeights.src_hypo_group_manager">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_hypo_group_manager</span></code><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.DatasetSignalWeights.src_hypo_group_manager">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_hypo_group_manager</span></span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.src_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of SourceHypoGroupManager, which defines the source
 hypothesis groups.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.DatasetSignalWeights.src_fitparam_mapper">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_fitparam_mapper</span></code><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.src_fitparam_mapper" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.DatasetSignalWeights.src_fitparam_mapper">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_fitparam_mapper</span></span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.src_fitparam_mapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SourceFitParameterMapper instance defining the global fit
 parameters and their mapping to the source fit parameters.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.DatasetSignalWeights.detsigyield_arr">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">detsigyield_arr</span></code><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.detsigyield_arr" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.DatasetSignalWeights.detsigyield_arr">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">detsigyield_arr</span></span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.detsigyield_arr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The 2D (N_source_hypo_groups,N_datasets)-shaped ndarray of
 DetSigYield instances.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.DatasetSignalWeights.n_datasets">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_datasets</span></code><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.n_datasets" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.DatasetSignalWeights.n_datasets">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_datasets</span></span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.n_datasets" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The number of datasets this DatasetSignalWeights instance
 is for.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.DatasetSignalWeights.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.DatasetSignalWeights.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.DatasetSignalWeights.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the SourceHypoGroupManager instance of this
 DatasetSignalWeights instance. This will also recreate the internal
 source numpy record arrays needed for the detector signal efficiency
@@ -677,8 +680,8 @@ this dataset signal weights instance.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.SingleSourceDatasetSignalWeights">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">SingleSourceDatasetSignalWeights</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detsigyields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceDatasetSignalWeights" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.SingleSourceDatasetSignalWeights">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">SingleSourceDatasetSignalWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_fitparam_mapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detsigyields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.SingleSourceDatasetSignalWeights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.DatasetSignalWeights" title="skyllh.core.llhratio.DatasetSignalWeights"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.DatasetSignalWeights</span></code></a></p>
 <p>This class calculates the dataset signal weight factors for each dataset
 assuming a single source.</p>
@@ -698,8 +701,8 @@ fit parameters and their mapping to the source fit parameters.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">MultiDatasetTCLLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_signal_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llhratios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">MultiDatasetTCLLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_signal_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llhratios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.TCLLHRatio" title="skyllh.core.llhratio.TCLLHRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.TCLLHRatio</span></code></a></p>
 <p>This class describes a two-component log-likelihood ratio function for
 multiple datasets. The final log-likelihood ratio value is the sum of the
@@ -723,51 +726,51 @@ one for each dataset.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.dataset_signal_weights">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dataset_signal_weights</span></code><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.dataset_signal_weights" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.dataset_signal_weights">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dataset_signal_weights</span></span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.dataset_signal_weights" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DatasetSignalWeights instance that provides the relative dataset
 weight factors.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.llhratio_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">llhratio_list</span></code><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.llhratio_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.llhratio_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">llhratio_list</span></span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.llhratio_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of TCLLHRatio instances, which are part of this
 composite log-likelihood-ratio function.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.n_selected_events">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_selected_events</span></code><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.n_selected_events" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.n_selected_events">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_selected_events</span></span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.n_selected_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The sum of selected events of each individual
 log-likelihood ratio function.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.mean_n_sig_0">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mean_n_sig_0</span></code><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.mean_n_sig_0" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.mean_n_sig_0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mean_n_sig_0</span></span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.mean_n_sig_0" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameter value for the mean number of signal events of the
 null-hypothesis.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the source hypo group manager of all objects of this LLH
 ratio function, hence, calling the <cite>change_source_hypo_group_manager</cite>
 method of all TCLLHRatio objects of this LLHRatio instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.initialize_for_new_trial">
-<code class="sig-name descname"><span class="pre">initialize_for_new_trial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.initialize_for_new_trial">
+<span class="sig-name descname"><span class="pre">initialize_for_new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes the log-likelihood-ratio function for a new trial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.evaluate">
-<code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates the composite log-likelihood-ratio function and returns its
 value and global fit parameter gradients.</p>
 <dl class="field-list simple">
@@ -790,8 +793,8 @@ By definition the first element is the gradient for ns.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.calculate_ns_grad2">
-<code class="sig-name descname"><span class="pre">calculate_ns_grad2</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.MultiDatasetTCLLHRatio.calculate_ns_grad2">
+<span class="sig-name descname"><span class="pre">calculate_ns_grad2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.MultiDatasetTCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the second derivative w.r.t. ns of the log-likelihood
 ratio function.
 This method tries to use cached values for the dataset signal weight
@@ -814,8 +817,8 @@ for the given fit parameter values.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></code><code class="sig-name descname"><span class="pre">NsProfileMultiDatasetTCLLHRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.llhratio.</span></span><span class="sig-name descname"><span class="pre">NsProfileMultiDatasetTCLLHRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_n_sig_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llhratio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.llhratio.TCLLHRatio" title="skyllh.core.llhratio.TCLLHRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.llhratio.TCLLHRatio</span></code></a></p>
 <p>This class implements a profile log-likelihood ratio function that has
 only ns as fit parameter. It uses a MultiDatasetTCLLHRatio instance as
@@ -838,16 +841,16 @@ log-likelihood function.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.llhratio">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">llhratio</span></code><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.llhratio" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.llhratio">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">llhratio</span></span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.llhratio" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of MultiDatasetTCLLHRatio, which should be used as
 log-likelihood function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the source hypo group manager of all objects of this LLH
 ratio function, hence, calling the <cite>change_source_hypo_group_manager</cite>
 method of the underlaying MultiDatasetTCLLHRatio instance of this
@@ -855,20 +858,20 @@ LLHRatio instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.initialize_for_new_trial">
-<code class="sig-name descname"><span class="pre">initialize_for_new_trial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.initialize_for_new_trial">
+<span class="sig-name descname"><span class="pre">initialize_for_new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes the log-likelihood-ratio function for a new trial.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tl</strong> (<em>TimeLord | None</em>) – The optional TimeLord instance that should be used for timing
+<dd class="field-odd"><p><strong>tl</strong> (<a class="reference internal" href="skyllh.core.timing.html#skyllh.core.timing.TimeLord" title="skyllh.core.timing.TimeLord"><em>TimeLord</em></a><em> | </em><em>None</em>) – The optional TimeLord instance that should be used for timing
 measurements.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.evaluate">
-<code class="sig-name descname"><span class="pre">evaluate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates the log-likelihood-ratio function and returns its value and
 global fit parameter gradients.</p>
 <dl class="field-list simple">
@@ -891,8 +894,8 @@ By definition the first element is the gradient for ns.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.calculate_ns_grad2">
-<code class="sig-name descname"><span class="pre">calculate_ns_grad2</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.calculate_ns_grad2">
+<span class="sig-name descname"><span class="pre">calculate_ns_grad2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.llhratio.NsProfileMultiDatasetTCLLHRatio.calculate_ns_grad2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the second derivative w.r.t. ns of the log-likelihood
 ratio function.</p>
 <dl class="field-list simple">

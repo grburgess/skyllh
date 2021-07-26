@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,14 +218,14 @@
 <p>The minimizer module provides functionality for the minimization process of
 a function.</p>
 <dl class="py class">
-<dt id="skyllh.core.minimizer.MinimizerImpl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></code><code class="sig-name descname"><span class="pre">MinimizerImpl</span></code><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.MinimizerImpl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></span><span class="sig-name descname"><span class="pre">MinimizerImpl</span></span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for a minimizer implementation. It defines the
 interface between the implementation and the Minimizer class.</p>
 <dl class="py method">
-<dt id="skyllh.core.minimizer.MinimizerImpl.minimize">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.MinimizerImpl.minimize">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to minimize the given function with the given
 initials.</p>
 <dl class="field-list simple">
@@ -238,11 +241,11 @@ The call signature must be</p>
 </div></blockquote>
 <p>The return value of <code class="docutils literal notranslate"><span class="pre">func</span></code> is minimizer implementation dependent.</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>sequence | None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>func_args</strong> (<em>sequence</em><em> | </em><em>None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>keyword arguments include options for this minimizer</strong> (<em>Additional</em>) – </p></li>
-<li><p><strong>These are implementation dependent.</strong> (<em>implementation.</em>) – </p></li>
+<li><p><strong>minimizer</strong> (<em>Additional keyword arguments include options for this</em>) – </p></li>
+<li><p><strong>dependent.</strong> (<em>implementation. These are implementation</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -259,8 +262,8 @@ process.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.MinimizerImpl.get_niter">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_niter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.MinimizerImpl.get_niter">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_niter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to return the number of iterations that were
 required to find the minimum.</p>
 <dl class="field-list simple">
@@ -275,8 +278,8 @@ minimization process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.MinimizerImpl.has_converged">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">has_converged</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.MinimizerImpl.has_converged">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">has_converged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to analyze the status information dictionary
 if the last minimization process has converged.</p>
 <dl class="field-list simple">
@@ -291,8 +294,8 @@ minimization process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.MinimizerImpl.is_repeatable">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">is_repeatable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.MinimizerImpl.is_repeatable">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">is_repeatable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.MinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to analyze the status information dictionary
 if the last minimization process can be repeated to obtain a better
 minimum.</p>
@@ -311,13 +314,13 @@ better minimum.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.minimizer.ScipyMinimizerImpl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></code><code class="sig-name descname"><span class="pre">ScipyMinimizerImpl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.ScipyMinimizerImpl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></span><span class="sig-name descname"><span class="pre">ScipyMinimizerImpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.minimizer.MinimizerImpl" title="skyllh.core.minimizer.MinimizerImpl"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.minimizer.MinimizerImpl</span></code></a></p>
 <p>Wrapper for <cite>scipy.optimize.minimize</cite></p>
 <dl class="py method">
-<dt id="skyllh.core.minimizer.ScipyMinimizerImpl.minimize">
-<code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.ScipyMinimizerImpl.minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimizes the given function <code class="docutils literal notranslate"><span class="pre">func</span></code> with the given initial function
 argument values <code class="docutils literal notranslate"><span class="pre">initials</span></code>.</p>
 <dl class="field-list simple">
@@ -337,21 +340,21 @@ the function gradient for each fit parameter, if the
 <code class="docutils literal notranslate"><span class="pre">func_provides_grads</span></code> keyword argument option is set to True.
 If set to False, <code class="docutils literal notranslate"><span class="pre">func</span></code> must return only the function value.</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>sequence | None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>func_args</strong> (<em>sequence</em><em> | </em><em>None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>keyword arguments include options for this minimizer</strong> (<em>Additional</em>) – </p></li>
-<li><p><strong>Possible options are</strong> (<em>implementation.</em>) – <dl class="simple">
+<li><p><strong>minimizer</strong> (<em>Additional keyword arguments include options for this</em>) – </p></li>
+<li><p><strong>are</strong> (<em>implementation. Possible options</em>) – <dl class="simple">
 <dt>func_provides_grads<span class="classifier">bool</span></dt><dd><p>Flag if the function <code class="docutils literal notranslate"><span class="pre">func</span></code> also returns its gradients.
 Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>additional keyword arguments are passed on to the underlaying</strong> (<em>Any</em>) – </p></li>
+<li><p><strong>underlaying</strong> (<em>Any additional keyword arguments are passed on to the</em>) – </p></li>
 </ul>
 </dd>
 </dl>
-<p>:param <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize" title="(in SciPy v1.6.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.optimize.minimize()</span></code></a> minimization function.:</p>
+<p>:param <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize" title="(in SciPy v1.7.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.optimize.minimize()</span></code></a> minimization function.:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><ul class="simple">
@@ -366,8 +369,8 @@ minimum.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.ScipyMinimizerImpl.get_niter">
-<code class="sig-name descname"><span class="pre">get_niter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.ScipyMinimizerImpl.get_niter">
+<span class="sig-name descname"><span class="pre">get_niter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of iterations needed to find the minimum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -381,8 +384,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.ScipyMinimizerImpl.has_converged">
-<code class="sig-name descname"><span class="pre">has_converged</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.ScipyMinimizerImpl.has_converged">
+<span class="sig-name descname"><span class="pre">has_converged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analyzes the status information dictionary if the minimization
 process has converged. By definition the minimization process has
 converged if <code class="docutils literal notranslate"><span class="pre">status['warnflag']</span></code> equals 0.</p>
@@ -398,8 +401,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.ScipyMinimizerImpl.is_repeatable">
-<code class="sig-name descname"><span class="pre">is_repeatable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.ScipyMinimizerImpl.is_repeatable">
+<span class="sig-name descname"><span class="pre">is_repeatable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.ScipyMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the minimization process can be repeated to get a better
 result.</p>
 <p>TODO: Method specific checks. For now just return False</p>
@@ -418,11 +421,11 @@ better minimum.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.minimizer.LBFGSMinimizerImpl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></code><code class="sig-name descname"><span class="pre">LBFGSMinimizerImpl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pgtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.LBFGSMinimizerImpl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></span><span class="sig-name descname"><span class="pre">LBFGSMinimizerImpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pgtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.minimizer.MinimizerImpl" title="skyllh.core.minimizer.MinimizerImpl"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.minimizer.MinimizerImpl</span></code></a></p>
 <p>The LBFGSMinimizerImpl class provides the minimizer implementation for
-L-BFG-S minimizer used from the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/optimize.html#module-scipy.optimize" title="(in SciPy v1.6.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.optimize</span></code></a> module.</p>
+L-BFG-S minimizer used from the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/optimize.html#module-scipy.optimize" title="(in SciPy v1.7.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.optimize</span></code></a> module.</p>
 <p>Creates a new L-BGF-S minimizer instance to minimize the given
 likelihood function with its given partial derivatives.</p>
 <dl class="field-list simple">
@@ -435,8 +438,8 @@ likelihood function with its given partial derivatives.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.minimizer.LBFGSMinimizerImpl.minimize">
-<code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.LBFGSMinimizerImpl.minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimizes the given function <code class="docutils literal notranslate"><span class="pre">func</span></code> with the given initial function
 argument values <code class="docutils literal notranslate"><span class="pre">initials</span></code>.</p>
 <dl class="field-list simple">
@@ -456,21 +459,21 @@ the function gradient for each fit parameter, if the
 <code class="docutils literal notranslate"><span class="pre">func_provides_grads</span></code> keyword argument option is set to True.
 If set to False, <code class="docutils literal notranslate"><span class="pre">func</span></code> must return only the function value.</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>sequence | None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>func_args</strong> (<em>sequence</em><em> | </em><em>None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>keyword arguments include options for this minimizer</strong> (<em>Additional</em>) – </p></li>
-<li><p><strong>Possible options are</strong> (<em>implementation.</em>) – <dl class="simple">
+<li><p><strong>minimizer</strong> (<em>Additional keyword arguments include options for this</em>) – </p></li>
+<li><p><strong>are</strong> (<em>implementation. Possible options</em>) – <dl class="simple">
 <dt>func_provides_grads<span class="classifier">bool</span></dt><dd><p>Flag if the function <code class="docutils literal notranslate"><span class="pre">func</span></code> also returns its gradients.
 Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>additional keyword arguments are passed on to the underlaying</strong> (<em>Any</em>) – </p></li>
+<li><p><strong>underlaying</strong> (<em>Any additional keyword arguments are passed on to the</em>) – </p></li>
 </ul>
 </dd>
 </dl>
-<p>:param <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html#scipy.optimize.fmin_l_bfgs_b" title="(in SciPy v1.6.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.optimize.fmin_l_bfgs_b()</span></code></a> minimization function.:</p>
+<p>:param <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.optimize.fmin_l_bfgs_b.html#scipy.optimize.fmin_l_bfgs_b" title="(in SciPy v1.7.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.optimize.fmin_l_bfgs_b()</span></code></a> minimization function.:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><ul>
@@ -497,8 +500,8 @@ The possible values are:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.LBFGSMinimizerImpl.get_niter">
-<code class="sig-name descname"><span class="pre">get_niter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.LBFGSMinimizerImpl.get_niter">
+<span class="sig-name descname"><span class="pre">get_niter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of iterations needed to find the minimum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -512,8 +515,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.LBFGSMinimizerImpl.has_converged">
-<code class="sig-name descname"><span class="pre">has_converged</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.LBFGSMinimizerImpl.has_converged">
+<span class="sig-name descname"><span class="pre">has_converged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analyzes the status information dictionary if the minimization
 process has converged. By definition the minimization process has
 converged if <code class="docutils literal notranslate"><span class="pre">status['warnflag']</span></code> equals 0.</p>
@@ -529,8 +532,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.LBFGSMinimizerImpl.is_repeatable">
-<code class="sig-name descname"><span class="pre">is_repeatable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.LBFGSMinimizerImpl.is_repeatable">
+<span class="sig-name descname"><span class="pre">is_repeatable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.LBFGSMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the minimization process can be repeated to get a better
 result. It’s repeatable if</p>
 <blockquote>
@@ -551,8 +554,8 @@ better minimum.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.minimizer.NR1dNsMinimizerImpl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></code><code class="sig-name descname"><span class="pre">NR1dNsMinimizerImpl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ns_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NR1dNsMinimizerImpl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></span><span class="sig-name descname"><span class="pre">NR1dNsMinimizerImpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ns_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.minimizer.MinimizerImpl" title="skyllh.core.minimizer.MinimizerImpl"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.minimizer.MinimizerImpl</span></code></a></p>
 <p>The NR1dNsMinimizerImpl class provides a minimizer implementation for the
 Newton-Raphson method for finding the minimum of a one-dimensional R1-&gt;R1
@@ -570,8 +573,8 @@ the fit is considered NOT converged.</p></li>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.minimizer.NR1dNsMinimizerImpl.minimize">
-<code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NR1dNsMinimizerImpl.minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimizes the given function <code class="docutils literal notranslate"><span class="pre">func</span></code> with the given initial function
 argument values <code class="docutils literal notranslate"><span class="pre">initials</span></code>. This minimizer implementation will only
 vary the first parameter. All other parameters will be set to their
@@ -592,10 +595,10 @@ function value at the function arguments <code class="docutils literal notransla
 function first derivative for the one fit parameter, and the value
 of the second derivative for the one fit parameter.</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>sequence | None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>func_args</strong> (<em>sequence</em><em> | </em><em>None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>are no additional options defined for this minimization</strong> (<em>There</em>) – </p></li>
+<li><p><strong>minimization</strong> (<em>There are no additional options defined for this</em>) – </p></li>
 <li><p><strong>implementation.</strong> – </p></li>
 </ul>
 </dd>
@@ -637,8 +640,8 @@ The possible values are:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.NR1dNsMinimizerImpl.get_niter">
-<code class="sig-name descname"><span class="pre">get_niter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NR1dNsMinimizerImpl.get_niter">
+<span class="sig-name descname"><span class="pre">get_niter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.get_niter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of iterations needed to find the minimum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -652,8 +655,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.NR1dNsMinimizerImpl.has_converged">
-<code class="sig-name descname"><span class="pre">has_converged</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NR1dNsMinimizerImpl.has_converged">
+<span class="sig-name descname"><span class="pre">has_converged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.has_converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analyzes the status information dictionary if the minimization
 process has converged. By definition the minimization process has
 converged if <code class="docutils literal notranslate"><span class="pre">status['warnflag']</span></code> is smaller or equal to 0.</p>
@@ -669,8 +672,8 @@ process.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.NR1dNsMinimizerImpl.is_repeatable">
-<code class="sig-name descname"><span class="pre">is_repeatable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NR1dNsMinimizerImpl.is_repeatable">
+<span class="sig-name descname"><span class="pre">is_repeatable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl.is_repeatable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the minimization process can be repeated to get a better
 result. By definition of this minimization method, this method will
 always return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -679,8 +682,8 @@ always return <code class="docutils literal notranslate"><span class="pre">False
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.minimizer.NRNsScan2dMinimizerImpl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></code><code class="sig-name descname"><span class="pre">NRNsScan2dMinimizerImpl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p2_scan_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NRNsScan2dMinimizerImpl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NRNsScan2dMinimizerImpl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></span><span class="sig-name descname"><span class="pre">NRNsScan2dMinimizerImpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p2_scan_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NRNsScan2dMinimizerImpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.minimizer.NR1dNsMinimizerImpl" title="skyllh.core.minimizer.NR1dNsMinimizerImpl"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.minimizer.NR1dNsMinimizerImpl</span></code></a></p>
 <p>The NRNsScan2dMinimizerImpl class provides a minimizer implementation for
 the R2-&gt;R1 function where the first dimension is minimized using the
@@ -696,8 +699,8 @@ to minimize.</p></li>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="skyllh.core.minimizer.NRNsScan2dMinimizerImpl.minimize">
-<code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NRNsScan2dMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.NRNsScan2dMinimizerImpl.minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.NRNsScan2dMinimizerImpl.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimizes the given function <code class="docutils literal notranslate"><span class="pre">func</span></code> with the given initial function
 argument values <code class="docutils literal notranslate"><span class="pre">initials</span></code>. This minimizer implementation will only
 vary the first two parameters. The first parameter is the number of
@@ -720,10 +723,10 @@ function value at the function arguments <code class="docutils literal notransla
 function first derivative for the first fit parameter, and the value
 of the second derivative for the first fit parameter.</p>
 </p></li>
-<li><p><strong>func_args</strong> (<em>sequence | None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>Keyword Arguments</strong> (<em>Additional</em>) – </p></li>
+<li><p><strong>func_args</strong> (<em>sequence</em><em> | </em><em>None</em>) – Optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
+<li><p><strong>Arguments</strong> (<em>Additional Keyword</em>) – </p></li>
 <li><p><strong>----------------------------</strong> – </p></li>
-<li><p><strong>are no additional options defined for this minimization</strong> (<em>There</em>) – </p></li>
+<li><p><strong>minimization</strong> (<em>There are no additional options defined for this</em>) – </p></li>
 <li><p><strong>implementation.</strong> – </p></li>
 </ul>
 </dd>
@@ -769,8 +772,8 @@ achieve the specified precision.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.minimizer.Minimizer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></code><code class="sig-name descname"><span class="pre">Minimizer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer_impl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_repetitions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.Minimizer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.Minimizer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.minimizer.</span></span><span class="sig-name descname"><span class="pre">Minimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer_impl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_repetitions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.Minimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Minimizer class provides the general interface for minimizing a
 function. The class takes an instance of MinimizerImpl for a specific
@@ -786,24 +789,24 @@ different initials.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.minimizer.Minimizer.minimizer_impl">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">minimizer_impl</span></code><a class="headerlink" href="#skyllh.core.minimizer.Minimizer.minimizer_impl" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.minimizer.Minimizer.minimizer_impl">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">minimizer_impl</span></span><a class="headerlink" href="#skyllh.core.minimizer.Minimizer.minimizer_impl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of MinimizerImpl, which provides the implementation of
 the minimizer.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.minimizer.Minimizer.max_repetitions">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">max_repetitions</span></code><a class="headerlink" href="#skyllh.core.minimizer.Minimizer.max_repetitions" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.minimizer.Minimizer.max_repetitions">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_repetitions</span></span><a class="headerlink" href="#skyllh.core.minimizer.Minimizer.max_repetitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>In case the minimization process did not converge at the first time
 this option specifies the maximum number of repetitions with
 different initials.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.minimizer.Minimizer.minimize">
-<code class="sig-name descname"><span class="pre">minimize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparamset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.Minimizer.minimize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.minimizer.Minimizer.minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparamset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.minimizer.Minimizer.minimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimizes the the given function <code class="docutils literal notranslate"><span class="pre">func</span></code> by calling the <code class="docutils literal notranslate"><span class="pre">minimize</span></code>
 method of the minimizer implementation.</p>
 <p>After the minimization process it calls the <code class="docutils literal notranslate"><span class="pre">has_converged</span></code> and
@@ -824,7 +827,7 @@ function <code class="docutils literal notranslate"><span class="pre">func</span
 <p>The return value of <code class="docutils literal notranslate"><span class="pre">func</span></code> is minimizer implementation dependent.</p>
 </p></li>
 <li><p><strong>args</strong> (sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code> | None) – The optional sequence of arguments for <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p></li>
-<li><p><strong>kwargs</strong> (<em>dict | None</em>) – The optional dictionary with keyword arguments for the minimizer
+<li><p><strong>kwargs</strong> (<em>dict</em><em> | </em><em>None</em>) – The optional dictionary with keyword arguments for the minimizer
 implementation minimize method.</p></li>
 </ul>
 </dd>

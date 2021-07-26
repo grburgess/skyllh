@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.i3.pdfratio">
 <span id="skyllh-i3-pdfratio-module"></span><h1>skyllh.i3.pdfratio module<a class="headerlink" href="#module-skyllh.i3.pdfratio" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.i3.pdfratio.</span></code><code class="sig-name descname"><span class="pre">I3EnergySigSetOverBkgPDFRatioSpline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signalpdfset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundpdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fillmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.i3.pdfratio.</span></span><span class="sig-name descname"><span class="pre">I3EnergySigSetOverBkgPDFRatioSpline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signalpdfset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundpdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fillmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.pdfratio.html#skyllh.core.pdfratio.SigSetOverBkgPDFRatio" title="skyllh.core.pdfratio.SigSetOverBkgPDFRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.SigSetOverBkgPDFRatio</span></code></a>, <a class="reference internal" href="skyllh.core.multiproc.html#skyllh.core.multiproc.IsParallelizable" title="skyllh.core.multiproc.IsParallelizable"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.multiproc.IsParallelizable</span></code></a></p>
 <p>This class implements a signal over background PDF ratio spline for
 I3EnergyPDF enegry PDFs. It takes an object, which is derived from PDFSet
@@ -232,31 +235,31 @@ The PDF set, which provides signal energy PDFs for a set of
 discrete signal parameters.</p></li>
 <li><p><strong>backgroundpdf</strong> (<em>class instance derived from I3EnergyPDF</em><em>, </em><em>and</em>) – IsBackgroundPDF
 The background energy PDF object.</p></li>
-<li><p><strong>fillmethod</strong> (<em>instance of PDFRatioFillMethod | None</em>) – An instance of class derived from PDFRatioFillMethod that implements
+<li><p><strong>fillmethod</strong> (<em>instance of PDFRatioFillMethod</em><em> | </em><em>None</em>) – An instance of class derived from PDFRatioFillMethod that implements
 the desired ratio fill method.
 If set to None (default), the default ratio fill method
 MostSignalLikePDFRatioFillMethod will be used.</p></li>
 <li><p><strong>interpolmethod</strong> (<em>class of GridManifoldInterpolationMethod</em>) – The class implementing the fit parameter interpolation method for
 the PDF ratio manifold grid.</p></li>
-<li><p><strong>ncpu</strong> (<em>int | None</em>) – The number of CPUs to use to create the ratio splines for the
+<li><p><strong>ncpu</strong> (<em>int</em><em> | </em><em>None</em>) – The number of CPUs to use to create the ratio splines for the
 different sets of signal parameters.</p></li>
-<li><p><strong>ppbar</strong> (<em>ProgressBar instance | None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
+<li><p><strong>ppbar</strong> (<em>ProgressBar instance</em><em> | </em><em>None</em>) – The instance of ProgressBar of the optional parent progress bar.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ValueError</strong> – If the signal and background PDFs use different binning.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.fillmethod">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">fillmethod</span></code><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.fillmethod" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.fillmethod">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fillmethod</span></span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.fillmethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>The PDFRatioFillMethod object, which should be used for filling the
 PDF ratio bins.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_ratio">
-<code class="sig-name descname"><span class="pre">get_ratio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_ratio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_ratio">
+<span class="sig-name descname"><span class="pre">get_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_ratio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the PDF ratio values for each given trial event data, given
 the given set of fit parameters. This method is called during the
 likelihood maximization process.
@@ -268,7 +271,7 @@ well and will be cached.</p>
 <li><p><strong>tdm</strong> (<em>instance of TrialDataManager</em>) – The TrialDataManager instance holding the trial event data for which
 the PDF ratio values should get calculated.</p></li>
 <li><p><strong>fitparams</strong> (<em>dict</em>) – The dictionary with the fit parameter values.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to measure
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to measure
 timing information.</p></li>
 </ul>
 </dd>
@@ -279,8 +282,8 @@ timing information.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_gradient">
-<code class="sig-name descname"><span class="pre">get_gradient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_gradient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_gradient">
+<span class="sig-name descname"><span class="pre">get_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.i3.pdfratio.I3EnergySigSetOverBkgPDFRatioSpline.get_gradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the PDF ratio gradient for the pidx’th fit parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,16 +218,16 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">backgroundpdf</span></code> module contains possible background PDF models for the
 likelihood function.</p>
 <dl class="py class">
-<dt id="skyllh.core.backgroundpdf.BackgroundMultiDimGridPDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">BackgroundMultiDimGridPDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_binnings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_pdf_splinetable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_grid_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.backgroundpdf.BackgroundMultiDimGridPDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.backgroundpdf.BackgroundMultiDimGridPDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">BackgroundMultiDimGridPDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_binnings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_pdf_splinetable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_grid_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.backgroundpdf.BackgroundMultiDimGridPDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.MultiDimGridPDF" title="skyllh.core.pdf.MultiDimGridPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.MultiDimGridPDF</span></code></a>, <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.IsBackgroundPDF" title="skyllh.core.pdf.IsBackgroundPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.IsBackgroundPDF</span></code></a></p>
 <p>This class provides a multi-dimensional background PDF. The PDF is
 created from pre-calculated PDF data on a grid. The grid data is
-interpolated using a <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RegularGridInterpolator.html#scipy.interpolate.RegularGridInterpolator" title="(in SciPy v1.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RegularGridInterpolator</span></code></a>
+interpolated using a <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.RegularGridInterpolator.html#scipy.interpolate.RegularGridInterpolator" title="(in SciPy v1.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RegularGridInterpolator</span></code></a>
 instance.</p>
 <p>Creates a new background PDF instance for a multi-dimensional PDF
 given as PDF values on a grid. The grid data is interpolated with a
-<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RegularGridInterpolator.html#scipy.interpolate.RegularGridInterpolator" title="(in SciPy v1.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RegularGridInterpolator</span></code></a> instance. As grid
+<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/reference/generated/scipy.interpolate.RegularGridInterpolator.html#scipy.interpolate.RegularGridInterpolator" title="(in SciPy v1.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">scipy.interpolate.RegularGridInterpolator</span></code></a> instance. As grid
 points the bin edges of the axis binning definitions are used.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -237,7 +240,7 @@ The spline table contains a pre-computed fit to pdf_grid_data.</p></li>
 <li><p><strong>pdf_grid_data</strong> (<em>n-dimensional numpy ndarray</em>) – The n-dimensional numpy ndarray holding the PDF values at given grid
 points. The grid points must match the bin edges of the given
 BinningDefinition instances of the <cite>axis_binnings</cite> argument.</p></li>
-<li><p><strong>norm_factor_func</strong> (<em>callable | None</em>) – The function that calculates a possible required normalization
+<li><p><strong>norm_factor_func</strong> (<em>callable</em><em> | </em><em>None</em>) – The function that calculates a possible required normalization
 factor for the PDF value based on the event properties.
 The call signature of this function
 must be <cite>__call__(pdf, events, fitparams)</cite>, where <cite>pdf</cite> is this PDF
@@ -250,8 +253,8 @@ with the current fit parameter names and values.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.backgroundpdf.BackgroundNDPhotosplinePDF">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.backgroundpdf.</span></code><code class="sig-name descname"><span class="pre">BackgroundNDPhotosplinePDF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_binnings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_pdf_splinefit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.backgroundpdf.BackgroundNDPhotosplinePDF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.backgroundpdf.BackgroundNDPhotosplinePDF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.backgroundpdf.</span></span><span class="sig-name descname"><span class="pre">BackgroundNDPhotosplinePDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_binnings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_pdf_splinefit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_factor_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.backgroundpdf.BackgroundNDPhotosplinePDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.NDPhotosplinePDF" title="skyllh.core.pdf.NDPhotosplinePDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.NDPhotosplinePDF</span></code></a>, <a class="reference internal" href="skyllh.core.pdf.html#skyllh.core.pdf.IsBackgroundPDF" title="skyllh.core.pdf.IsBackgroundPDF"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdf.IsBackgroundPDF</span></code></a></p>
 <p>This class provides a multi-dimensional background PDF created from a
 n-dimensional photospline fit. The photospline package is used to evaluate
@@ -261,14 +264,14 @@ PDF fit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>axis_binnings</strong> (<em>BinningDefinition | sequence of BinningDefinition</em>) – The sequence of BinningDefinition instances defining the binning of
+<li><p><strong>axis_binnings</strong> (<a class="reference internal" href="skyllh.core.binning.html#skyllh.core.binning.BinningDefinition" title="skyllh.core.binning.BinningDefinition"><em>BinningDefinition</em></a><em> | </em><em>sequence of BinningDefinition</em>) – The sequence of BinningDefinition instances defining the binning of
 the PDF axes. The name of each BinningDefinition instance defines
 the event field name that should be used for querying the PDF.</p></li>
-<li><p><strong>param_set</strong> (<em>Parameter | ParameterSet</em>) – The Parameter instance or ParameterSet instance defining the
+<li><p><strong>param_set</strong> (<a class="reference internal" href="skyllh.core.parameters.html#skyllh.core.parameters.Parameter" title="skyllh.core.parameters.Parameter"><em>Parameter</em></a><em> | </em><a class="reference internal" href="skyllh.core.parameters.html#skyllh.core.parameters.ParameterSet" title="skyllh.core.parameters.ParameterSet"><em>ParameterSet</em></a>) – The Parameter instance or ParameterSet instance defining the
 parameters of this PDF. The ParameterSet holds the information
 which parameters are fixed and which are floating (i.e. fitted).</p></li>
 <li><p><strong>path_to_pdf_splinefit</strong> (<em>str</em>) – The path to the file containing the photospline fit.</p></li>
-<li><p><strong>norm_factor_func</strong> (<em>callable | None</em>) – The function that calculates a possible required normalization
+<li><p><strong>norm_factor_func</strong> (<em>callable</em><em> | </em><em>None</em>) – The function that calculates a possible required normalization
 factor for the PDF value based on the event properties.
 The call signature of this function must be
 <cite>__call__(pdf, tdm, params)</cite>, where <cite>pdf</cite> is this PDF

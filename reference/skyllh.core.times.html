@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,13 +216,13 @@
 <div class="section" id="module-skyllh.core.times">
 <span id="skyllh-core-times-module"></span><h1>skyllh.core.times module<a class="headerlink" href="#module-skyllh.core.times" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.times.TimeGenerationMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.times.</span></code><code class="sig-name descname"><span class="pre">TimeGenerationMethod</span></code><a class="headerlink" href="#skyllh.core.times.TimeGenerationMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.times.TimeGenerationMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.times.</span></span><span class="sig-name descname"><span class="pre">TimeGenerationMethod</span></span><a class="headerlink" href="#skyllh.core.times.TimeGenerationMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base class (type) for implementing a method to generate times.</p>
 <dl class="py method">
-<dt id="skyllh.core.times.TimeGenerationMethod.generate_times">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">generate_times</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.TimeGenerationMethod.generate_times" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.times.TimeGenerationMethod.generate_times">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">generate_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.TimeGenerationMethod.generate_times" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">generate_times</span></code> method implements the actual generation of
 times, which is method dependent.</p>
 <dl class="field-list simple">
@@ -239,8 +242,8 @@ generator (RNG).</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.times.LivetimeTimeGenerationMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.times.</span></code><code class="sig-name descname"><span class="pre">LivetimeTimeGenerationMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.LivetimeTimeGenerationMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.times.LivetimeTimeGenerationMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.times.</span></span><span class="sig-name descname"><span class="pre">LivetimeTimeGenerationMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">livetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.LivetimeTimeGenerationMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.times.TimeGenerationMethod" title="skyllh.core.times.TimeGenerationMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.times.TimeGenerationMethod</span></code></a></p>
 <p>The LivetimeTimeGenerationMethod provides the method to generate times
 from a Livetime object. It will uniformely generate times that will coincide
@@ -252,15 +255,15 @@ method of the Livetime class.</p>
 <dd class="field-odd"><p><strong>livetime</strong> (<a class="reference internal" href="skyllh.core.livetime.html#skyllh.core.livetime.Livetime" title="skyllh.core.livetime.Livetime"><em>Livetime</em></a>) – The Livetime instance that should be used to generate times from.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.times.LivetimeTimeGenerationMethod.livetime">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">livetime</span></code><a class="headerlink" href="#skyllh.core.times.LivetimeTimeGenerationMethod.livetime" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.times.LivetimeTimeGenerationMethod.livetime">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">livetime</span></span><a class="headerlink" href="#skyllh.core.times.LivetimeTimeGenerationMethod.livetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Livetime instance used to draw times from.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.times.LivetimeTimeGenerationMethod.generate_times">
-<code class="sig-name descname"><span class="pre">generate_times</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.LivetimeTimeGenerationMethod.generate_times" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.times.LivetimeTimeGenerationMethod.generate_times">
+<span class="sig-name descname"><span class="pre">generate_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.LivetimeTimeGenerationMethod.generate_times" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates <cite>size</cite> MJD times according to the detector on-times
 provided by the Livetime instance.</p>
 <dl class="field-list simple">
@@ -280,8 +283,8 @@ generator (RNG).</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.times.TimeGenerator">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.times.</span></code><code class="sig-name descname"><span class="pre">TimeGenerator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.TimeGenerator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.times.TimeGenerator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.times.</span></span><span class="sig-name descname"><span class="pre">TimeGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.TimeGenerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Creates a time generator instance with a given defined time
 generation method.</p>
@@ -291,16 +294,16 @@ generation method.</p>
 generating times.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.times.TimeGenerator.method">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">method</span></code><a class="headerlink" href="#skyllh.core.times.TimeGenerator.method" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.times.TimeGenerator.method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">method</span></span><a class="headerlink" href="#skyllh.core.times.TimeGenerator.method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The TimeGenerationMethod object that should be used to generate
 the times.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.times.TimeGenerator.generate_times">
-<code class="sig-name descname"><span class="pre">generate_times</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.TimeGenerator.generate_times" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.times.TimeGenerator.generate_times">
+<span class="sig-name descname"><span class="pre">generate_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.times.TimeGenerator.generate_times" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates <code class="docutils literal notranslate"><span class="pre">size</span></code> amount of times by calling the <code class="docutils literal notranslate"><span class="pre">generate_times</span></code>
 method of the TimeGenerationMethod class.</p>
 <dl class="field-list simple">

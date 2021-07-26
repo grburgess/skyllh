@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -215,8 +218,8 @@
 <p>The source_hypothesis module provides classes to define groups of source
 hypotheses. The SourceHypoGroupManager manages the groups of source hypotheses.</p>
 <dl class="py class">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.source_hypothesis.</span></code><code class="sig-name descname"><span class="pre">SourceHypoGroupManager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.source_hypothesis.</span></span><span class="sig-name descname"><span class="pre">SourceHypoGroupManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The source hypothesis group manager provides the functionality to group
 sources of the same source hypothesis, i.e. spatial model and flux model,
@@ -226,38 +229,38 @@ way.</p>
 <p>Creates a new source hypothesis group manager instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>src_hypo_groups</strong> (<em>SourceHypoGroup instance |</em>) – sequence of SourceHypoGroup instances | None
+<dd class="field-odd"><p><strong>src_hypo_groups</strong> (<em>SourceHypoGroup instance</em><em> |</em>) – sequence of SourceHypoGroup instances | None
 The SourceHypoGroup instances to initialize the manager with.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.source_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">source_list</span></code><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.source_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.source_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">source_list</span></span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.source_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of defined SourceModel instances.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.n_sources">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_sources</span></code><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.n_sources" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.n_sources">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_sources</span></span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.n_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The total number of sources defined in all source groups.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.n_src_hypo_groups">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_src_hypo_groups</span></code><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.n_src_hypo_groups" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.n_src_hypo_groups">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_src_hypo_groups</span></span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.n_src_hypo_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of defined source hypothesis groups.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.src_hypo_group_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">src_hypo_group_list</span></code><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.src_hypo_group_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.src_hypo_group_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">src_hypo_group_list</span></span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.src_hypo_group_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of source hypothesis groups, i.e.
 SourceHypoGroup instances.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.add_source_hypo_group">
-<code class="sig-name descname"><span class="pre">add_source_hypo_group</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detsigyield_implmethods</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_gen_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.add_source_hypo_group" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.add_source_hypo_group">
+<span class="sig-name descname"><span class="pre">add_source_hypo_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detsigyield_implmethods</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_gen_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.add_source_hypo_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a source hypothesis group to the source hypothesis group
 manager. A source hypothesis group share sources of the same source
 model with the same flux model and hence the same detector signal
@@ -265,7 +268,7 @@ yield and signal generation implementation methods.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sources</strong> (<em>SourceModel | sequence of SourceModel</em>) – The source or sequence of sources that define the source group.</p></li>
+<li><p><strong>sources</strong> (<a class="reference internal" href="skyllh.physics.source.html#skyllh.physics.source.SourceModel" title="skyllh.physics.source.SourceModel"><em>SourceModel</em></a><em> | </em><em>sequence of SourceModel</em>) – The source or sequence of sources that define the source group.</p></li>
 <li><p><strong>fluxmodel</strong> (<em>instance of FluxModel</em>) – The FluxModel instance that applies to the list of sources of the
 group.</p></li>
 <li><p><strong>detsigyield_implmethods</strong> (<em>sequence of DetSigYieldImplMethod instances</em>) – The sequence of detector signal yield implementation method
@@ -274,7 +277,7 @@ yield for the sources of the group. Each element is the
 detector signal yield implementation method for the particular
 dataset, if several datasets are used. If this list contains only
 one implementation method, it should be used for all datasets.</p></li>
-<li><p><strong>sig_gen_method</strong> (<em>instance of SignalGenerationMethod | None</em>) – The SignalGenerationMethod instance that implements the detector
+<li><p><strong>sig_gen_method</strong> (<em>instance of SignalGenerationMethod</em><em> | </em><em>None</em>) – The SignalGenerationMethod instance that implements the detector
 and source hypothesis specific signal generation.
 It can be set to None which means no signal can be generated.</p></li>
 </ul>
@@ -283,8 +286,8 @@ It can be set to None which means no signal can be generated.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.get_fluxmodel_by_src_idx">
-<code class="sig-name descname"><span class="pre">get_fluxmodel_by_src_idx</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.get_fluxmodel_by_src_idx" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.get_fluxmodel_by_src_idx">
+<span class="sig-name descname"><span class="pre">get_fluxmodel_by_src_idx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.get_fluxmodel_by_src_idx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the FluxModel instance for the source specified by its
 source index.</p>
 <dl class="field-list simple">
@@ -299,8 +302,8 @@ source index.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.source_hypothesis.SourceHypoGroupManager.get_detsigyield_implmethod_list_by_src_idx">
-<code class="sig-name descname"><span class="pre">get_detsigyield_implmethod_list_by_src_idx</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.get_detsigyield_implmethod_list_by_src_idx" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.source_hypothesis.SourceHypoGroupManager.get_detsigyield_implmethod_list_by_src_idx">
+<span class="sig-name descname"><span class="pre">get_detsigyield_implmethod_list_by_src_idx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.source_hypothesis.SourceHypoGroupManager.get_detsigyield_implmethod_list_by_src_idx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of DetSigYieldImplMethod instances for the source
 specified by its source index.</p>
 <dl class="field-list simple">

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,8 +216,8 @@
 <div class="section" id="module-skyllh.core.pdfratio">
 <span id="skyllh-core-pdfratio-module"></span><h1>skyllh.core.pdfratio module<a class="headerlink" href="#module-skyllh.core.pdfratio" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.PDFRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">PDFRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">PDFRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class for a PDF ratio class. It defines the interface
 of a PDF ratio class.</p>
@@ -224,18 +227,18 @@ of a PDF ratio class.</p>
 <dd class="field-odd"><p><strong>pdf_type</strong> (<em>type</em>) – The Python type of the PDF object the PDF ratio is made for.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.n_fitparams">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_fitparams</span></code><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.n_fitparams" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.n_fitparams">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_fitparams</span></span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.n_fitparams" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The number of fit parameters the PDF ratio depends on.
 This is the sum of signal and background fit parameters. At the moment
 only signal fit parameters are supported, so this property is equivalent
 to the n_signal_fitparams property. But this might change in the future.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.fitparam_names">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">fitparam_names</span></code><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.fitparam_names" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.fitparam_names">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fitparam_names</span></span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.fitparam_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of fit parameter names this PDF ratio is a
 function of.
 This is the superset of signal and background fit parameter names.
@@ -244,30 +247,30 @@ is equivalent to the signal_fitparam_names property. But this might
 change in the future.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.n_signal_fitparams">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_signal_fitparams</span></code><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.n_signal_fitparams" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.n_signal_fitparams">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_signal_fitparams</span></span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.n_signal_fitparams" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The number of signal fit parameters the PDF ratio depends
 on.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.signal_fitparam_names">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">signal_fitparam_names</span></code><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.signal_fitparam_names" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.signal_fitparam_names">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">signal_fitparam_names</span></span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.signal_fitparam_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The list of signal fit parameter names this PDF ratio is
 a function of.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.pdf_type">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pdf_type</span></code><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.pdf_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.pdf_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pdf_type</span></span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.pdf_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>(read-only) The Python type of the PDF object for which the PDF
 ratio is made for.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.get_ratio">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_ratio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.get_ratio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.get_ratio">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.get_ratio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the PDF ratio value for each given trial data event, given
 the given set of fit parameters. This method is called during the
 likelihood maximization process.</p>
@@ -276,10 +279,10 @@ likelihood maximization process.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tdm</strong> (<em>instance of TrialDataManager</em>) – The TrialDataManager instance holding the trial data events for
 which the PDF ratio values should get calculated.</p></li>
-<li><p><strong>params</strong> (<em>dict | None</em>) – The dictionary with the parameter name-value pairs.
+<li><p><strong>params</strong> (<em>dict</em><em> | </em><em>None</em>) – The dictionary with the parameter name-value pairs.
 It can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, if the PDF ratio does not depend on any
 parameters.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to measure
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to measure
 timing information.</p></li>
 </ul>
 </dd>
@@ -290,8 +293,8 @@ timing information.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatio.get_gradient">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_gradient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.get_gradient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatio.get_gradient">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatio.get_gradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the PDF ratio gradient for the parameter <code class="docutils literal notranslate"><span class="pre">fitparam_name</span></code>
 for each given trial event, given the given set of fit parameters.
 This method is called during the likelihood maximization process.</p>
@@ -314,8 +317,8 @@ get calculated.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">SingleSourcePDFRatioArrayArithmetic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdfratios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">SingleSourcePDFRatioArrayArithmetic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdfratios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class provides arithmetic methods for arrays of PDFRatio instances.
 It has methods to calculate the product of the ratio values for a given set
@@ -335,21 +338,21 @@ order of the minimizer.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.pdfratio_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pdfratio_list</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.pdfratio_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.pdfratio_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pdfratio_list</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.pdfratio_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of PDFRatio objects.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.fitparam_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">fitparam_list</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.fitparam_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.fitparam_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fitparam_list</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.fitparam_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of FitParameter instances.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.initialize_for_new_trial">
-<code class="sig-name descname"><span class="pre">initialize_for_new_trial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.initialize_for_new_trial">
+<span class="sig-name descname"><span class="pre">initialize_for_new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.initialize_for_new_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes the PDFRatio array arithmetic for a new trial. For a new
 trial the data events change, hence we need to recompute the PDF ratio
 values of the fit parameter independent PDFRatio instances.</p>
@@ -362,8 +365,8 @@ that this PDFRatioArrayArithmetic instance should get initialized.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_pdfratio">
-<code class="sig-name descname"><span class="pre">get_pdfratio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_pdfratio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_pdfratio">
+<span class="sig-name descname"><span class="pre">get_pdfratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fitparam_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_pdfratio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the PDFRatio instance that corresponds to the given fit
 parameter index.</p>
 <dl class="field-list simple">
@@ -378,8 +381,8 @@ index.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.calculate_pdfratio_values">
-<code class="sig-name descname"><span class="pre">calculate_pdfratio_values</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.calculate_pdfratio_values" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.calculate_pdfratio_values">
+<span class="sig-name descname"><span class="pre">calculate_pdfratio_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.calculate_pdfratio_values" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the PDF ratio values for the PDF ratio objects which
 depend on fit parameters.</p>
 <dl class="field-list simple">
@@ -388,7 +391,7 @@ depend on fit parameters.</p>
 <li><p><strong>tdm</strong> (<em>instance of TrialDataManager</em>) – The instance of TrialDataManager that holds the trial event data for
 which the PDF ratio values should get calculated.</p></li>
 <li><p><strong>fitparams</strong> (<em>dict</em>) – The dictionary with the fit parameter name-value pairs.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to measure
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to measure
 timing information.</p></li>
 </ul>
 </dd>
@@ -396,15 +399,15 @@ timing information.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_ratio_product">
-<code class="sig-name descname"><span class="pre">get_ratio_product</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">excluded_fitparam_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_ratio_product" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_ratio_product">
+<span class="sig-name descname"><span class="pre">get_ratio_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">excluded_fitparam_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SingleSourcePDFRatioArrayArithmetic.get_ratio_product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the product of the of the PDF ratio values of each event,
 but excludes the PDF ratio values that correspond to the given excluded
 fit parameter index. This is useful for calculating the derivates of
 the log-likelihood ratio function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>excluded_fitparam_idx</strong> (<em>int | None</em>) – The index of the fit parameter whose PDF ratio values should get
+<dd class="field-odd"><p><strong>excluded_fitparam_idx</strong> (<em>int</em><em> | </em><em>None</em>) – The index of the fit parameter whose PDF ratio values should get
 excluded from the product. If None, the product over all PDF ratio
 values will be computed.</p>
 </dd>
@@ -417,15 +420,15 @@ values will be computed.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.PDFRatioFillMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">PDFRatioFillMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatioFillMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">PDFRatioFillMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstract base class to implement a PDF ratio fill method. It can happen,
 that there are empty background bins but where signal could possibly be.
 A PDFRatioFillMethod implements what happens in such cases.</p>
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.PDFRatioFillMethod.fill_ratios">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">fill_ratios</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.PDFRatioFillMethod.fill_ratios">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">fill_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.PDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fill_ratios method is supposed to fill the ratio bins (array)
 with the signal / background division values. For bins (array elements),
 where the division is undefined, e.g. due to zero background, the fill
@@ -467,8 +470,8 @@ False entries.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">Skylab2SkylabPDFRatioFillMethod</span></code><a class="headerlink" href="#skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">Skylab2SkylabPDFRatioFillMethod</span></span><a class="headerlink" href="#skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.pdfratio.PDFRatioFillMethod" title="skyllh.core.pdfratio.PDFRatioFillMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.PDFRatioFillMethod</span></code></a></p>
 <p>This PDF ratio fill method implements the exact same fill method as in
 the skylab2 software named “skylab”. It exists just for comparsion and
@@ -476,16 +479,16 @@ backward compatibility reasons. In general, it should not be used, because
 it does not distinguish between bins with MC converage and physics model
 contribution, and those with MC coverage and no physics model contribution!</p>
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod.fill_ratios">
-<code class="sig-name descname"><span class="pre">fill_ratios</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod.fill_ratios">
+<span class="sig-name descname"><span class="pre">fill_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.Skylab2SkylabPDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fills the ratio array.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">MostSignalLikePDFRatioFillMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signallike_percentile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">MostSignalLikePDFRatioFillMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signallike_percentile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.pdfratio.PDFRatioFillMethod" title="skyllh.core.pdfratio.PDFRatioFillMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.PDFRatioFillMethod</span></code></a></p>
 <p>PDF ratio fill method to set the PDF ratio to the most signal like PDF
 ratio for bins, where there is signal MC coverage but no background (MC)
@@ -499,25 +502,25 @@ with the most signal-like ratio value.</p>
 ratio value for ratios with no background probability.</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.signallike_percentile">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">signallike_percentile</span></code><a class="headerlink" href="#skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.signallike_percentile" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.signallike_percentile">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">signallike_percentile</span></span><a class="headerlink" href="#skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.signallike_percentile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The percentile of signal-like ratios, which should be taken as the
 ratio value for ratios with no background probability. This percentile
 must be given as a float value in the range [0, 100] inclusively.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.fill_ratios">
-<code class="sig-name descname"><span class="pre">fill_ratios</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.fill_ratios">
+<span class="sig-name descname"><span class="pre">fill_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.MostSignalLikePDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fills the ratio array.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">MinBackgroundLikePDFRatioFillMethod</span></code><a class="headerlink" href="#skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">MinBackgroundLikePDFRatioFillMethod</span></span><a class="headerlink" href="#skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.pdfratio.PDFRatioFillMethod" title="skyllh.core.pdfratio.PDFRatioFillMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.PDFRatioFillMethod</span></code></a></p>
 <p>PDF ratio fill method to set the PDF ratio to the minimal background like
 value for bins, where there is signal MC coverage but no background (MC)
@@ -526,16 +529,16 @@ coverage.</p>
 where there is signal MC coverage but no background (MC) coverage
 with the minimal background-like ratio value.</p>
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod.fill_ratios">
-<code class="sig-name descname"><span class="pre">fill_ratios</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod.fill_ratios">
+<span class="sig-name descname"><span class="pre">fill_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_prob_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sig_mask_mc_covered_zero_physics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_mask_mc_covered_zero_physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.MinBackgroundLikePDFRatioFillMethod.fill_ratios" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fills the ratio array.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.SigOverBkgPDFRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">SigOverBkgPDFRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">same_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_bkg_ratio_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigOverBkgPDFRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">SigOverBkgPDFRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">same_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_bkg_ratio_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.pdfratio.PDFRatio" title="skyllh.core.pdfratio.PDFRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.PDFRatio</span></code></a></p>
 <p>This class implements a generic signal-over-background PDF ratio for a
 signal and a background PDF instance.
@@ -547,7 +550,7 @@ It takes a signal PDF of type <em>pdf_type</em> and a background PDF of type
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sig_pdf</strong> (class instance derived from <cite>pdf_type</cite>, IsSignalPDF) – The instance of the signal PDF.</p></li>
 <li><p><strong>bkg_pdf</strong> (class instance derived from <cite>pdf_type</cite>, IsBackgroundPDF) – The instance of the background PDF.</p></li>
-<li><p><strong>pdf_type</strong> (<em>type | None</em>) – The python type of the PDF object for which the PDF ratio is for.
+<li><p><strong>pdf_type</strong> (<em>type</em><em> | </em><em>None</em>) – The python type of the PDF object for which the PDF ratio is for.
 If set to None, the default class <code class="docutils literal notranslate"><span class="pre">PDF</span></code> will be used.</p></li>
 <li><p><strong>same_axes</strong> (<em>bool</em>) – Flag if the signal and background PDFs are supposed to have the
 same axes. Default is True.</p></li>
@@ -556,39 +559,39 @@ is zero. This is to avoid division by zero. Default is 1.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SigOverBkgPDFRatio.sig_pdf">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">sig_pdf</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.sig_pdf" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigOverBkgPDFRatio.sig_pdf">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sig_pdf</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.sig_pdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>The signal PDF object used to create the PDF ratio.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SigOverBkgPDFRatio.bkg_pdf">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">bkg_pdf</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.bkg_pdf" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigOverBkgPDFRatio.bkg_pdf">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bkg_pdf</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.bkg_pdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>The background PDF object used to create the PDF ratio.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SigOverBkgPDFRatio.zero_bkg_ratio_value">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">zero_bkg_ratio_value</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.zero_bkg_ratio_value" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigOverBkgPDFRatio.zero_bkg_ratio_value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">zero_bkg_ratio_value</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.zero_bkg_ratio_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value of the PDF ratio to take when the background PDF value
 is zero. This is to avoid division by zero.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SigOverBkgPDFRatio.get_ratio">
-<code class="sig-name descname"><span class="pre">get_ratio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.get_ratio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigOverBkgPDFRatio.get_ratio">
+<span class="sig-name descname"><span class="pre">get_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.get_ratio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the PDF ratio for the given trial events.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tdm</strong> (<em>instance of TrialDataManager</em>) – The TrialDataManager instance holding the trial data events for
 which the PDF ratio values should be calculated.</p></li>
-<li><p><strong>params</strong> (<em>dict | None</em>) – The dictionary holding the parameter names and values for which the
+<li><p><strong>params</strong> (<em>dict</em><em> | </em><em>None</em>) – The dictionary holding the parameter names and values for which the
 probability ratio should get calculated.
 This can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, if the signal and background PDFs do not
 depend on any parameters.</p></li>
-<li><p><strong>tl</strong> (<em>TimeLord instance | None</em>) – The optional TimeLord instance that should be used to measure
+<li><p><strong>tl</strong> (<em>TimeLord instance</em><em> | </em><em>None</em>) – The optional TimeLord instance that should be used to measure
 timing information.</p></li>
 </ul>
 </dd>
@@ -602,8 +605,8 @@ dimensionality of the probability ndarray returned by the
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SigOverBkgPDFRatio.get_gradient">
-<code class="sig-name descname"><span class="pre">get_gradient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.get_gradient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigOverBkgPDFRatio.get_gradient">
+<span class="sig-name descname"><span class="pre">get_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio.get_gradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the gradient of the PDF ratio w.r.t. the given fit
 parameter. This method must be called after the <code class="docutils literal notranslate"><span class="pre">get_ratio</span></code> method.</p>
 <dl class="field-list simple">
@@ -625,8 +628,8 @@ get calculated.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.SpatialSigOverBkgPDFRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">SpatialSigOverBkgPDFRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_pdf</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SpatialSigOverBkgPDFRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SpatialSigOverBkgPDFRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">SpatialSigOverBkgPDFRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sig_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bkg_pdf</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SpatialSigOverBkgPDFRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.pdfratio.SigOverBkgPDFRatio" title="skyllh.core.pdfratio.SigOverBkgPDFRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.SigOverBkgPDFRatio</span></code></a></p>
 <p>This class implements a signal-over-background PDF ratio for spatial
 PDFs. It takes a signal PDF of type SpatialPDF and a background PDF of type
@@ -644,8 +647,8 @@ PDFs.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></code><code class="sig-name descname"><span class="pre">SigSetOverBkgPDFRatio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signalpdfset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundpdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.pdfratio.</span></span><span class="sig-name descname"><span class="pre">SigSetOverBkgPDFRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signalpdfset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundpdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.pdfratio.PDFRatio" title="skyllh.core.pdfratio.PDFRatio"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.pdfratio.PDFRatio</span></code></a></p>
 <p>Class for a PDF ratio class that takes a PDFSet of PDF type
 <em>pdf_type</em> as signal PDF and a PDF of type <em>pdf_type</em> as background PDF.
@@ -663,7 +666,7 @@ The PDF set, which provides signal PDFs for a set of
 discrete signal fit parameters.</p></li>
 <li><p><strong>backgroundpdf</strong> (class instance derived from <code class="docutils literal notranslate"><span class="pre">pdf_type</span></code>, and) – IsBackgroundPDF
 The background PDF instance.</p></li>
-<li><p><strong>interpolmethod</strong> (<em>class of GridManifoldInterpolationMethod | None</em>) – The class implementing the fit parameter interpolation method for
+<li><p><strong>interpolmethod</strong> (<em>class of GridManifoldInterpolationMethod</em><em> | </em><em>None</em>) – The class implementing the fit parameter interpolation method for
 the PDF ratio manifold grid.
 If set to None (default), the
 Parabola1DGridManifoldInterpolationMethod will be used for
@@ -671,29 +674,29 @@ Parabola1DGridManifoldInterpolationMethod will be used for
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.backgroundpdf">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">backgroundpdf</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.backgroundpdf" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.backgroundpdf">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">backgroundpdf</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.backgroundpdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>The background PDF object, derived from <code class="docutils literal notranslate"><span class="pre">pdf_type</span></code> and
 IsBackgroundPDF.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.signalpdfset">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">signalpdfset</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.signalpdfset" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.signalpdfset">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">signalpdfset</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.signalpdfset" title="Permalink to this definition">¶</a></dt>
 <dd><p>The signal PDFSet object for <code class="docutils literal notranslate"><span class="pre">pdf_type</span></code> PDF objects.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.interpolmethod">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">interpolmethod</span></code><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.interpolmethod" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.interpolmethod">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">interpolmethod</span></span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.interpolmethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class derived from GridManifoldInterpolationMethod
 implementing the interpolation of the fit parameter manifold.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.convert_signal_fitparam_name_into_index">
-<code class="sig-name descname"><span class="pre">convert_signal_fitparam_name_into_index</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.convert_signal_fitparam_name_into_index" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.pdfratio.SigSetOverBkgPDFRatio.convert_signal_fitparam_name_into_index">
+<span class="sig-name descname"><span class="pre">convert_signal_fitparam_name_into_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_fitparam_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.pdfratio.SigSetOverBkgPDFRatio.convert_signal_fitparam_name_into_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts the given signal fit parameter name into the parameter
 index, i.e. the position of parameter in the signal parameter grid set.</p>
 <dl class="field-list simple">

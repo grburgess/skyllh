@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -89,7 +92,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hypothesis/index.html">Hypothesis Definition</a></li>
@@ -112,7 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dev_docs/logging.html">Logging</a></li>
 </ul>
@@ -213,15 +216,15 @@
 <div class="section" id="module-skyllh.core.background_generation">
 <span id="skyllh-core-background-generation-module"></span><h1>skyllh.core.background_generation module<a class="headerlink" href="#module-skyllh.core.background_generation" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="skyllh.core.background_generation.BackgroundGenerationMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.background_generation.</span></code><code class="sig-name descname"><span class="pre">BackgroundGenerationMethod</span></code><a class="headerlink" href="#skyllh.core.background_generation.BackgroundGenerationMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generation.BackgroundGenerationMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.background_generation.</span></span><span class="sig-name descname"><span class="pre">BackgroundGenerationMethod</span></span><a class="headerlink" href="#skyllh.core.background_generation.BackgroundGenerationMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is the abstract base class for a detector specific background
 generation method.</p>
 <p>Constructs a new background generation method instance.</p>
 <dl class="py method">
-<dt id="skyllh.core.background_generation.BackgroundGenerationMethod.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.BackgroundGenerationMethod.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generation.BackgroundGenerationMethod.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.BackgroundGenerationMethod.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Notifies the background generation method about an updated
 SourceHypoGroupManager instance.</p>
 <dl class="field-list simple">
@@ -232,8 +235,8 @@ SourceHypoGroupManager instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.background_generation.BackgroundGenerationMethod.generate_events">
-<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">generate_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.BackgroundGenerationMethod.generate_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generation.BackgroundGenerationMethod.generate_events">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">generate_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.BackgroundGenerationMethod.generate_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is supposed to generate a <cite>mean</cite> number of background
 events for the given dataset and its data.</p>
 <dl class="field-list simple">
@@ -246,7 +249,7 @@ events should get generated.</p></li>
 <li><p><strong>data</strong> (<em>instance of DatasetData</em>) – The DatasetData instance holding the data of the dataset for which
 background events should get generated.</p></li>
 <li><p><strong>mean</strong> (<em>float</em>) – The mean number of background events to generate.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 <li><p><strong>**kwargs</strong> – Additional keyword arguments, which might be required for a
 particular background generation method.</p></li>
@@ -270,8 +273,8 @@ sample.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">skyllh.core.background_generation.</span></code><code class="sig-name descname"><span class="pre">MCDataSamplingBkgGenMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_event_prob_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_mean_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_scrambler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mc_inplace_scrambling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_mc_data_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_event_selection_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skyllh.core.background_generation.</span></span><span class="sig-name descname"><span class="pre">MCDataSamplingBkgGenMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_event_prob_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_mean_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_scrambler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mc_inplace_scrambling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_mc_data_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_event_selection_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#skyllh.core.background_generation.BackgroundGenerationMethod" title="skyllh.core.background_generation.BackgroundGenerationMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">skyllh.core.background_generation.BackgroundGenerationMethod</span></code></a></p>
 <p>This class implements the method to generate background events from
 monte-carlo (MC) data by sampling events from the MC data set according to a
@@ -289,7 +292,7 @@ where <cite>dataset</cite> and <cite>data</cite> are <cite>Dataset</cite> and <c
 of the data set for which background events needs to get generated.
 The <cite>events</cite> argument holds the actual set of events, for which the
 background event probabilities need to get calculated.</p></li>
-<li><p><strong>get_mean_func</strong> (<em>callable | None</em>) – The function to get the mean number of background events.
+<li><p><strong>get_mean_func</strong> (<em>callable</em><em> | </em><em>None</em>) – The function to get the mean number of background events.
 The call signature of this function must be
 <cite>__call__(dataset, data, events)</cite>,
 where <cite>dataset</cite> and <cite>data</cite> are <cite>Dataset</cite> and <cite>DatasetData</cite> instances
@@ -302,82 +305,82 @@ background events to generate needs to get specified through the
 provided, this argument cannot be None.</p></li>
 <li><p><strong>unique_events</strong> (<em>bool</em>) – Flag if unique events should be drawn from the monte-carlo (True),
 or if events can be drawn several times (False). Default is False.</p></li>
-<li><p><strong>data_scrambler</strong> (<em>instance of DataScrambler | None</em>) – If set to an instance of DataScrambler, the drawn monte-carlo
+<li><p><strong>data_scrambler</strong> (<em>instance of DataScrambler</em><em> | </em><em>None</em>) – If set to an instance of DataScrambler, the drawn monte-carlo
 background events will get scrambled. This can ensure more
 independent data trials. It is especially important when monte-carlo
 statistics are low.</p></li>
 <li><p><strong>mc_inplace_scrambling</strong> (<em>bool</em>) – Flag if the scrambling of the monte-carlo data should be done
 inplace, i.e. without creating a copy of the MC data first.
 Default is False.</p></li>
-<li><p><strong>keep_mc_data_fields</strong> (<em>str | list of str | None</em>) – The MC data field names that should be kept in order to be able to
+<li><p><strong>keep_mc_data_fields</strong> (<em>str</em><em> | </em><em>list of str</em><em> | </em><em>None</em>) – The MC data field names that should be kept in order to be able to
 calculate the background events rates by the functions
 <code class="docutils literal notranslate"><span class="pre">get_event_prob_func</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mean_func</span></code>. All other MC fields
 will get droped due to computational efficiency reasons.</p></li>
-<li><p><strong>pre_event_selection_method</strong> (<em>instance of EventSelectionMethod | None</em>) – If set to an instance of EventSelectionMethod, this method will
+<li><p><strong>pre_event_selection_method</strong> (<em>instance of EventSelectionMethod</em><em> | </em><em>None</em>) – If set to an instance of EventSelectionMethod, this method will
 pre-select the MC events that will be used for later background
 event generation. Using this pre-selection a large portion of the
 MC data can be reduced prior to background event generation.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_event_prob_func">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">get_event_prob_func</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_event_prob_func" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_event_prob_func">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">get_event_prob_func</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_event_prob_func" title="Permalink to this definition">¶</a></dt>
 <dd><p>The function to obtain the background probability for each
 monte-carlo event of the data set.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_mean_func">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">get_mean_func</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_mean_func" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_mean_func">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">get_mean_func</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.get_mean_func" title="Permalink to this definition">¶</a></dt>
 <dd><p>The function to obtain the mean number of background events for the
 data set. This can be None, which means that the mean number of
 background events to generate needs to be specified through the
 <cite>generate_events</cite> method.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.unique_events">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">unique_events</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.unique_events" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.unique_events">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">unique_events</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.unique_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag if unique events should be drawn from the monto-carlo (True),
 or if the same event can be drawn multiple times from the monte-carlo.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.data_scrambler">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_scrambler</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.data_scrambler" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.data_scrambler">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data_scrambler</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.data_scrambler" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DataScrambler instance that should be used to scramble the drawn
 monte-carlo background events to ensure more independent data trials.
 This is especially important when monte-carlo statistics are low. It is
 <cite>None</cite>, if no data scrambling should be used.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.mc_inplace_scrambling">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mc_inplace_scrambling</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.mc_inplace_scrambling" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.mc_inplace_scrambling">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mc_inplace_scrambling</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.mc_inplace_scrambling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag if the scrambling of the monte-carlo data should be done
 inplace, i.e. without creating a copy of the MC data first.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.keep_mc_data_field_names">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">keep_mc_data_field_names</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.keep_mc_data_field_names" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.keep_mc_data_field_names">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">keep_mc_data_field_names</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.keep_mc_data_field_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MC data field names that should be kept in order to be able to
 calculate the background events rates by the functions
 <code class="docutils literal notranslate"><span class="pre">get_event_prob_func</span></code> and <code class="docutils literal notranslate"><span class="pre">get_mean_func</span></code>. All other MC fields
 will get droped due to computational efficiency reasons.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.pre_event_selection_method">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pre_event_selection_method</span></code><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.pre_event_selection_method" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.pre_event_selection_method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pre_event_selection_method</span></span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.pre_event_selection_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of EventSelectionMethod that pre-selects the MC events,
 which can be considered for background event generation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.change_source_hypo_group_manager">
-<code class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.change_source_hypo_group_manager">
+<span class="sig-name descname"><span class="pre">change_source_hypo_group_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_hypo_group_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.change_source_hypo_group_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the SourceHypoGroupManager instance of the
 pre-event-selection method. Also it invalides the data cache of this
 background generation method.</p>
@@ -389,8 +392,8 @@ background generation method.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.generate_events">
-<code class="sig-name descname"><span class="pre">generate_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.generate_events" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="skyllh.core.background_generation.MCDataSamplingBkgGenMethod.generate_events">
+<span class="sig-name descname"><span class="pre">generate_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skyllh.core.background_generation.MCDataSamplingBkgGenMethod.generate_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a <cite>mean</cite> number of background events for the given dataset
 and its data.</p>
 <dl class="field-list simple">
@@ -402,7 +405,7 @@ random numbers from.</p></li>
 events should get generated.</p></li>
 <li><p><strong>data</strong> (<em>instance of DatasetData</em>) – The DatasetData instance holding the data of the dataset for which
 background events should get generated.</p></li>
-<li><p><strong>mean</strong> (<em>float | None</em>) – The mean number of background events to generate.
+<li><p><strong>mean</strong> (<em>float</em><em> | </em><em>None</em>) – The mean number of background events to generate.
 Can be <cite>None</cite>. In that case the mean number of background events is
 obtained through the <cite>get_mean_func</cite> function.</p></li>
 <li><p><strong>poisson</strong> (<em>bool</em>) – If set to True (default), the actual number of generated background
@@ -410,7 +413,7 @@ events will be drawn from a Poisson distribution with the given mean
 value of background events.
 If set to False, the argument <code class="docutils literal notranslate"><span class="pre">mean</span></code> specifies the actual number
 of generated background events.</p></li>
-<li><p><strong>tl</strong> (<em>instance of TimeLord | None</em>) – The optional instance of TimeLord that should be used to collect
+<li><p><strong>tl</strong> (<em>instance of TimeLord</em><em> | </em><em>None</em>) – The optional instance of TimeLord that should be used to collect
 timing information about this method.</p></li>
 </ul>
 </dd>
